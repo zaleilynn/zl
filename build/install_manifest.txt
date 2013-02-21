@@ -1,0 +1,3 @@
+/home/zaleilynn/workspace/lynn/test/test
+/home/zaleilynn/workspace/lynn/bin/master
+/home/zaleilynn/workspace/lynn/bin/worker

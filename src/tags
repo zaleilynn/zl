@@ -1,0 +1,1046 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ATTR_ALL_MEMORY	include/attributes.h	/^static const string ATTR_ALL_MEMORY = "total_memory";$/;"	v
+ATTR_ALL_VCPU	include/attributes.h	/^static const string ATTR_ALL_VCPU = "total_vcpu";$/;"	v
+ATTR_AVAIL_MEMORY	include/attributes.h	/^static const string ATTR_AVAIL_MEMORY = "avail_memory";$/;"	v
+ATTR_AVAIL_VCPU	include/attributes.h	/^static const string ATTR_AVAIL_VCPU = "avail_vcpu";$/;"	v
+ATTR_NEED_MEMORY	include/attributes.h	/^static const string ATTR_NEED_MEMORY = "need_memory";$/;"	v
+ATTR_NEED_VCPU	include/attributes.h	/^static const string ATTR_NEED_VCPU = "need_vcpu";$/;"	v
+ATTR_TASK_RANK	include/attributes.h	/^static const string ATTR_TASK_RANK = "task_rank";$/;"	v
+ATTR_TASK_REQUIREMENT	include/attributes.h	/^static const string ATTR_TASK_REQUIREMENT = "requirement";$/;"	v
+ATTR_VC	include/attributes.h	/^static const string ATTR_VC = "virtual_cluster";$/;"	v
+AddTask	master/vc_pool.cpp	/^void VCPool::AddTask(const TaskPtr& task){$/;"	f	class:VCPool
+AddVC	master/service.cpp	/^int32_t MasterService::AddVC(const VCInfo& vc_info){$/;"	f	class:MasterService
+AddVC	master/vc_pool.cpp	/^int32_t VCPool::AddVC(const VCPtr& vc) {$/;"	f	class:VCPool
+AddVC	proxy/master/gen-cpp/Master.cpp	/^int32_t MasterClient::AddVC(const VCInfo& vc_info)$/;"	f	class:MasterClient
+AddVC	proxy/master/gen-cpp/Master.h	/^  int32_t AddVC(const VCInfo& \/* vc_info *\/) {$/;"	f	class:MasterNull
+AddVC	proxy/master/gen-cpp/Master.h	/^  int32_t AddVC(const VCInfo& vc_info) {$/;"	f	class:MasterMultiface
+AddVC	proxy/master/gen-cpp/Master_server.skeleton.cpp	/^  int32_t AddVC(const VCInfo& vc_info) {$/;"	f	class:MasterHandler
+AddVC	proxy/worker/gen-cpp/Master.cpp	/^int32_t MasterClient::AddVC(const VCInfo& vc_info)$/;"	f	class:MasterClient
+AddVC	proxy/worker/gen-cpp/Master.h	/^  int32_t AddVC(const VCInfo& \/* vc_info *\/) {$/;"	f	class:MasterNull
+AddVC	proxy/worker/gen-cpp/Master.h	/^  int32_t AddVC(const VCInfo& vc_info) {$/;"	f	class:MasterMultiface
+AddVC	proxy/worker/gen-cpp/Master_server.skeleton.cpp	/^  int32_t AddVC(const VCInfo& vc_info) {$/;"	f	class:MasterHandler
+AssignTask	master/machine_pool.cpp	/^string MachinePool::AssignTask(const ClassAd& ad){$/;"	f	class:MachinePool
+AssignTask	master/task.cpp	/^bool Task::AssignTask() {$/;"	f	class:Task
+BlockQueue	include/block_queue.h	/^            BlockQueue() {$/;"	f	class:lynn::BlockQueue
+BlockQueue	include/block_queue.h	/^    class BlockQueue {$/;"	c	namespace:lynn
+CheckCompleteness	master/config.cpp	/^int32_t MasterConfig::CheckCompleteness() {$/;"	f	class:MasterConfig
+CheckCompleteness	worker/config.cpp	/^int32_t WorkerConfig::CheckCompleteness() {$/;"	f	class:WorkerConfig
+CheckError	include/cond.h	/^            void CheckError(const char* info, int code){$/;"	f	class:lynn::Cond
+CheckError	include/mutex.h	/^            void CheckError(const char* info, int err_code) {$/;"	f	class:lynn::Mutex
+CheckError	include/rwlock.h	/^            void CheckError(const char* info, int code) {$/;"	f	class:lynn::RWLock
+Compare	master/machine_pool.cpp	/^bool MachinePool::Compare(const MachinePtr& left, const MachinePtr& right){$/;"	f	class:MachinePool
+Cond	include/cond.h	/^            Cond(){$/;"	f	class:lynn::Cond
+Cond	include/cond.h	/^    class Cond {$/;"	c	namespace:lynn
+Config	include/config.h	/^class Config {$/;"	c
+CpuNum	include/system.h	/^    static int CpuNum() {$/;"	f	class:System
+CpuTime	include/system.h	/^    static uint64_t CpuTime() {$/;"	f	class:System
+CpuUsage	include/system.h	/^    static double CpuUsage() {$/;"	f	class:System
+DEFAULT_THREAD_NUM	include/rpc.h	/^    static const int DEFAULT_THREAD_NUM = 4;$/;"	m	class:Rpc
+EXP_TASK_RANK	include/attributes.h	/^static const string EXP_TASK_RANK = "1.0*" + ATTR_NEED_VCPU + "\/" + ATTR_AVAIL_VCPU + " > 1.0*" + ATTR_NEED_MEMORY + "\/" + ATTR_AVAIL_MEMORY + " ? 1.0*" + ATTR_NEED_VCPU + "\/" + ATTR_AVAIL_VCPU + " : 1.0*" + ATTR_NEED_MEMORY + "\/" + ATTR_AVAIL_MEMORY;$/;"	v
+EXP_TASK_REQUIREMENT	include/attributes.h	/^static const string EXP_TASK_REQUIREMENT = ATTR_NEED_VCPU + "<=" + ATTR_AVAIL_VCPU + " && " + ATTR_NEED_MEMORY + "<=" + ATTR_AVAIL_MEMORY;$/;"	v
+Erase	master/task_queue.cpp	/^bool TaskQueue::Erase(int64_t task_id) {$/;"	f	class:TaskQueue
+Event	include/event.h	/^     Event() {$/;"	f	class:Event
+Event	include/event.h	/^class Event {$/;"	c
+FindToDo	master/vc_pool.cpp	/^bool VCPool::FindToDo(const string& name, VCFunc func) {$/;"	f	class:VCPool
+Get	include/config.h	/^   string Get(const string& name) {$/;"	f	class:Config
+GetCurrentTime	include/system.h	/^    void GetCurrentTime(char* time_str, int len) {$/;"	f	class:System
+GetDiskSpace	include/system.h	/^    static void GetDiskSpace(int32_t *total_disk, int32_t *avail_disk){$/;"	f	class:System
+GetEndpoint	master/machine.h	/^    string GetEndpoint(){$/;"	f	class:Machine
+GetErrorCode	include/event.h	/^     int32_t GetErrorCode() {$/;"	f	class:Event
+GetFakeSpace	include/system.h	/^    static int32_t GetFakeSpace(const string& img_dir) { $/;"	f	class:System
+GetIP	include/system.h	/^    static string GetIP(string interface){$/;"	f	class:System
+GetId	master/task.h	/^    int64_t GetId(){$/;"	f	class:Task
+GetMachineInfo	worker/resource_manager.cpp	/^int32_t ResourceManager::GetMachineInfo(MachineInfo& info) {$/;"	f	class:ResourceManager
+GetNetFlow	include/system.h	/^    static void GetNetFlow(const char* interface, int64_t *bytes_in, int64_t *bytes_out){$/;"	f	class:System
+GetProxy	include/rpc.h	/^    static Proxy<T> GetProxy(const string& endpoint, int timeout = TIME_OUT) {$/;"	f	class:Rpc
+GetRankValue	master/machine.h	/^    double GetRankValue() const {$/;"	f	class:Machine
+GetRunOn	master/task.h	/^    string GetRunOn(){$/;"	f	class:Task
+GetTask	master/vc_pool.cpp	/^TaskPtr VCPool::GetTask() {$/;"	f	class:VCPool
+GetTaskId	include/identity.h	/^    int64_t GetTaskId() {$/;"	f	class:Identity
+GetTaskInfo	master/task.h	/^    TaskInfo GetTaskInfo(){$/;"	f	class:Task
+GetTaskInfo	master/virtual_cluster.cpp	/^TaskInfo VC::GetTaskInfo(){$/;"	f	class:VC
+GetTaskState	master/task.cpp	/^TaskState Task::GetTaskState() {$/;"	f	class:Task
+GetVCName	master/task.h	/^    string GetVCName() {$/;"	f	class:Task
+GetVCName	master/virtual_cluster.h	/^    string GetVCName() {$/;"	f	class:VC
+Handler	proxy/master/gen-cpp/Master.h	/^  typedef MasterIf Handler;$/;"	t	class:MasterIfFactory
+Handler	proxy/worker/gen-cpp/Master.h	/^  typedef MasterIf Handler;$/;"	t	class:MasterIfFactory
+Handler	proxy/worker/gen-cpp/Worker.h	/^  typedef WorkerIf Handler;$/;"	t	class:WorkerIfFactory
+Heartbeat	master/service.cpp	/^void MasterService::Heartbeat(const MachineInfo& info) {$/;"	f	class:MasterService
+Heartbeat	proxy/master/gen-cpp/Master.cpp	/^void MasterClient::Heartbeat(const MachineInfo& info)$/;"	f	class:MasterClient
+Heartbeat	proxy/master/gen-cpp/Master.h	/^  void Heartbeat(const MachineInfo& \/* info *\/) {$/;"	f	class:MasterNull
+Heartbeat	proxy/master/gen-cpp/Master.h	/^  void Heartbeat(const MachineInfo& info) {$/;"	f	class:MasterMultiface
+Heartbeat	proxy/master/gen-cpp/Master_server.skeleton.cpp	/^  void Heartbeat(const MachineInfo& info) {$/;"	f	class:MasterHandler
+Heartbeat	proxy/worker/gen-cpp/Master.cpp	/^void MasterClient::Heartbeat(const MachineInfo& info)$/;"	f	class:MasterClient
+Heartbeat	proxy/worker/gen-cpp/Master.h	/^  void Heartbeat(const MachineInfo& \/* info *\/) {$/;"	f	class:MasterNull
+Heartbeat	proxy/worker/gen-cpp/Master.h	/^  void Heartbeat(const MachineInfo& info) {$/;"	f	class:MasterMultiface
+Heartbeat	proxy/worker/gen-cpp/Master_server.skeleton.cpp	/^  void Heartbeat(const MachineInfo& info) {$/;"	f	class:MasterHandler
+HeartbeatProcessor	worker/work_thread.cpp	/^void* HeartbeatProcessor() {$/;"	f
+Identity	include/identity.h	/^    Identity() : m_id(0) {}$/;"	f	class:Identity
+Identity	include/identity.h	/^    explicit Identity(int32_t num) : m_id(num) {}$/;"	f	class:Identity
+Identity	include/identity.h	/^class Identity {$/;"	c
+Init	include/config.h	/^   int32_t Init(const string& conf_file) {$/;"	f	class:Config
+Init	master/virtual_cluster.cpp	/^int32_t VC::Init() {$/;"	f	class:VC
+Init	worker/resource_manager.cpp	/^int32_t ResourceManager::Init(){$/;"	f	class:ResourceManager
+Insert	master/machine_pool.cpp	/^void MachinePool::Insert(const MachinePtr& machine) {$/;"	f	class:MachinePool
+Insert	master/task_pool.cpp	/^void TaskPool::Insert(const TaskPtr& task){$/;"	f	class:TaskPool
+Insert	master/vc_pool.cpp	/^void VCPool::Insert(const VCPtr& vc) {$/;"	f	class:VCPool
+Instance	include/singleton.h	/^    static T* Instance() {$/;"	f	class:Singleton
+IsEmpty	include/block_queue.h	/^            bool IsEmpty() {$/;"	f	class:lynn::BlockQueue
+IsMatch	master/machine.cpp	/^bool Machine::IsMatch(ClassAd ad){$/;"	f	class:Machine
+LYNN_INCLUDE_CONFIG_H_	include/config.h	2;"	d
+Listen	include/rpc.h	/^    static void Listen(int port) {$/;"	f	class:Rpc
+LoadAvg	include/system.h	/^    static double LoadAvg() {$/;"	f	class:System
+Lock	include/mutex.h	/^            void Lock() {$/;"	f	class:lynn::Mutex
+LogInfo	master/machine.cpp	/^void Machine::LogInfo() const {$/;"	f	class:Machine
+LogInfo	master/virtual_cluster.cpp	/^void VC::LogInfo() {$/;"	f	class:VC
+Machine	master/machine.cpp	/^Machine::Machine(const MachineInfo& info): m_machine_info(info) {$/;"	f	class:Machine
+Machine	master/machine.h	/^class Machine  {$/;"	c
+MachineFunc	master/machine_pool.h	/^    typedef function<void(const MachinePtr&)> MachineFunc;$/;"	t	class:MachinePool
+MachineInfo	proxy/master/gen-cpp/master_types.h	/^  MachineInfo() : endpoint(), cpu_usage(0), total_vcpu(0), total_memory(0), avail_vcpu(0), avail_memory(0) {$/;"	f	class:MachineInfo
+MachineInfo	proxy/master/gen-cpp/master_types.h	/^class MachineInfo {$/;"	c
+MachineInfo	proxy/worker/gen-cpp/master_types.h	/^  MachineInfo() : endpoint(), cpu_usage(0), total_vcpu(0), total_memory(0), avail_vcpu(0), avail_memory(0) {$/;"	f	class:MachineInfo
+MachineInfo	proxy/worker/gen-cpp/master_types.h	/^class MachineInfo {$/;"	c
+MachinePool	master/machine_pool.h	/^class MachinePool {$/;"	c
+MachinePoolI	master/machine_pool.h	/^typedef Singleton<MachinePool> MachinePoolI;$/;"	t
+MachinePtr	master/machine.h	/^typedef shared_ptr<Machine> MachinePtr;$/;"	t
+MapToDo	master/machine_pool.cpp	/^void MachinePool::MapToDo(MachineFunc func) {$/;"	f	class:MachinePool
+MasterClient	proxy/master/gen-cpp/Master.h	/^  MasterClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> iprot, boost::shared_ptr< ::apache::thrift::protocol::TProtocol> oprot) :$/;"	f	class:MasterClient
+MasterClient	proxy/master/gen-cpp/Master.h	/^  MasterClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> prot) :$/;"	f	class:MasterClient
+MasterClient	proxy/master/gen-cpp/Master.h	/^class MasterClient : virtual public MasterIf {$/;"	c
+MasterClient	proxy/worker/gen-cpp/Master.h	/^  MasterClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> iprot, boost::shared_ptr< ::apache::thrift::protocol::TProtocol> oprot) :$/;"	f	class:MasterClient
+MasterClient	proxy/worker/gen-cpp/Master.h	/^  MasterClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> prot) :$/;"	f	class:MasterClient
+MasterClient	proxy/worker/gen-cpp/Master.h	/^class MasterClient : virtual public MasterIf {$/;"	c
+MasterConfig	master/config.h	/^class MasterConfig : public Config {$/;"	c
+MasterConfigI	master/config.h	/^typedef Singleton<MasterConfig> MasterConfigI;$/;"	t
+MasterHandler	proxy/master/gen-cpp/Master_server.skeleton.cpp	/^  MasterHandler() {$/;"	f	class:MasterHandler
+MasterHandler	proxy/master/gen-cpp/Master_server.skeleton.cpp	/^class MasterHandler : virtual public MasterIf {$/;"	c	file:
+MasterHandler	proxy/worker/gen-cpp/Master_server.skeleton.cpp	/^  MasterHandler() {$/;"	f	class:MasterHandler
+MasterHandler	proxy/worker/gen-cpp/Master_server.skeleton.cpp	/^class MasterHandler : virtual public MasterIf {$/;"	c	file:
+MasterIf	proxy/master/gen-cpp/Master.h	/^class MasterIf {$/;"	c
+MasterIf	proxy/worker/gen-cpp/Master.h	/^class MasterIf {$/;"	c
+MasterIfFactory	proxy/master/gen-cpp/Master.h	/^class MasterIfFactory {$/;"	c
+MasterIfFactory	proxy/worker/gen-cpp/Master.h	/^class MasterIfFactory {$/;"	c
+MasterIfSingletonFactory	proxy/master/gen-cpp/Master.h	/^  MasterIfSingletonFactory(const boost::shared_ptr<MasterIf>& iface) : iface_(iface) {}$/;"	f	class:MasterIfSingletonFactory
+MasterIfSingletonFactory	proxy/master/gen-cpp/Master.h	/^class MasterIfSingletonFactory : virtual public MasterIfFactory {$/;"	c
+MasterIfSingletonFactory	proxy/worker/gen-cpp/Master.h	/^  MasterIfSingletonFactory(const boost::shared_ptr<MasterIf>& iface) : iface_(iface) {}$/;"	f	class:MasterIfSingletonFactory
+MasterIfSingletonFactory	proxy/worker/gen-cpp/Master.h	/^class MasterIfSingletonFactory : virtual public MasterIfFactory {$/;"	c
+MasterMultiface	proxy/master/gen-cpp/Master.h	/^  MasterMultiface() {}$/;"	f	class:MasterMultiface
+MasterMultiface	proxy/master/gen-cpp/Master.h	/^  MasterMultiface(std::vector<boost::shared_ptr<MasterIf> >& ifaces) : ifaces_(ifaces) {$/;"	f	class:MasterMultiface
+MasterMultiface	proxy/master/gen-cpp/Master.h	/^class MasterMultiface : virtual public MasterIf {$/;"	c
+MasterMultiface	proxy/worker/gen-cpp/Master.h	/^  MasterMultiface() {}$/;"	f	class:MasterMultiface
+MasterMultiface	proxy/worker/gen-cpp/Master.h	/^  MasterMultiface(std::vector<boost::shared_ptr<MasterIf> >& ifaces) : ifaces_(ifaces) {$/;"	f	class:MasterMultiface
+MasterMultiface	proxy/worker/gen-cpp/Master.h	/^class MasterMultiface : virtual public MasterIf {$/;"	c
+MasterNull	proxy/master/gen-cpp/Master.h	/^class MasterNull : virtual public MasterIf {$/;"	c
+MasterNull	proxy/worker/gen-cpp/Master.h	/^class MasterNull : virtual public MasterIf {$/;"	c
+MasterProcessor	proxy/master/gen-cpp/Master.h	/^  MasterProcessor(boost::shared_ptr<MasterIf> iface) :$/;"	f	class:MasterProcessor
+MasterProcessor	proxy/master/gen-cpp/Master.h	/^class MasterProcessor : public ::apache::thrift::TDispatchProcessor {$/;"	c
+MasterProcessor	proxy/worker/gen-cpp/Master.h	/^  MasterProcessor(boost::shared_ptr<MasterIf> iface) :$/;"	f	class:MasterProcessor
+MasterProcessor	proxy/worker/gen-cpp/Master.h	/^class MasterProcessor : public ::apache::thrift::TDispatchProcessor {$/;"	c
+MasterProcessorFactory	proxy/master/gen-cpp/Master.h	/^  MasterProcessorFactory(const ::boost::shared_ptr< MasterIfFactory >& handlerFactory) :$/;"	f	class:MasterProcessorFactory
+MasterProcessorFactory	proxy/master/gen-cpp/Master.h	/^class MasterProcessorFactory : public ::apache::thrift::TProcessorFactory {$/;"	c
+MasterProcessorFactory	proxy/worker/gen-cpp/Master.h	/^  MasterProcessorFactory(const ::boost::shared_ptr< MasterIfFactory >& handlerFactory) :$/;"	f	class:MasterProcessorFactory
+MasterProcessorFactory	proxy/worker/gen-cpp/Master.h	/^class MasterProcessorFactory : public ::apache::thrift::TProcessorFactory {$/;"	c
+MasterService	master/service.h	/^class MasterService : public MasterIf {$/;"	c
+Master_AddVC_args	proxy/master/gen-cpp/Master.h	/^  Master_AddVC_args() {$/;"	f	class:Master_AddVC_args
+Master_AddVC_args	proxy/master/gen-cpp/Master.h	/^class Master_AddVC_args {$/;"	c
+Master_AddVC_args	proxy/worker/gen-cpp/Master.h	/^  Master_AddVC_args() {$/;"	f	class:Master_AddVC_args
+Master_AddVC_args	proxy/worker/gen-cpp/Master.h	/^class Master_AddVC_args {$/;"	c
+Master_AddVC_pargs	proxy/master/gen-cpp/Master.h	/^class Master_AddVC_pargs {$/;"	c
+Master_AddVC_pargs	proxy/worker/gen-cpp/Master.h	/^class Master_AddVC_pargs {$/;"	c
+Master_AddVC_presult	proxy/master/gen-cpp/Master.h	/^class Master_AddVC_presult {$/;"	c
+Master_AddVC_presult	proxy/worker/gen-cpp/Master.h	/^class Master_AddVC_presult {$/;"	c
+Master_AddVC_result	proxy/master/gen-cpp/Master.h	/^  Master_AddVC_result() : success(0) {$/;"	f	class:Master_AddVC_result
+Master_AddVC_result	proxy/master/gen-cpp/Master.h	/^class Master_AddVC_result {$/;"	c
+Master_AddVC_result	proxy/worker/gen-cpp/Master.h	/^  Master_AddVC_result() : success(0) {$/;"	f	class:Master_AddVC_result
+Master_AddVC_result	proxy/worker/gen-cpp/Master.h	/^class Master_AddVC_result {$/;"	c
+Master_H	proxy/master/gen-cpp/Master.h	8;"	d
+Master_H	proxy/worker/gen-cpp/Master.h	8;"	d
+Master_Heartbeat_args	proxy/master/gen-cpp/Master.h	/^  Master_Heartbeat_args() {$/;"	f	class:Master_Heartbeat_args
+Master_Heartbeat_args	proxy/master/gen-cpp/Master.h	/^class Master_Heartbeat_args {$/;"	c
+Master_Heartbeat_args	proxy/worker/gen-cpp/Master.h	/^  Master_Heartbeat_args() {$/;"	f	class:Master_Heartbeat_args
+Master_Heartbeat_args	proxy/worker/gen-cpp/Master.h	/^class Master_Heartbeat_args {$/;"	c
+Master_Heartbeat_pargs	proxy/master/gen-cpp/Master.h	/^class Master_Heartbeat_pargs {$/;"	c
+Master_Heartbeat_pargs	proxy/worker/gen-cpp/Master.h	/^class Master_Heartbeat_pargs {$/;"	c
+Master_Heartbeat_presult	proxy/master/gen-cpp/Master.h	/^class Master_Heartbeat_presult {$/;"	c
+Master_Heartbeat_presult	proxy/worker/gen-cpp/Master.h	/^class Master_Heartbeat_presult {$/;"	c
+Master_Heartbeat_result	proxy/master/gen-cpp/Master.h	/^  Master_Heartbeat_result() {$/;"	f	class:Master_Heartbeat_result
+Master_Heartbeat_result	proxy/master/gen-cpp/Master.h	/^class Master_Heartbeat_result {$/;"	c
+Master_Heartbeat_result	proxy/worker/gen-cpp/Master.h	/^  Master_Heartbeat_result() {$/;"	f	class:Master_Heartbeat_result
+Master_Heartbeat_result	proxy/worker/gen-cpp/Master.h	/^class Master_Heartbeat_result {$/;"	c
+MemoryUsage	include/system.h	/^    static double MemoryUsage() {$/;"	f	class:System
+Mutex	include/mutex.h	/^            Mutex() {$/;"	f	class:lynn::Mutex
+Mutex	include/mutex.h	/^    class Mutex {$/;"	c	namespace:lynn
+MutexLocker	include/mutex.h	/^            explicit MutexLocker(Mutex& mutex) : m_mutex(&mutex) {$/;"	f	class:lynn::MutexLocker
+MutexLocker	include/mutex.h	/^    class MutexLocker {$/;"	c	namespace:lynn
+PhysicalMemory	include/system.h	/^    static int PhysicalMemory() {$/;"	f	class:System
+PopFront	include/block_queue.h	/^            bool PopFront(T* value, size_t timeout) {$/;"	f	class:lynn::BlockQueue
+PopFront	include/block_queue.h	/^            void PopFront(T* value) {$/;"	f	class:lynn::BlockQueue
+PopFront	master/task_queue.cpp	/^TaskPtr TaskQueue::PopFront() {$/;"	f	class:TaskQueue
+PopTask	master/virtual_cluster.cpp	/^TaskPtr VC::PopTask(TaskState type) {$/;"	f	class:VC
+ProcessFunction	proxy/master/gen-cpp/Master.h	/^  typedef  void (MasterProcessor::*ProcessFunction)(int32_t, ::apache::thrift::protocol::TProtocol*, ::apache::thrift::protocol::TProtocol*, void*);$/;"	t	class:MasterProcessor
+ProcessFunction	proxy/worker/gen-cpp/Master.h	/^  typedef  void (MasterProcessor::*ProcessFunction)(int32_t, ::apache::thrift::protocol::TProtocol*, ::apache::thrift::protocol::TProtocol*, void*);$/;"	t	class:MasterProcessor
+ProcessFunction	proxy/worker/gen-cpp/Worker.h	/^  typedef  void (WorkerProcessor::*ProcessFunction)(int32_t, ::apache::thrift::protocol::TProtocol*, ::apache::thrift::protocol::TProtocol*, void*);$/;"	t	class:WorkerProcessor
+ProcessMap	proxy/master/gen-cpp/Master.h	/^  typedef std::map<std::string, ProcessFunction> ProcessMap;$/;"	t	class:MasterProcessor
+ProcessMap	proxy/worker/gen-cpp/Master.h	/^  typedef std::map<std::string, ProcessFunction> ProcessMap;$/;"	t	class:MasterProcessor
+ProcessMap	proxy/worker/gen-cpp/Worker.h	/^  typedef std::map<std::string, ProcessFunction> ProcessMap;$/;"	t	class:WorkerProcessor
+Proxy	include/rpc.h	/^    Proxy(const T& client, const shared_ptr<TTransport>& connector)$/;"	f	class:Proxy
+Proxy	include/rpc.h	/^class Proxy {$/;"	c
+PushBack	include/block_queue.h	/^            void PushBack(const T& element) {$/;"	f	class:lynn::BlockQueue
+PushBack	master/task_queue.cpp	/^void TaskQueue::PushBack(const TaskPtr& task) {$/;"	f	class:TaskQueue
+PushTask	master/virtual_cluster.cpp	/^void VC::PushTask(const TaskPtr& task) {$/;"	f	class:VC
+RAPIDXML_ALIGNMENT	include/rapidxml.hpp	131;"	d
+RAPIDXML_DYNAMIC_POOL_SIZE	include/rapidxml.hpp	123;"	d
+RAPIDXML_HPP_INCLUDED	include/rapidxml.hpp	2;"	d
+RAPIDXML_PARSE_ERROR	include/rapidxml.hpp	2589;"	d
+RAPIDXML_PARSE_ERROR	include/rapidxml.hpp	28;"	d
+RAPIDXML_STATIC_POOL_SIZE	include/rapidxml.hpp	116;"	d
+RAPIDXML_UTILS_HPP_INCLUDED	include/rapidxml_utils.hpp	2;"	d
+RWLock	include/rwlock.h	/^            RWLock() {$/;"	f	class:lynn::RWLock
+RWLock	include/rwlock.h	/^    class RWLock {$/;"	c	namespace:lynn
+ReadLock	include/rwlock.h	/^            void ReadLock() {$/;"	f	class:lynn::RWLock
+ReadLocker	include/rwlock.h	/^            explicit ReadLocker(RWLock& rwlock) : m_rwlock(&rwlock) {$/;"	f	class:lynn::ReadLocker
+ReadLocker	include/rwlock.h	/^    class ReadLocker {$/;"	c	namespace:lynn
+RemoveDir	include/system.h	/^    static void RemoveDir(const char* path) {$/;"	f	class:System
+ResourceManager	worker/resource_manager.h	/^class ResourceManager {$/;"	c
+ResourceManagerI	worker/resource_manager.h	/^typedef Singleton<ResourceManager> ResourceManagerI;$/;"	t
+Rpc	include/rpc.h	/^class Rpc {$/;"	c
+SchedulerProcessor	master/work_thread.cpp	/^void* SchedulerProcessor() {$/;"	f
+SetAllFD	include/system.h	/^    static bool SetAllFD(){$/;"	f	class:System
+SetTaskState	master/task.cpp	/^void Task::SetTaskState(TaskState ts) {$/;"	f	class:Task
+Signal	include/cond.h	/^            void Signal(){$/;"	f	class:lynn::Cond
+Singleton	include/singleton.h	/^class Singleton {$/;"	c
+Size	include/block_queue.h	/^            int Size() {$/;"	f	class:lynn::BlockQueue
+Size	master/task_queue.cpp	/^int32_t TaskQueue::Size() {$/;"	f	class:TaskQueue
+StartTask	proxy/worker/gen-cpp/Worker.cpp	/^bool WorkerClient::StartTask(const  ::TaskInfo& info)$/;"	f	class:WorkerClient
+StartTask	proxy/worker/gen-cpp/Worker.h	/^  bool StartTask(const  ::TaskInfo& \/* info *\/) {$/;"	f	class:WorkerNull
+StartTask	proxy/worker/gen-cpp/Worker.h	/^  bool StartTask(const  ::TaskInfo& info) {$/;"	f	class:WorkerMultiface
+StartTask	proxy/worker/gen-cpp/Worker_server.skeleton.cpp	/^  bool StartTask(const  ::TaskInfo& info) {$/;"	f	class:WorkerHandler
+StartTask	worker/service.cpp	/^bool WorkerService::StartTask(const TaskInfo& info) {$/;"	f	class:WorkerService
+System	include/system.h	/^class System {$/;"	c
+TASK_RUN	master/task.h	/^    TASK_RUN,$/;"	e	enum:TaskState
+TASK_WAIT	master/task.h	/^    TASK_WAIT,$/;"	e	enum:TaskState
+TIME_OUT	include/rpc.h	/^    static const int TIME_OUT = 2000;$/;"	m	class:Rpc
+Task	master/task.cpp	/^Task::Task(const TaskInfo& info): m_task_info(info) {$/;"	f	class:Task
+Task	master/task.h	/^class Task {$/;"	c
+TaskBufferI	master/task.h	/^typedef Singleton< BlockQueue<TaskPtr> > TaskBufferI;$/;"	t
+TaskFunc	master/task_pool.h	/^    typedef function<void(const TaskPtr&)> TaskFunc;$/;"	t	class:TaskPool
+TaskIdentity	master/identity.h	/^class TaskIdentity : public Identity {$/;"	c
+TaskIdentityI	master/identity.h	/^typedef Singleton<TaskIdentity> TaskIdentityI;$/;"	t
+TaskInfo	proxy/master/gen-cpp/master_types.h	/^  TaskInfo() : vc_name(), id(0), need_vcpu(0), need_memory(0) {$/;"	f	class:TaskInfo
+TaskInfo	proxy/master/gen-cpp/master_types.h	/^class TaskInfo {$/;"	c
+TaskInfo	proxy/worker/gen-cpp/master_types.h	/^  TaskInfo() : vc_name(), id(0), need_vcpu(0), need_memory(0) {$/;"	f	class:TaskInfo
+TaskInfo	proxy/worker/gen-cpp/master_types.h	/^class TaskInfo {$/;"	c
+TaskPool	master/task_pool.h	/^class TaskPool {$/;"	c
+TaskPoolI	master/task_pool.h	/^typedef Singleton<TaskPool> TaskPoolI;$/;"	t
+TaskProcessor	master/work_thread.cpp	/^void* TaskProcessor() {$/;"	f
+TaskPtr	master/task.h	/^typedef shared_ptr<Task> TaskPtr;$/;"	t
+TaskQueue	master/task_queue.h	/^class TaskQueue {$/;"	c
+TaskState	master/task.h	/^enum TaskState {$/;"	g
+TotalMemory	include/system.h	/^    static int TotalMemory() {$/;"	f	class:System
+Unlock	include/mutex.h	/^            void Unlock() {$/;"	f	class:lynn::Mutex
+Unlock	include/rwlock.h	/^            void Unlock() {$/;"	f	class:lynn::RWLock
+UsedMemory	include/system.h	/^    static int UsedMemory() {$/;"	f	class:System
+VC	master/virtual_cluster.cpp	/^VC::VC(const VCInfo& info) : m_vc_info(info) {$/;"	f	class:VC
+VC	master/virtual_cluster.h	/^class VC {$/;"	c
+VCFunc	master/vc_pool.h	/^    typedef function<void(const VCPtr&)> VCFunc; $/;"	t	class:VCPool
+VCInfo	proxy/master/gen-cpp/master_types.h	/^  VCInfo() : name(), vcpu(0), memory(0), quota(0) {$/;"	f	class:VCInfo
+VCInfo	proxy/master/gen-cpp/master_types.h	/^class VCInfo {$/;"	c
+VCInfo	proxy/worker/gen-cpp/master_types.h	/^  VCInfo() : name(), vcpu(0), memory(0), quota(0) {$/;"	f	class:VCInfo
+VCInfo	proxy/worker/gen-cpp/master_types.h	/^class VCInfo {$/;"	c
+VCPool	master/vc_pool.h	/^class VCPool {$/;"	c
+VCPoolI	master/vc_pool.h	/^typedef Singleton<VCPool> VCPoolI;$/;"	t
+VCPtr	master/virtual_cluster.h	/^typedef shared_ptr<VC> VCPtr;$/;"	t
+VM	worker/vm.h	/^class VM {$/;"	c
+VMStat	proxy/master/gen-cpp/master_types.h	/^  VMStat() : vc_name(), task_id(0), used_vcpu(0), used_memory(0) {$/;"	f	class:VMStat
+VMStat	proxy/master/gen-cpp/master_types.h	/^class VMStat {$/;"	c
+VMStat	proxy/worker/gen-cpp/master_types.h	/^  VMStat() : vc_name(), task_id(0), used_vcpu(0), used_memory(0) {$/;"	f	class:VMStat
+VMStat	proxy/worker/gen-cpp/master_types.h	/^class VMStat {$/;"	c
+VirtualMemory	include/system.h	/^    static int VirtualMemory() {$/;"	f	class:System
+Wait	include/block_queue.h	/^            void Wait() {$/;"	f	class:lynn::BlockQueue
+Wait	include/cond.h	/^            int Wait(Mutex& mutex, size_t timeout){$/;"	f	class:lynn::Cond
+Wait	include/cond.h	/^            void Wait(Mutex& mutex){$/;"	f	class:lynn::Cond
+WorkerClient	proxy/worker/gen-cpp/Worker.h	/^  WorkerClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> iprot, boost::shared_ptr< ::apache::thrift::protocol::TProtocol> oprot) :$/;"	f	class:WorkerClient
+WorkerClient	proxy/worker/gen-cpp/Worker.h	/^  WorkerClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> prot) :$/;"	f	class:WorkerClient
+WorkerClient	proxy/worker/gen-cpp/Worker.h	/^class WorkerClient : virtual public WorkerIf {$/;"	c
+WorkerConfig	worker/config.h	/^class WorkerConfig : public Config {$/;"	c
+WorkerConfigI	worker/config.h	/^typedef Singleton<WorkerConfig> WorkerConfigI;$/;"	t
+WorkerHandler	proxy/worker/gen-cpp/Worker_server.skeleton.cpp	/^  WorkerHandler() {$/;"	f	class:WorkerHandler
+WorkerHandler	proxy/worker/gen-cpp/Worker_server.skeleton.cpp	/^class WorkerHandler : virtual public WorkerIf {$/;"	c	file:
+WorkerIf	proxy/worker/gen-cpp/Worker.h	/^class WorkerIf {$/;"	c
+WorkerIfFactory	proxy/worker/gen-cpp/Worker.h	/^class WorkerIfFactory {$/;"	c
+WorkerIfSingletonFactory	proxy/worker/gen-cpp/Worker.h	/^  WorkerIfSingletonFactory(const boost::shared_ptr<WorkerIf>& iface) : iface_(iface) {}$/;"	f	class:WorkerIfSingletonFactory
+WorkerIfSingletonFactory	proxy/worker/gen-cpp/Worker.h	/^class WorkerIfSingletonFactory : virtual public WorkerIfFactory {$/;"	c
+WorkerMultiface	proxy/worker/gen-cpp/Worker.h	/^  WorkerMultiface() {}$/;"	f	class:WorkerMultiface
+WorkerMultiface	proxy/worker/gen-cpp/Worker.h	/^  WorkerMultiface(std::vector<boost::shared_ptr<WorkerIf> >& ifaces) : ifaces_(ifaces) {$/;"	f	class:WorkerMultiface
+WorkerMultiface	proxy/worker/gen-cpp/Worker.h	/^class WorkerMultiface : virtual public WorkerIf {$/;"	c
+WorkerNull	proxy/worker/gen-cpp/Worker.h	/^class WorkerNull : virtual public WorkerIf {$/;"	c
+WorkerProcessor	proxy/worker/gen-cpp/Worker.h	/^  WorkerProcessor(boost::shared_ptr<WorkerIf> iface) :$/;"	f	class:WorkerProcessor
+WorkerProcessor	proxy/worker/gen-cpp/Worker.h	/^class WorkerProcessor : public ::apache::thrift::TDispatchProcessor {$/;"	c
+WorkerProcessorFactory	proxy/worker/gen-cpp/Worker.h	/^  WorkerProcessorFactory(const ::boost::shared_ptr< WorkerIfFactory >& handlerFactory) :$/;"	f	class:WorkerProcessorFactory
+WorkerProcessorFactory	proxy/worker/gen-cpp/Worker.h	/^class WorkerProcessorFactory : public ::apache::thrift::TProcessorFactory {$/;"	c
+WorkerService	worker/service.h	/^class WorkerService : public WorkerIf {$/;"	c
+Worker_H	proxy/worker/gen-cpp/Worker.h	8;"	d
+Worker_StartTask_args	proxy/worker/gen-cpp/Worker.h	/^  Worker_StartTask_args() {$/;"	f	class:Worker_StartTask_args
+Worker_StartTask_args	proxy/worker/gen-cpp/Worker.h	/^class Worker_StartTask_args {$/;"	c
+Worker_StartTask_pargs	proxy/worker/gen-cpp/Worker.h	/^class Worker_StartTask_pargs {$/;"	c
+Worker_StartTask_presult	proxy/worker/gen-cpp/Worker.h	/^class Worker_StartTask_presult {$/;"	c
+Worker_StartTask_result	proxy/worker/gen-cpp/Worker.h	/^  Worker_StartTask_result() : success(0) {$/;"	f	class:Worker_StartTask_result
+Worker_StartTask_result	proxy/worker/gen-cpp/Worker.h	/^class Worker_StartTask_result {$/;"	c
+WriteLock	include/rwlock.h	/^            void WriteLock() {$/;"	f	class:lynn::RWLock
+WriteLocker	include/rwlock.h	/^            explicit WriteLocker(RWLock& rwlock) : m_rwlock(&rwlock) {$/;"	f	class:lynn::WriteLocker
+WriteLocker	include/rwlock.h	/^    class WriteLocker {$/;"	c	namespace:lynn
+_LYNN_INCLUDE_ATTRIBUTES_H_	include/attributes.h	2;"	d
+_LYNN_INCLUDE_BLOCK_QUEUE_H_	include/block_queue.h	2;"	d
+_LYNN_INCLUDE_COND_H_	include/cond.h	2;"	d
+_LYNN_INCLUDE_EVENT_H_	include/event.h	2;"	d
+_LYNN_INCLUDE_IDENTITY_H_	include/identity.h	2;"	d
+_LYNN_INCLUDE_MUTEX_H_	include/mutex.h	2;"	d
+_LYNN_INCLUDE_PROXY_H_	include/proxy.h	2;"	d
+_LYNN_INCLUDE_RPC_H_	include/rpc.h	2;"	d
+_LYNN_INCLUDE_RWLOCK_H_	include/rwlock.h	2;"	d
+_LYNN_INCLUDE_SINGLETON_H_	include/singleton.h	2;"	d
+_LYNN_INCLUDE_SYSTEM_H_	include/system.h	2;"	d
+_LYNN_MASTER_MACHINE_H_	master/machine.h	2;"	d
+_LYNN_MASTER_MACHINE_POOL_H	master/machine_pool.h	2;"	d
+_LYNN_MASTER_POOL_H_	master/vc_pool.h	2;"	d
+_LYNN_MASTER_TASK_H_	master/task.h	2;"	d
+_LYNN_MASTER_TASK_POOL_H_	master/task_pool.h	2;"	d
+_LYNN_MASTER_TASK_QUEUE_H_	master/task_queue.h	2;"	d
+_LYNN_MASTER_VIRTUAL_CLSUTER_H_	master/virtual_cluster.h	2;"	d
+_LYNN_SRC_MASTER_SERVICE_H_	master/service.h	2;"	d
+_LYNN_SRC_WORKER_SERVICE_H_	worker/service.h	2;"	d
+_LYNN_WORKER_CONFIG_H_	worker/config.h	2;"	d
+_LYNN_WORKER_RESOURCE_MANAGER_H_	worker/resource_manager.h	2;"	d
+_LYNN_WORKER_VM_H_	worker/vm.h	2;"	d
+_MASTER_CONFIG_H_	master/config.h	2;"	d
+_MachineInfo__isset	proxy/master/gen-cpp/master_types.h	/^  _MachineInfo__isset() : endpoint(false), cpu_usage(false), total_vcpu(false), total_memory(false), avail_vcpu(false), avail_memory(false), vm_list(false) {}$/;"	f	struct:_MachineInfo__isset
+_MachineInfo__isset	proxy/master/gen-cpp/master_types.h	/^typedef struct _MachineInfo__isset {$/;"	s
+_MachineInfo__isset	proxy/master/gen-cpp/master_types.h	/^} _MachineInfo__isset;$/;"	t	typeref:struct:_MachineInfo__isset
+_MachineInfo__isset	proxy/worker/gen-cpp/master_types.h	/^  _MachineInfo__isset() : endpoint(false), cpu_usage(false), total_vcpu(false), total_memory(false), avail_vcpu(false), avail_memory(false), vm_list(false) {}$/;"	f	struct:_MachineInfo__isset
+_MachineInfo__isset	proxy/worker/gen-cpp/master_types.h	/^typedef struct _MachineInfo__isset {$/;"	s
+_MachineInfo__isset	proxy/worker/gen-cpp/master_types.h	/^} _MachineInfo__isset;$/;"	t	typeref:struct:_MachineInfo__isset
+_Master_AddVC_args__isset	proxy/master/gen-cpp/Master.h	/^  _Master_AddVC_args__isset() : vc_info(false) {}$/;"	f	struct:_Master_AddVC_args__isset
+_Master_AddVC_args__isset	proxy/master/gen-cpp/Master.h	/^typedef struct _Master_AddVC_args__isset {$/;"	s
+_Master_AddVC_args__isset	proxy/master/gen-cpp/Master.h	/^} _Master_AddVC_args__isset;$/;"	t	typeref:struct:_Master_AddVC_args__isset
+_Master_AddVC_args__isset	proxy/worker/gen-cpp/Master.h	/^  _Master_AddVC_args__isset() : vc_info(false) {}$/;"	f	struct:_Master_AddVC_args__isset
+_Master_AddVC_args__isset	proxy/worker/gen-cpp/Master.h	/^typedef struct _Master_AddVC_args__isset {$/;"	s
+_Master_AddVC_args__isset	proxy/worker/gen-cpp/Master.h	/^} _Master_AddVC_args__isset;$/;"	t	typeref:struct:_Master_AddVC_args__isset
+_Master_AddVC_presult__isset	proxy/master/gen-cpp/Master.h	/^  _Master_AddVC_presult__isset() : success(false) {}$/;"	f	struct:_Master_AddVC_presult__isset
+_Master_AddVC_presult__isset	proxy/master/gen-cpp/Master.h	/^typedef struct _Master_AddVC_presult__isset {$/;"	s
+_Master_AddVC_presult__isset	proxy/master/gen-cpp/Master.h	/^} _Master_AddVC_presult__isset;$/;"	t	typeref:struct:_Master_AddVC_presult__isset
+_Master_AddVC_presult__isset	proxy/worker/gen-cpp/Master.h	/^  _Master_AddVC_presult__isset() : success(false) {}$/;"	f	struct:_Master_AddVC_presult__isset
+_Master_AddVC_presult__isset	proxy/worker/gen-cpp/Master.h	/^typedef struct _Master_AddVC_presult__isset {$/;"	s
+_Master_AddVC_presult__isset	proxy/worker/gen-cpp/Master.h	/^} _Master_AddVC_presult__isset;$/;"	t	typeref:struct:_Master_AddVC_presult__isset
+_Master_AddVC_result__isset	proxy/master/gen-cpp/Master.h	/^  _Master_AddVC_result__isset() : success(false) {}$/;"	f	struct:_Master_AddVC_result__isset
+_Master_AddVC_result__isset	proxy/master/gen-cpp/Master.h	/^typedef struct _Master_AddVC_result__isset {$/;"	s
+_Master_AddVC_result__isset	proxy/master/gen-cpp/Master.h	/^} _Master_AddVC_result__isset;$/;"	t	typeref:struct:_Master_AddVC_result__isset
+_Master_AddVC_result__isset	proxy/worker/gen-cpp/Master.h	/^  _Master_AddVC_result__isset() : success(false) {}$/;"	f	struct:_Master_AddVC_result__isset
+_Master_AddVC_result__isset	proxy/worker/gen-cpp/Master.h	/^typedef struct _Master_AddVC_result__isset {$/;"	s
+_Master_AddVC_result__isset	proxy/worker/gen-cpp/Master.h	/^} _Master_AddVC_result__isset;$/;"	t	typeref:struct:_Master_AddVC_result__isset
+_Master_Heartbeat_args__isset	proxy/master/gen-cpp/Master.h	/^  _Master_Heartbeat_args__isset() : info(false) {}$/;"	f	struct:_Master_Heartbeat_args__isset
+_Master_Heartbeat_args__isset	proxy/master/gen-cpp/Master.h	/^typedef struct _Master_Heartbeat_args__isset {$/;"	s
+_Master_Heartbeat_args__isset	proxy/master/gen-cpp/Master.h	/^} _Master_Heartbeat_args__isset;$/;"	t	typeref:struct:_Master_Heartbeat_args__isset
+_Master_Heartbeat_args__isset	proxy/worker/gen-cpp/Master.h	/^  _Master_Heartbeat_args__isset() : info(false) {}$/;"	f	struct:_Master_Heartbeat_args__isset
+_Master_Heartbeat_args__isset	proxy/worker/gen-cpp/Master.h	/^typedef struct _Master_Heartbeat_args__isset {$/;"	s
+_Master_Heartbeat_args__isset	proxy/worker/gen-cpp/Master.h	/^} _Master_Heartbeat_args__isset;$/;"	t	typeref:struct:_Master_Heartbeat_args__isset
+_TaskInfo__isset	proxy/master/gen-cpp/master_types.h	/^  _TaskInfo__isset() : vc_name(false), id(false), need_vcpu(false), need_memory(false) {}$/;"	f	struct:_TaskInfo__isset
+_TaskInfo__isset	proxy/master/gen-cpp/master_types.h	/^typedef struct _TaskInfo__isset {$/;"	s
+_TaskInfo__isset	proxy/master/gen-cpp/master_types.h	/^} _TaskInfo__isset;$/;"	t	typeref:struct:_TaskInfo__isset
+_TaskInfo__isset	proxy/worker/gen-cpp/master_types.h	/^  _TaskInfo__isset() : vc_name(false), id(false), need_vcpu(false), need_memory(false) {}$/;"	f	struct:_TaskInfo__isset
+_TaskInfo__isset	proxy/worker/gen-cpp/master_types.h	/^typedef struct _TaskInfo__isset {$/;"	s
+_TaskInfo__isset	proxy/worker/gen-cpp/master_types.h	/^} _TaskInfo__isset;$/;"	t	typeref:struct:_TaskInfo__isset
+_VCInfo__isset	proxy/master/gen-cpp/master_types.h	/^  _VCInfo__isset() : name(false), vcpu(false), memory(false), quota(false) {}$/;"	f	struct:_VCInfo__isset
+_VCInfo__isset	proxy/master/gen-cpp/master_types.h	/^typedef struct _VCInfo__isset {$/;"	s
+_VCInfo__isset	proxy/master/gen-cpp/master_types.h	/^} _VCInfo__isset;$/;"	t	typeref:struct:_VCInfo__isset
+_VCInfo__isset	proxy/worker/gen-cpp/master_types.h	/^  _VCInfo__isset() : name(false), vcpu(false), memory(false), quota(false) {}$/;"	f	struct:_VCInfo__isset
+_VCInfo__isset	proxy/worker/gen-cpp/master_types.h	/^typedef struct _VCInfo__isset {$/;"	s
+_VCInfo__isset	proxy/worker/gen-cpp/master_types.h	/^} _VCInfo__isset;$/;"	t	typeref:struct:_VCInfo__isset
+_VMStat__isset	proxy/master/gen-cpp/master_types.h	/^  _VMStat__isset() : vc_name(false), task_id(false), used_vcpu(false), used_memory(false) {}$/;"	f	struct:_VMStat__isset
+_VMStat__isset	proxy/master/gen-cpp/master_types.h	/^typedef struct _VMStat__isset {$/;"	s
+_VMStat__isset	proxy/master/gen-cpp/master_types.h	/^} _VMStat__isset;$/;"	t	typeref:struct:_VMStat__isset
+_VMStat__isset	proxy/worker/gen-cpp/master_types.h	/^  _VMStat__isset() : vc_name(false), task_id(false), used_vcpu(false), used_memory(false) {}$/;"	f	struct:_VMStat__isset
+_VMStat__isset	proxy/worker/gen-cpp/master_types.h	/^typedef struct _VMStat__isset {$/;"	s
+_VMStat__isset	proxy/worker/gen-cpp/master_types.h	/^} _VMStat__isset;$/;"	t	typeref:struct:_VMStat__isset
+_Worker_StartTask_args__isset	proxy/worker/gen-cpp/Worker.h	/^  _Worker_StartTask_args__isset() : info(false) {}$/;"	f	struct:_Worker_StartTask_args__isset
+_Worker_StartTask_args__isset	proxy/worker/gen-cpp/Worker.h	/^typedef struct _Worker_StartTask_args__isset {$/;"	s
+_Worker_StartTask_args__isset	proxy/worker/gen-cpp/Worker.h	/^} _Worker_StartTask_args__isset;$/;"	t	typeref:struct:_Worker_StartTask_args__isset
+_Worker_StartTask_presult__isset	proxy/worker/gen-cpp/Worker.h	/^  _Worker_StartTask_presult__isset() : success(false) {}$/;"	f	struct:_Worker_StartTask_presult__isset
+_Worker_StartTask_presult__isset	proxy/worker/gen-cpp/Worker.h	/^typedef struct _Worker_StartTask_presult__isset {$/;"	s
+_Worker_StartTask_presult__isset	proxy/worker/gen-cpp/Worker.h	/^} _Worker_StartTask_presult__isset;$/;"	t	typeref:struct:_Worker_StartTask_presult__isset
+_Worker_StartTask_result__isset	proxy/worker/gen-cpp/Worker.h	/^  _Worker_StartTask_result__isset() : success(false) {}$/;"	f	struct:_Worker_StartTask_result__isset
+_Worker_StartTask_result__isset	proxy/worker/gen-cpp/Worker.h	/^typedef struct _Worker_StartTask_result__isset {$/;"	s
+_Worker_StartTask_result__isset	proxy/worker/gen-cpp/Worker.h	/^} _Worker_StartTask_result__isset;$/;"	t	typeref:struct:_Worker_StartTask_result__isset
+__isset	proxy/master/gen-cpp/Master.h	/^  _Master_AddVC_args__isset __isset;$/;"	m	class:Master_AddVC_args
+__isset	proxy/master/gen-cpp/Master.h	/^  _Master_AddVC_presult__isset __isset;$/;"	m	class:Master_AddVC_presult
+__isset	proxy/master/gen-cpp/Master.h	/^  _Master_AddVC_result__isset __isset;$/;"	m	class:Master_AddVC_result
+__isset	proxy/master/gen-cpp/Master.h	/^  _Master_Heartbeat_args__isset __isset;$/;"	m	class:Master_Heartbeat_args
+__isset	proxy/master/gen-cpp/master_types.h	/^  _MachineInfo__isset __isset;$/;"	m	class:MachineInfo
+__isset	proxy/master/gen-cpp/master_types.h	/^  _TaskInfo__isset __isset;$/;"	m	class:TaskInfo
+__isset	proxy/master/gen-cpp/master_types.h	/^  _VCInfo__isset __isset;$/;"	m	class:VCInfo
+__isset	proxy/master/gen-cpp/master_types.h	/^  _VMStat__isset __isset;$/;"	m	class:VMStat
+__isset	proxy/worker/gen-cpp/Master.h	/^  _Master_AddVC_args__isset __isset;$/;"	m	class:Master_AddVC_args
+__isset	proxy/worker/gen-cpp/Master.h	/^  _Master_AddVC_presult__isset __isset;$/;"	m	class:Master_AddVC_presult
+__isset	proxy/worker/gen-cpp/Master.h	/^  _Master_AddVC_result__isset __isset;$/;"	m	class:Master_AddVC_result
+__isset	proxy/worker/gen-cpp/Master.h	/^  _Master_Heartbeat_args__isset __isset;$/;"	m	class:Master_Heartbeat_args
+__isset	proxy/worker/gen-cpp/Worker.h	/^  _Worker_StartTask_args__isset __isset;$/;"	m	class:Worker_StartTask_args
+__isset	proxy/worker/gen-cpp/Worker.h	/^  _Worker_StartTask_presult__isset __isset;$/;"	m	class:Worker_StartTask_presult
+__isset	proxy/worker/gen-cpp/Worker.h	/^  _Worker_StartTask_result__isset __isset;$/;"	m	class:Worker_StartTask_result
+__isset	proxy/worker/gen-cpp/master_types.h	/^  _MachineInfo__isset __isset;$/;"	m	class:MachineInfo
+__isset	proxy/worker/gen-cpp/master_types.h	/^  _TaskInfo__isset __isset;$/;"	m	class:TaskInfo
+__isset	proxy/worker/gen-cpp/master_types.h	/^  _VCInfo__isset __isset;$/;"	m	class:VCInfo
+__isset	proxy/worker/gen-cpp/master_types.h	/^  _VMStat__isset __isset;$/;"	m	class:VMStat
+__set_avail_memory	proxy/master/gen-cpp/master_types.h	/^  void __set_avail_memory(const int32_t val) {$/;"	f	class:MachineInfo
+__set_avail_memory	proxy/worker/gen-cpp/master_types.h	/^  void __set_avail_memory(const int32_t val) {$/;"	f	class:MachineInfo
+__set_avail_vcpu	proxy/master/gen-cpp/master_types.h	/^  void __set_avail_vcpu(const int32_t val) {$/;"	f	class:MachineInfo
+__set_avail_vcpu	proxy/worker/gen-cpp/master_types.h	/^  void __set_avail_vcpu(const int32_t val) {$/;"	f	class:MachineInfo
+__set_cpu_usage	proxy/master/gen-cpp/master_types.h	/^  void __set_cpu_usage(const double val) {$/;"	f	class:MachineInfo
+__set_cpu_usage	proxy/worker/gen-cpp/master_types.h	/^  void __set_cpu_usage(const double val) {$/;"	f	class:MachineInfo
+__set_endpoint	proxy/master/gen-cpp/master_types.h	/^  void __set_endpoint(const std::string& val) {$/;"	f	class:MachineInfo
+__set_endpoint	proxy/worker/gen-cpp/master_types.h	/^  void __set_endpoint(const std::string& val) {$/;"	f	class:MachineInfo
+__set_id	proxy/master/gen-cpp/master_types.h	/^  void __set_id(const int64_t val) {$/;"	f	class:TaskInfo
+__set_id	proxy/worker/gen-cpp/master_types.h	/^  void __set_id(const int64_t val) {$/;"	f	class:TaskInfo
+__set_info	proxy/master/gen-cpp/Master.h	/^  void __set_info(const MachineInfo& val) {$/;"	f	class:Master_Heartbeat_args
+__set_info	proxy/worker/gen-cpp/Master.h	/^  void __set_info(const MachineInfo& val) {$/;"	f	class:Master_Heartbeat_args
+__set_info	proxy/worker/gen-cpp/Worker.h	/^  void __set_info(const  ::TaskInfo& val) {$/;"	f	class:Worker_StartTask_args
+__set_memory	proxy/master/gen-cpp/master_types.h	/^  void __set_memory(const int32_t val) {$/;"	f	class:VCInfo
+__set_memory	proxy/worker/gen-cpp/master_types.h	/^  void __set_memory(const int32_t val) {$/;"	f	class:VCInfo
+__set_name	proxy/master/gen-cpp/master_types.h	/^  void __set_name(const std::string& val) {$/;"	f	class:VCInfo
+__set_name	proxy/worker/gen-cpp/master_types.h	/^  void __set_name(const std::string& val) {$/;"	f	class:VCInfo
+__set_need_memory	proxy/master/gen-cpp/master_types.h	/^  void __set_need_memory(const int32_t val) {$/;"	f	class:TaskInfo
+__set_need_memory	proxy/worker/gen-cpp/master_types.h	/^  void __set_need_memory(const int32_t val) {$/;"	f	class:TaskInfo
+__set_need_vcpu	proxy/master/gen-cpp/master_types.h	/^  void __set_need_vcpu(const int32_t val) {$/;"	f	class:TaskInfo
+__set_need_vcpu	proxy/worker/gen-cpp/master_types.h	/^  void __set_need_vcpu(const int32_t val) {$/;"	f	class:TaskInfo
+__set_quota	proxy/master/gen-cpp/master_types.h	/^  void __set_quota(const int32_t val) {$/;"	f	class:VCInfo
+__set_quota	proxy/worker/gen-cpp/master_types.h	/^  void __set_quota(const int32_t val) {$/;"	f	class:VCInfo
+__set_success	proxy/master/gen-cpp/Master.h	/^  void __set_success(const int32_t val) {$/;"	f	class:Master_AddVC_result
+__set_success	proxy/worker/gen-cpp/Master.h	/^  void __set_success(const int32_t val) {$/;"	f	class:Master_AddVC_result
+__set_success	proxy/worker/gen-cpp/Worker.h	/^  void __set_success(const bool val) {$/;"	f	class:Worker_StartTask_result
+__set_task_id	proxy/master/gen-cpp/master_types.h	/^  void __set_task_id(const int64_t val) {$/;"	f	class:VMStat
+__set_task_id	proxy/worker/gen-cpp/master_types.h	/^  void __set_task_id(const int64_t val) {$/;"	f	class:VMStat
+__set_total_memory	proxy/master/gen-cpp/master_types.h	/^  void __set_total_memory(const int32_t val) {$/;"	f	class:MachineInfo
+__set_total_memory	proxy/worker/gen-cpp/master_types.h	/^  void __set_total_memory(const int32_t val) {$/;"	f	class:MachineInfo
+__set_total_vcpu	proxy/master/gen-cpp/master_types.h	/^  void __set_total_vcpu(const int32_t val) {$/;"	f	class:MachineInfo
+__set_total_vcpu	proxy/worker/gen-cpp/master_types.h	/^  void __set_total_vcpu(const int32_t val) {$/;"	f	class:MachineInfo
+__set_used_memory	proxy/master/gen-cpp/master_types.h	/^  void __set_used_memory(const int32_t val) {$/;"	f	class:VMStat
+__set_used_memory	proxy/worker/gen-cpp/master_types.h	/^  void __set_used_memory(const int32_t val) {$/;"	f	class:VMStat
+__set_used_vcpu	proxy/master/gen-cpp/master_types.h	/^  void __set_used_vcpu(const double val) {$/;"	f	class:VMStat
+__set_used_vcpu	proxy/worker/gen-cpp/master_types.h	/^  void __set_used_vcpu(const double val) {$/;"	f	class:VMStat
+__set_vc_info	proxy/master/gen-cpp/Master.h	/^  void __set_vc_info(const VCInfo& val) {$/;"	f	class:Master_AddVC_args
+__set_vc_info	proxy/worker/gen-cpp/Master.h	/^  void __set_vc_info(const VCInfo& val) {$/;"	f	class:Master_AddVC_args
+__set_vc_name	proxy/master/gen-cpp/master_types.h	/^  void __set_vc_name(const std::string& val) {$/;"	f	class:TaskInfo
+__set_vc_name	proxy/master/gen-cpp/master_types.h	/^  void __set_vc_name(const std::string& val) {$/;"	f	class:VMStat
+__set_vc_name	proxy/worker/gen-cpp/master_types.h	/^  void __set_vc_name(const std::string& val) {$/;"	f	class:TaskInfo
+__set_vc_name	proxy/worker/gen-cpp/master_types.h	/^  void __set_vc_name(const std::string& val) {$/;"	f	class:VMStat
+__set_vcpu	proxy/master/gen-cpp/master_types.h	/^  void __set_vcpu(const int32_t val) {$/;"	f	class:VCInfo
+__set_vcpu	proxy/worker/gen-cpp/master_types.h	/^  void __set_vcpu(const int32_t val) {$/;"	f	class:VCInfo
+__set_vm_list	proxy/master/gen-cpp/master_types.h	/^  void __set_vm_list(const std::vector<VMStat> & val) {$/;"	f	class:MachineInfo
+__set_vm_list	proxy/worker/gen-cpp/master_types.h	/^  void __set_vm_list(const std::vector<VMStat> & val) {$/;"	f	class:MachineInfo
+add	proxy/master/gen-cpp/Master.h	/^  void add(boost::shared_ptr<MasterIf> iface) {$/;"	f	class:MasterMultiface
+add	proxy/worker/gen-cpp/Master.h	/^  void add(boost::shared_ptr<MasterIf> iface) {$/;"	f	class:MasterMultiface
+add	proxy/worker/gen-cpp/Worker.h	/^  void add(boost::shared_ptr<WorkerIf> iface) {$/;"	f	class:WorkerMultiface
+align	include/rapidxml.hpp	/^        char *align(char *ptr)$/;"	f	class:rapidxml::memory_pool
+alloc_func	include/rapidxml.hpp	/^        typedef void *(alloc_func)(std::size_t);       \/\/ Type of user-defined function used to allocate memory$/;"	t	class:rapidxml::memory_pool
+allocate_aligned	include/rapidxml.hpp	/^        void *allocate_aligned(std::size_t size)$/;"	f	class:rapidxml::memory_pool
+allocate_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *allocate_attribute(const Ch *name = 0, const Ch *value = 0, $/;"	f	class:rapidxml::memory_pool
+allocate_node	include/rapidxml.hpp	/^        xml_node<Ch> *allocate_node(node_type type, $/;"	f	class:rapidxml::memory_pool
+allocate_raw	include/rapidxml.hpp	/^        char *allocate_raw(std::size_t size)$/;"	f	class:rapidxml::memory_pool
+allocate_string	include/rapidxml.hpp	/^        Ch *allocate_string(const Ch *source = 0, std::size_t size = 0)$/;"	f	class:rapidxml::memory_pool
+append_attribute	include/rapidxml.hpp	/^        void append_attribute(xml_attribute<Ch> *attribute)$/;"	f	class:rapidxml::xml_node
+append_node	include/rapidxml.hpp	/^        void append_node(xml_node<Ch> *child)$/;"	f	class:rapidxml::xml_node
+ascii_fingerprint	proxy/master/gen-cpp/master_types.cpp	/^const char* MachineInfo::ascii_fingerprint = "2E26812E0ED4F46F8A3A9E75FA0B9AA9";$/;"	m	class:MachineInfo	file:
+ascii_fingerprint	proxy/master/gen-cpp/master_types.cpp	/^const char* TaskInfo::ascii_fingerprint = "816A2EDC53440EE9F1FD11DF1A5C0C51";$/;"	m	class:TaskInfo	file:
+ascii_fingerprint	proxy/master/gen-cpp/master_types.cpp	/^const char* VCInfo::ascii_fingerprint = "9284B42FBE364FECA7AF8E76C1F488A2";$/;"	m	class:VCInfo	file:
+ascii_fingerprint	proxy/master/gen-cpp/master_types.cpp	/^const char* VMStat::ascii_fingerprint = "CA686CC0868D3556820A8027F5E9EE8D";$/;"	m	class:VMStat	file:
+ascii_fingerprint	proxy/master/gen-cpp/master_types.h	/^  static const char* ascii_fingerprint; \/\/ = "2E26812E0ED4F46F8A3A9E75FA0B9AA9";$/;"	m	class:MachineInfo
+ascii_fingerprint	proxy/master/gen-cpp/master_types.h	/^  static const char* ascii_fingerprint; \/\/ = "816A2EDC53440EE9F1FD11DF1A5C0C51";$/;"	m	class:TaskInfo
+ascii_fingerprint	proxy/master/gen-cpp/master_types.h	/^  static const char* ascii_fingerprint; \/\/ = "9284B42FBE364FECA7AF8E76C1F488A2";$/;"	m	class:VCInfo
+ascii_fingerprint	proxy/master/gen-cpp/master_types.h	/^  static const char* ascii_fingerprint; \/\/ = "CA686CC0868D3556820A8027F5E9EE8D";$/;"	m	class:VMStat
+ascii_fingerprint	proxy/worker/gen-cpp/master_types.cpp	/^const char* MachineInfo::ascii_fingerprint = "2E26812E0ED4F46F8A3A9E75FA0B9AA9";$/;"	m	class:MachineInfo	file:
+ascii_fingerprint	proxy/worker/gen-cpp/master_types.cpp	/^const char* TaskInfo::ascii_fingerprint = "816A2EDC53440EE9F1FD11DF1A5C0C51";$/;"	m	class:TaskInfo	file:
+ascii_fingerprint	proxy/worker/gen-cpp/master_types.cpp	/^const char* VCInfo::ascii_fingerprint = "9284B42FBE364FECA7AF8E76C1F488A2";$/;"	m	class:VCInfo	file:
+ascii_fingerprint	proxy/worker/gen-cpp/master_types.cpp	/^const char* VMStat::ascii_fingerprint = "CA686CC0868D3556820A8027F5E9EE8D";$/;"	m	class:VMStat	file:
+ascii_fingerprint	proxy/worker/gen-cpp/master_types.h	/^  static const char* ascii_fingerprint; \/\/ = "2E26812E0ED4F46F8A3A9E75FA0B9AA9";$/;"	m	class:MachineInfo
+ascii_fingerprint	proxy/worker/gen-cpp/master_types.h	/^  static const char* ascii_fingerprint; \/\/ = "816A2EDC53440EE9F1FD11DF1A5C0C51";$/;"	m	class:TaskInfo
+ascii_fingerprint	proxy/worker/gen-cpp/master_types.h	/^  static const char* ascii_fingerprint; \/\/ = "9284B42FBE364FECA7AF8E76C1F488A2";$/;"	m	class:VCInfo
+ascii_fingerprint	proxy/worker/gen-cpp/master_types.h	/^  static const char* ascii_fingerprint; \/\/ = "CA686CC0868D3556820A8027F5E9EE8D";$/;"	m	class:VMStat
+attribute_name_pred	include/rapidxml.hpp	/^        struct attribute_name_pred$/;"	s	class:rapidxml::xml_document
+attribute_value_pred	include/rapidxml.hpp	/^        struct attribute_value_pred$/;"	s	class:rapidxml::xml_document
+attribute_value_pure_pred	include/rapidxml.hpp	/^        struct attribute_value_pure_pred$/;"	s	class:rapidxml::xml_document
+avail_memory	proxy/master/gen-cpp/master_types.h	/^  bool avail_memory;$/;"	m	struct:_MachineInfo__isset
+avail_memory	proxy/master/gen-cpp/master_types.h	/^  int32_t avail_memory;$/;"	m	class:MachineInfo
+avail_memory	proxy/worker/gen-cpp/master_types.h	/^  bool avail_memory;$/;"	m	struct:_MachineInfo__isset
+avail_memory	proxy/worker/gen-cpp/master_types.h	/^  int32_t avail_memory;$/;"	m	class:MachineInfo
+avail_vcpu	proxy/master/gen-cpp/master_types.h	/^  bool avail_vcpu;$/;"	m	struct:_MachineInfo__isset
+avail_vcpu	proxy/master/gen-cpp/master_types.h	/^  int32_t avail_vcpu;$/;"	m	class:MachineInfo
+avail_vcpu	proxy/worker/gen-cpp/master_types.h	/^  bool avail_vcpu;$/;"	m	struct:_MachineInfo__isset
+avail_vcpu	proxy/worker/gen-cpp/master_types.h	/^  int32_t avail_vcpu;$/;"	m	class:MachineInfo
+binary_fingerprint	proxy/master/gen-cpp/master_types.cpp	/^const uint8_t MachineInfo::binary_fingerprint[16] = {0x2E,0x26,0x81,0x2E,0x0E,0xD4,0xF4,0x6F,0x8A,0x3A,0x9E,0x75,0xFA,0x0B,0x9A,0xA9};$/;"	m	class:MachineInfo	file:
+binary_fingerprint	proxy/master/gen-cpp/master_types.cpp	/^const uint8_t TaskInfo::binary_fingerprint[16] = {0x81,0x6A,0x2E,0xDC,0x53,0x44,0x0E,0xE9,0xF1,0xFD,0x11,0xDF,0x1A,0x5C,0x0C,0x51};$/;"	m	class:TaskInfo	file:
+binary_fingerprint	proxy/master/gen-cpp/master_types.cpp	/^const uint8_t VCInfo::binary_fingerprint[16] = {0x92,0x84,0xB4,0x2F,0xBE,0x36,0x4F,0xEC,0xA7,0xAF,0x8E,0x76,0xC1,0xF4,0x88,0xA2};$/;"	m	class:VCInfo	file:
+binary_fingerprint	proxy/master/gen-cpp/master_types.cpp	/^const uint8_t VMStat::binary_fingerprint[16] = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};$/;"	m	class:VMStat	file:
+binary_fingerprint	proxy/master/gen-cpp/master_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0x2E,0x26,0x81,0x2E,0x0E,0xD4,0xF4,0x6F,0x8A,0x3A,0x9E,0x75,0xFA,0x0B,0x9A,0xA9};$/;"	m	class:MachineInfo
+binary_fingerprint	proxy/master/gen-cpp/master_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0x81,0x6A,0x2E,0xDC,0x53,0x44,0x0E,0xE9,0xF1,0xFD,0x11,0xDF,0x1A,0x5C,0x0C,0x51};$/;"	m	class:TaskInfo
+binary_fingerprint	proxy/master/gen-cpp/master_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0x92,0x84,0xB4,0x2F,0xBE,0x36,0x4F,0xEC,0xA7,0xAF,0x8E,0x76,0xC1,0xF4,0x88,0xA2};$/;"	m	class:VCInfo
+binary_fingerprint	proxy/master/gen-cpp/master_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};$/;"	m	class:VMStat
+binary_fingerprint	proxy/worker/gen-cpp/master_types.cpp	/^const uint8_t MachineInfo::binary_fingerprint[16] = {0x2E,0x26,0x81,0x2E,0x0E,0xD4,0xF4,0x6F,0x8A,0x3A,0x9E,0x75,0xFA,0x0B,0x9A,0xA9};$/;"	m	class:MachineInfo	file:
+binary_fingerprint	proxy/worker/gen-cpp/master_types.cpp	/^const uint8_t TaskInfo::binary_fingerprint[16] = {0x81,0x6A,0x2E,0xDC,0x53,0x44,0x0E,0xE9,0xF1,0xFD,0x11,0xDF,0x1A,0x5C,0x0C,0x51};$/;"	m	class:TaskInfo	file:
+binary_fingerprint	proxy/worker/gen-cpp/master_types.cpp	/^const uint8_t VCInfo::binary_fingerprint[16] = {0x92,0x84,0xB4,0x2F,0xBE,0x36,0x4F,0xEC,0xA7,0xAF,0x8E,0x76,0xC1,0xF4,0x88,0xA2};$/;"	m	class:VCInfo	file:
+binary_fingerprint	proxy/worker/gen-cpp/master_types.cpp	/^const uint8_t VMStat::binary_fingerprint[16] = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};$/;"	m	class:VMStat	file:
+binary_fingerprint	proxy/worker/gen-cpp/master_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0x2E,0x26,0x81,0x2E,0x0E,0xD4,0xF4,0x6F,0x8A,0x3A,0x9E,0x75,0xFA,0x0B,0x9A,0xA9};$/;"	m	class:MachineInfo
+binary_fingerprint	proxy/worker/gen-cpp/master_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0x81,0x6A,0x2E,0xDC,0x53,0x44,0x0E,0xE9,0xF1,0xFD,0x11,0xDF,0x1A,0x5C,0x0C,0x51};$/;"	m	class:TaskInfo
+binary_fingerprint	proxy/worker/gen-cpp/master_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0x92,0x84,0xB4,0x2F,0xBE,0x36,0x4F,0xEC,0xA7,0xAF,0x8E,0x76,0xC1,0xF4,0x88,0xA2};$/;"	m	class:VCInfo
+binary_fingerprint	proxy/worker/gen-cpp/master_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};$/;"	m	class:VMStat
+clear	include/rapidxml.hpp	/^        void clear()$/;"	f	class:rapidxml::memory_pool
+clear	include/rapidxml.hpp	/^        void clear()$/;"	f	class:rapidxml::xml_document
+clone_node	include/rapidxml.hpp	/^        xml_node<Ch> *clone_node(const xml_node<Ch> *source, xml_node<Ch> *result = 0)$/;"	f	class:rapidxml::memory_pool
+compare	include/rapidxml.hpp	/^        inline bool compare(const Ch *p1, std::size_t size1, const Ch *p2, std::size_t size2, bool case_sensitive)$/;"	f	namespace:rapidxml::internal
+count_attributes	include/rapidxml_utils.hpp	/^    inline std::size_t count_attributes(xml_node<Ch> *node)$/;"	f	namespace:rapidxml
+count_children	include/rapidxml_utils.hpp	/^    inline std::size_t count_children(xml_node<Ch> *node)$/;"	f	namespace:rapidxml
+cpu_usage	proxy/master/gen-cpp/master_types.h	/^  bool cpu_usage;$/;"	m	struct:_MachineInfo__isset
+cpu_usage	proxy/master/gen-cpp/master_types.h	/^  double cpu_usage;$/;"	m	class:MachineInfo
+cpu_usage	proxy/worker/gen-cpp/master_types.h	/^  bool cpu_usage;$/;"	m	struct:_MachineInfo__isset
+cpu_usage	proxy/worker/gen-cpp/master_types.h	/^  double cpu_usage;$/;"	m	class:MachineInfo
+data	include/rapidxml_utils.hpp	/^        Ch *data()$/;"	f	class:rapidxml::file
+data	include/rapidxml_utils.hpp	/^        const Ch *data() const$/;"	f	class:rapidxml::file
+dispatchCall	proxy/master/gen-cpp/Master.cpp	/^bool MasterProcessor::dispatchCall(::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, const std::string& fname, int32_t seqid, void* callContext) {$/;"	f	class:MasterProcessor
+dispatchCall	proxy/worker/gen-cpp/Master.cpp	/^bool MasterProcessor::dispatchCall(::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, const std::string& fname, int32_t seqid, void* callContext) {$/;"	f	class:MasterProcessor
+dispatchCall	proxy/worker/gen-cpp/Worker.cpp	/^bool WorkerProcessor::dispatchCall(::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, const std::string& fname, int32_t seqid, void* callContext) {$/;"	f	class:WorkerProcessor
+document	include/rapidxml.hpp	/^        xml_document<Ch> *document() const$/;"	f	class:rapidxml::xml_attribute
+document	include/rapidxml.hpp	/^        xml_document<Ch> *document() const$/;"	f	class:rapidxml::xml_node
+endpoint	proxy/master/gen-cpp/master_types.h	/^  bool endpoint;$/;"	m	struct:_MachineInfo__isset
+endpoint	proxy/master/gen-cpp/master_types.h	/^  std::string endpoint;$/;"	m	class:MachineInfo
+endpoint	proxy/worker/gen-cpp/master_types.h	/^  bool endpoint;$/;"	m	struct:_MachineInfo__isset
+endpoint	proxy/worker/gen-cpp/master_types.h	/^  std::string endpoint;$/;"	m	class:MachineInfo
+file	include/rapidxml_utils.hpp	/^        file(const char *filename)$/;"	f	class:rapidxml::file
+file	include/rapidxml_utils.hpp	/^        file(std::basic_istream<Ch> &stream)$/;"	f	class:rapidxml::file
+file	include/rapidxml_utils.hpp	/^    class file$/;"	c	namespace:rapidxml
+first_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *first_attribute(const Ch *name = 0, std::size_t name_size = 0, bool case_sensitive = true) const$/;"	f	class:rapidxml::xml_node
+first_node	include/rapidxml.hpp	/^        xml_node<Ch> *first_node(const Ch *name = 0, std::size_t name_size = 0, bool case_sensitive = true) const$/;"	f	class:rapidxml::xml_node
+free_func	include/rapidxml.hpp	/^        typedef void (free_func)(void *);              \/\/ Type of user-defined function used to free memory$/;"	t	class:rapidxml::memory_pool
+g_master_constants	proxy/master/gen-cpp/master_constants.cpp	/^const masterConstants g_master_constants;$/;"	v
+g_master_constants	proxy/worker/gen-cpp/master_constants.cpp	/^const masterConstants g_master_constants;$/;"	v
+g_worker_constants	proxy/worker/gen-cpp/worker_constants.cpp	/^const workerConstants g_worker_constants;$/;"	v
+getHandler	proxy/master/gen-cpp/Master.h	/^  virtual MasterIf* getHandler(const ::apache::thrift::TConnectionInfo&) {$/;"	f	class:MasterIfSingletonFactory
+getHandler	proxy/worker/gen-cpp/Master.h	/^  virtual MasterIf* getHandler(const ::apache::thrift::TConnectionInfo&) {$/;"	f	class:MasterIfSingletonFactory
+getHandler	proxy/worker/gen-cpp/Worker.h	/^  virtual WorkerIf* getHandler(const ::apache::thrift::TConnectionInfo&) {$/;"	f	class:WorkerIfSingletonFactory
+getInputProtocol	proxy/master/gen-cpp/Master.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getInputProtocol() {$/;"	f	class:MasterClient
+getInputProtocol	proxy/worker/gen-cpp/Master.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getInputProtocol() {$/;"	f	class:MasterClient
+getInputProtocol	proxy/worker/gen-cpp/Worker.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getInputProtocol() {$/;"	f	class:WorkerClient
+getOutputProtocol	proxy/master/gen-cpp/Master.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getOutputProtocol() {$/;"	f	class:MasterClient
+getOutputProtocol	proxy/worker/gen-cpp/Master.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getOutputProtocol() {$/;"	f	class:MasterClient
+getOutputProtocol	proxy/worker/gen-cpp/Worker.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getOutputProtocol() {$/;"	f	class:WorkerClient
+getProcessor	proxy/master/gen-cpp/Master.cpp	/^::boost::shared_ptr< ::apache::thrift::TProcessor > MasterProcessorFactory::getProcessor(const ::apache::thrift::TConnectionInfo& connInfo) {$/;"	f	class:MasterProcessorFactory
+getProcessor	proxy/worker/gen-cpp/Master.cpp	/^::boost::shared_ptr< ::apache::thrift::TProcessor > MasterProcessorFactory::getProcessor(const ::apache::thrift::TConnectionInfo& connInfo) {$/;"	f	class:MasterProcessorFactory
+getProcessor	proxy/worker/gen-cpp/Worker.cpp	/^::boost::shared_ptr< ::apache::thrift::TProcessor > WorkerProcessorFactory::getProcessor(const ::apache::thrift::TConnectionInfo& connInfo) {$/;"	f	class:WorkerProcessorFactory
+handlerFactory_	proxy/master/gen-cpp/Master.h	/^  ::boost::shared_ptr< MasterIfFactory > handlerFactory_;$/;"	m	class:MasterProcessorFactory
+handlerFactory_	proxy/worker/gen-cpp/Master.h	/^  ::boost::shared_ptr< MasterIfFactory > handlerFactory_;$/;"	m	class:MasterProcessorFactory
+handlerFactory_	proxy/worker/gen-cpp/Worker.h	/^  ::boost::shared_ptr< WorkerIfFactory > handlerFactory_;$/;"	m	class:WorkerProcessorFactory
+header	include/rapidxml.hpp	/^        struct header$/;"	s	class:rapidxml::memory_pool
+id	proxy/master/gen-cpp/master_types.h	/^  bool id;$/;"	m	struct:_TaskInfo__isset
+id	proxy/master/gen-cpp/master_types.h	/^  int64_t id;$/;"	m	class:TaskInfo
+id	proxy/worker/gen-cpp/master_types.h	/^  bool id;$/;"	m	struct:_TaskInfo__isset
+id	proxy/worker/gen-cpp/master_types.h	/^  int64_t id;$/;"	m	class:TaskInfo
+iface_	proxy/master/gen-cpp/Master.h	/^  boost::shared_ptr<MasterIf> iface_;$/;"	m	class:MasterIfSingletonFactory
+iface_	proxy/master/gen-cpp/Master.h	/^  boost::shared_ptr<MasterIf> iface_;$/;"	m	class:MasterProcessor
+iface_	proxy/worker/gen-cpp/Master.h	/^  boost::shared_ptr<MasterIf> iface_;$/;"	m	class:MasterIfSingletonFactory
+iface_	proxy/worker/gen-cpp/Master.h	/^  boost::shared_ptr<MasterIf> iface_;$/;"	m	class:MasterProcessor
+iface_	proxy/worker/gen-cpp/Worker.h	/^  boost::shared_ptr<WorkerIf> iface_;$/;"	m	class:WorkerIfSingletonFactory
+iface_	proxy/worker/gen-cpp/Worker.h	/^  boost::shared_ptr<WorkerIf> iface_;$/;"	m	class:WorkerProcessor
+ifaces_	proxy/master/gen-cpp/Master.h	/^  std::vector<boost::shared_ptr<MasterIf> > ifaces_;$/;"	m	class:MasterMultiface
+ifaces_	proxy/worker/gen-cpp/Master.h	/^  std::vector<boost::shared_ptr<MasterIf> > ifaces_;$/;"	m	class:MasterMultiface
+ifaces_	proxy/worker/gen-cpp/Worker.h	/^  std::vector<boost::shared_ptr<WorkerIf> > ifaces_;$/;"	m	class:WorkerMultiface
+info	proxy/master/gen-cpp/Master.h	/^  MachineInfo info;$/;"	m	class:Master_Heartbeat_args
+info	proxy/master/gen-cpp/Master.h	/^  bool info;$/;"	m	struct:_Master_Heartbeat_args__isset
+info	proxy/master/gen-cpp/Master.h	/^  const MachineInfo* info;$/;"	m	class:Master_Heartbeat_pargs
+info	proxy/worker/gen-cpp/Master.h	/^  MachineInfo info;$/;"	m	class:Master_Heartbeat_args
+info	proxy/worker/gen-cpp/Master.h	/^  bool info;$/;"	m	struct:_Master_Heartbeat_args__isset
+info	proxy/worker/gen-cpp/Master.h	/^  const MachineInfo* info;$/;"	m	class:Master_Heartbeat_pargs
+info	proxy/worker/gen-cpp/Worker.h	/^   ::TaskInfo info;$/;"	m	class:Worker_StartTask_args
+info	proxy/worker/gen-cpp/Worker.h	/^  bool info;$/;"	m	struct:_Worker_StartTask_args__isset
+info	proxy/worker/gen-cpp/Worker.h	/^  const  ::TaskInfo* info;$/;"	m	class:Worker_StartTask_pargs
+init	include/rapidxml.hpp	/^        void init()$/;"	f	class:rapidxml::memory_pool
+insert_attribute	include/rapidxml.hpp	/^        void insert_attribute(xml_attribute<Ch> *where, xml_attribute<Ch> *attribute)$/;"	f	class:rapidxml::xml_node
+insert_coded_character	include/rapidxml.hpp	/^        static void insert_coded_character(Ch *&text, unsigned long code)$/;"	f	class:rapidxml::xml_document
+insert_node	include/rapidxml.hpp	/^        void insert_node(xml_node<Ch> *where, xml_node<Ch> *child)$/;"	f	class:rapidxml::xml_node
+internal	include/rapidxml.hpp	/^    namespace internal$/;"	n	namespace:rapidxml
+iprot_	proxy/master/gen-cpp/Master.h	/^  ::apache::thrift::protocol::TProtocol* iprot_;$/;"	m	class:MasterClient
+iprot_	proxy/worker/gen-cpp/Master.h	/^  ::apache::thrift::protocol::TProtocol* iprot_;$/;"	m	class:MasterClient
+iprot_	proxy/worker/gen-cpp/Worker.h	/^  ::apache::thrift::protocol::TProtocol* iprot_;$/;"	m	class:WorkerClient
+last_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *last_attribute(const Ch *name = 0, std::size_t name_size = 0, bool case_sensitive = true) const$/;"	f	class:rapidxml::xml_node
+last_node	include/rapidxml.hpp	/^        xml_node<Ch> *last_node(const Ch *name = 0, std::size_t name_size = 0, bool case_sensitive = true) const$/;"	f	class:rapidxml::xml_node
+logger	master/config.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	master/machine.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	master/service.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	master/task.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	master/virtual_cluster.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	master/work_thread.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	worker/config.cpp	/^static Logger logger = Logger::getInstance("worker");$/;"	v	file:
+logger	worker/service.cpp	/^static Logger logger = Logger::getInstance("worker");$/;"	v	file:
+logger	worker/work_thread.cpp	/^static Logger logger = Logger::getInstance("worker");$/;"	v	file:
+lookup_attribute_data_1	include/rapidxml.hpp	/^            static const unsigned char lookup_attribute_data_1[256];        \/\/ Attribute data table with single quote$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_attribute_data_1	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_attribute_data_1[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_attribute_data_1_pure	include/rapidxml.hpp	/^            static const unsigned char lookup_attribute_data_1_pure[256];   \/\/ Attribute data table with single quote$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_attribute_data_1_pure	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_attribute_data_1_pure[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_attribute_data_2	include/rapidxml.hpp	/^            static const unsigned char lookup_attribute_data_2[256];        \/\/ Attribute data table with double quotes$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_attribute_data_2	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_attribute_data_2[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_attribute_data_2_pure	include/rapidxml.hpp	/^            static const unsigned char lookup_attribute_data_2_pure[256];   \/\/ Attribute data table with double quotes$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_attribute_data_2_pure	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_attribute_data_2_pure[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_attribute_name	include/rapidxml.hpp	/^            static const unsigned char lookup_attribute_name[256];          \/\/ Attribute name table$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_attribute_name	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_attribute_name[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_digits	include/rapidxml.hpp	/^            static const unsigned char lookup_digits[256];                  \/\/ Digits$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_digits	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_digits[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_node_name	include/rapidxml.hpp	/^            static const unsigned char lookup_node_name[256];               \/\/ Node name table$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_node_name	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_node_name[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_tables	include/rapidxml.hpp	/^        struct lookup_tables$/;"	s	namespace:rapidxml::internal
+lookup_text	include/rapidxml.hpp	/^            static const unsigned char lookup_text[256];                    \/\/ Text table$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_text	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_text[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_text_pure_no_ws	include/rapidxml.hpp	/^            static const unsigned char lookup_text_pure_no_ws[256];         \/\/ Text table$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_text_pure_no_ws	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_text_pure_no_ws[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_text_pure_with_ws	include/rapidxml.hpp	/^            static const unsigned char lookup_text_pure_with_ws[256];       \/\/ Text table$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_text_pure_with_ws	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_text_pure_with_ws[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_upcase	include/rapidxml.hpp	/^            static const unsigned char lookup_upcase[256];                  \/\/ To uppercase conversion table for ASCII characters$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_upcase	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_upcase[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lookup_whitespace	include/rapidxml.hpp	/^            static const unsigned char lookup_whitespace[256];              \/\/ Whitespace table$/;"	m	struct:rapidxml::internal::lookup_tables
+lookup_whitespace	include/rapidxml.hpp	/^        const unsigned char lookup_tables<Dummy>::lookup_whitespace[256] = $/;"	m	class:rapidxml::internal::lookup_tables
+lynn	include/block_queue.h	/^namespace lynn {$/;"	n
+lynn	include/cond.h	/^namespace lynn {$/;"	n
+lynn	include/mutex.h	/^namespace lynn {$/;"	n
+lynn	include/rwlock.h	/^namespace lynn {$/;"	n
+m_ad	master/machine.h	/^    ClassAd m_ad;$/;"	m	class:Machine
+m_ad	master/task.h	/^    ClassAd m_ad;$/;"	m	class:Task
+m_alloc_func	include/rapidxml.hpp	/^        alloc_func *m_alloc_func;                           \/\/ Allocator function, or 0 if default is to be used$/;"	m	class:rapidxml::memory_pool
+m_attr_map	include/config.h	/^   map<string, string> m_attr_map;$/;"	m	class:Config
+m_avail_memory	worker/resource_manager.h	/^   int32_t m_avail_memory;$/;"	m	class:ResourceManager
+m_avail_vcpu	worker/resource_manager.h	/^   int32_t m_avail_vcpu;$/;"	m	class:ResourceManager
+m_begin	include/rapidxml.hpp	/^        char *m_begin;                                      \/\/ Start of raw memory making up current pool$/;"	m	class:rapidxml::memory_pool
+m_client	include/rpc.h	/^    T m_client;$/;"	m	class:Proxy
+m_cond	include/cond.h	/^            pthread_cond_t m_cond;$/;"	m	class:lynn::Cond
+m_connector	include/rpc.h	/^    shared_ptr<TTransport> m_connector;$/;"	m	class:Proxy
+m_data	include/rapidxml_utils.hpp	/^        std::vector<Ch> m_data;   \/\/ File data$/;"	m	class:rapidxml::file
+m_empty	include/block_queue.h	/^            Cond* m_empty;$/;"	m	class:lynn::BlockQueue
+m_end	include/rapidxml.hpp	/^        char *m_end;                                        \/\/ One past last available byte in current pool$/;"	m	class:rapidxml::memory_pool
+m_endpoint	worker/resource_manager.h	/^   string m_endpoint;$/;"	m	class:ResourceManager
+m_error_code	include/event.h	/^     int32_t m_error_code;$/;"	m	class:Event
+m_first_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *m_first_attribute;   \/\/ Pointer to first attribute of node, or 0 if none; always valid$/;"	m	class:rapidxml::xml_node
+m_first_node	include/rapidxml.hpp	/^        xml_node<Ch> *m_first_node;             \/\/ Pointer to first child node, or 0 if none; always valid$/;"	m	class:rapidxml::xml_node
+m_free_func	include/rapidxml.hpp	/^        free_func *m_free_func;                             \/\/ Free function, or 0 if default is to be used$/;"	m	class:rapidxml::memory_pool
+m_id	include/identity.h	/^    int64_t m_id;$/;"	m	class:Identity
+m_instance	include/singleton.h	/^    static T* m_instance;$/;"	m	class:Singleton
+m_instance	include/singleton.h	/^T* Singleton<T>::m_instance = NULL;$/;"	m	class:Singleton
+m_last_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *m_last_attribute;    \/\/ Pointer to last attribute of node, or 0 if none; this value is only valid if m_first_attribute is non-zero$/;"	m	class:rapidxml::xml_node
+m_last_node	include/rapidxml.hpp	/^        xml_node<Ch> *m_last_node;              \/\/ Pointer to last child node, or 0 if none; this value is only valid if m_first_node is non-zero$/;"	m	class:rapidxml::xml_node
+m_list	master/task_queue.h	/^    list<TaskPtr> m_list;$/;"	m	class:TaskQueue
+m_lock	include/identity.h	/^    Mutex m_lock;$/;"	m	class:Identity
+m_lock	include/mutex.h	/^            pthread_mutex_t m_lock;$/;"	m	class:lynn::Mutex
+m_lock	include/rwlock.h	/^            pthread_rwlock_t m_lock;$/;"	m	class:lynn::RWLock
+m_lock	include/singleton.h	/^    static lynn::Mutex m_lock;$/;"	m	class:Singleton
+m_lock	include/singleton.h	/^lynn::Mutex Singleton<T>::m_lock;$/;"	m	class:Singleton
+m_lock	master/machine_pool.h	/^    RWLock m_lock;$/;"	m	class:MachinePool
+m_lock	master/task.h	/^    RWLock m_lock;$/;"	m	class:Task
+m_lock	master/task_pool.h	/^    RWLock m_lock;$/;"	m	class:TaskPool
+m_lock	master/task_queue.h	/^    RWLock m_lock;$/;"	m	class:TaskQueue
+m_lock	master/vc_pool.h	/^    RWLock m_lock;$/;"	m	class:VCPool
+m_machine_info	master/machine.h	/^    MachineInfo m_machine_info;$/;"	m	class:Machine
+m_machine_pool	master/machine_pool.h	/^    map<string, MachinePtr> m_machine_pool;$/;"	m	class:MachinePool
+m_mutex	include/block_queue.h	/^            Mutex* m_mutex;$/;"	m	class:lynn::BlockQueue
+m_mutex	include/mutex.h	/^            lynn::Mutex* m_mutex;$/;"	m	class:lynn::MutexLocker
+m_name	include/rapidxml.hpp	/^        Ch *m_name;                         \/\/ Name of node, or 0 if no name$/;"	m	class:rapidxml::xml_base
+m_name_size	include/rapidxml.hpp	/^        std::size_t m_name_size;            \/\/ Length of node name, or undefined of no name$/;"	m	class:rapidxml::xml_base
+m_next_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *m_next_attribute;        \/\/ Pointer to next sibling of attribute, or 0 if none; only valid if parent is non-zero$/;"	m	class:rapidxml::xml_attribute
+m_next_sibling	include/rapidxml.hpp	/^        xml_node<Ch> *m_next_sibling;           \/\/ Pointer to next sibling of node, or 0 if none; this value is only valid if m_parent is non-zero$/;"	m	class:rapidxml::xml_node
+m_parent	include/rapidxml.hpp	/^        xml_node<Ch> *m_parent;             \/\/ Pointer to parent node, or 0 if none$/;"	m	class:rapidxml::xml_base
+m_prev_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *m_prev_attribute;        \/\/ Pointer to previous sibling of attribute, or 0 if none; only valid if parent is non-zero$/;"	m	class:rapidxml::xml_attribute
+m_prev_sibling	include/rapidxml.hpp	/^        xml_node<Ch> *m_prev_sibling;           \/\/ Pointer to previous sibling of node, or 0 if none; this value is only valid if m_parent is non-zero$/;"	m	class:rapidxml::xml_node
+m_ptr	include/rapidxml.hpp	/^        char *m_ptr;                                        \/\/ First free byte in current pool$/;"	m	class:rapidxml::memory_pool
+m_queue	include/block_queue.h	/^            list<T> m_queue;$/;"	m	class:lynn::BlockQueue
+m_rank_value	master/machine.h	/^    double m_rank_value; $/;"	m	class:Machine
+m_retry_times	include/event.h	/^     int32_t m_retry_times;$/;"	m	class:Event
+m_run_on	master/task.h	/^    string m_run_on;$/;"	m	class:Task
+m_run_queue	master/virtual_cluster.h	/^    TaskQueue m_run_queue;$/;"	m	class:VC
+m_rwlock	include/rwlock.h	/^            RWLock* m_rwlock;$/;"	m	class:lynn::ReadLocker
+m_rwlock	include/rwlock.h	/^            RWLock* m_rwlock;$/;"	m	class:lynn::WriteLocker
+m_state	master/task.h	/^    TaskState m_state;$/;"	m	class:Task
+m_static_memory	include/rapidxml.hpp	/^        char m_static_memory[RAPIDXML_STATIC_POOL_SIZE];    \/\/ Static raw memory$/;"	m	class:rapidxml::memory_pool
+m_task_info	master/task.h	/^    TaskInfo m_task_info;$/;"	m	class:Task
+m_task_info	master/virtual_cluster.h	/^    TaskInfo m_task_info;$/;"	m	class:VC
+m_task_pool	master/task_pool.h	/^    map<int64_t, TaskPtr> m_task_pool;$/;"	m	class:TaskPool
+m_total_memory	worker/resource_manager.h	/^   int32_t m_total_memory;$/;"	m	class:ResourceManager
+m_total_vcpu	worker/resource_manager.h	/^   int32_t m_total_vcpu;$/;"	m	class:ResourceManager
+m_type	include/rapidxml.hpp	/^        node_type m_type;                       \/\/ Type of node; always valid$/;"	m	class:rapidxml::xml_node
+m_value	include/rapidxml.hpp	/^        Ch *m_value;                        \/\/ Value of node, or 0 if no value$/;"	m	class:rapidxml::xml_base
+m_value_size	include/rapidxml.hpp	/^        std::size_t m_value_size;           \/\/ Length of node value, or undefined if no value$/;"	m	class:rapidxml::xml_base
+m_vc_info	master/virtual_cluster.h	/^    VCInfo m_vc_info;$/;"	m	class:VC
+m_vc_pool	master/vc_pool.h	/^    map<string,VCPtr> m_vc_pool;$/;"	m	class:VCPool
+m_wait_queue	master/virtual_cluster.h	/^    TaskQueue m_wait_queue;$/;"	m	class:VC
+main	master/master.cpp	/^int32_t main(int argc, char ** argv) {$/;"	f
+main	proxy/master/gen-cpp/Master_server.skeleton.cpp	/^int main(int argc, char **argv) {$/;"	f
+main	proxy/worker/gen-cpp/Master_server.skeleton.cpp	/^int main(int argc, char **argv) {$/;"	f
+main	proxy/worker/gen-cpp/Worker_server.skeleton.cpp	/^int main(int argc, char **argv) {$/;"	f
+main	test/add_vc.cpp	/^int32_t main(int argc, char ** argv) {$/;"	f
+main	test/class_ad_match.cpp	/^int main(int argc, char ** argv) {$/;"	f
+main	test/test.cpp	/^int32_t main(int argc, char ** argv) {$/;"	f
+main	worker/worker.cpp	/^int32_t main(int argc, char ** argv){$/;"	f
+masterConstants	proxy/master/gen-cpp/master_constants.cpp	/^masterConstants::masterConstants() {$/;"	f	class:masterConstants
+masterConstants	proxy/master/gen-cpp/master_constants.h	/^class masterConstants {$/;"	c
+masterConstants	proxy/worker/gen-cpp/master_constants.cpp	/^masterConstants::masterConstants() {$/;"	f	class:masterConstants
+masterConstants	proxy/worker/gen-cpp/master_constants.h	/^class masterConstants {$/;"	c
+master_CONSTANTS_H	proxy/master/gen-cpp/master_constants.h	8;"	d
+master_CONSTANTS_H	proxy/worker/gen-cpp/master_constants.h	8;"	d
+master_TYPES_H	proxy/master/gen-cpp/master_types.h	8;"	d
+master_TYPES_H	proxy/worker/gen-cpp/master_types.h	8;"	d
+measure	include/rapidxml.hpp	/^        inline std::size_t measure(const Ch *p)$/;"	f	namespace:rapidxml::internal
+memory	proxy/master/gen-cpp/master_types.h	/^  bool memory;$/;"	m	struct:_VCInfo__isset
+memory	proxy/master/gen-cpp/master_types.h	/^  int32_t memory;$/;"	m	class:VCInfo
+memory	proxy/worker/gen-cpp/master_types.h	/^  bool memory;$/;"	m	struct:_VCInfo__isset
+memory	proxy/worker/gen-cpp/master_types.h	/^  int32_t memory;$/;"	m	class:VCInfo
+memory_pool	include/rapidxml.hpp	/^        memory_pool()$/;"	f	class:rapidxml::memory_pool
+memory_pool	include/rapidxml.hpp	/^    class memory_pool$/;"	c	namespace:rapidxml
+name	include/rapidxml.hpp	/^        Ch *name() const$/;"	f	class:rapidxml::xml_base
+name	include/rapidxml.hpp	/^        void name(const Ch *name)$/;"	f	class:rapidxml::xml_base
+name	include/rapidxml.hpp	/^        void name(const Ch *name, std::size_t size)$/;"	f	class:rapidxml::xml_base
+name	proxy/master/gen-cpp/master_types.h	/^  bool name;$/;"	m	struct:_VCInfo__isset
+name	proxy/master/gen-cpp/master_types.h	/^  std::string name;$/;"	m	class:VCInfo
+name	proxy/worker/gen-cpp/master_types.h	/^  bool name;$/;"	m	struct:_VCInfo__isset
+name	proxy/worker/gen-cpp/master_types.h	/^  std::string name;$/;"	m	class:VCInfo
+name_size	include/rapidxml.hpp	/^        std::size_t name_size() const$/;"	f	class:rapidxml::xml_base
+need_memory	proxy/master/gen-cpp/master_types.h	/^  bool need_memory;$/;"	m	struct:_TaskInfo__isset
+need_memory	proxy/master/gen-cpp/master_types.h	/^  int32_t need_memory;$/;"	m	class:TaskInfo
+need_memory	proxy/worker/gen-cpp/master_types.h	/^  bool need_memory;$/;"	m	struct:_TaskInfo__isset
+need_memory	proxy/worker/gen-cpp/master_types.h	/^  int32_t need_memory;$/;"	m	class:TaskInfo
+need_vcpu	proxy/master/gen-cpp/master_types.h	/^  bool need_vcpu;$/;"	m	struct:_TaskInfo__isset
+need_vcpu	proxy/master/gen-cpp/master_types.h	/^  int32_t need_vcpu;$/;"	m	class:TaskInfo
+need_vcpu	proxy/worker/gen-cpp/master_types.h	/^  bool need_vcpu;$/;"	m	struct:_TaskInfo__isset
+need_vcpu	proxy/worker/gen-cpp/master_types.h	/^  int32_t need_vcpu;$/;"	m	class:TaskInfo
+next_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *next_attribute(const Ch *name = 0, std::size_t name_size = 0, bool case_sensitive = true) const$/;"	f	class:rapidxml::xml_attribute
+next_sibling	include/rapidxml.hpp	/^        xml_node<Ch> *next_sibling(const Ch *name = 0, std::size_t name_size = 0, bool case_sensitive = true) const$/;"	f	class:rapidxml::xml_node
+node_cdata	include/rapidxml.hpp	/^        node_cdata,         \/\/!< A CDATA node. Name is empty. Value contains data text.$/;"	e	enum:rapidxml::node_type
+node_comment	include/rapidxml.hpp	/^        node_comment,       \/\/!< A comment node. Name is empty. Value contains comment text.$/;"	e	enum:rapidxml::node_type
+node_data	include/rapidxml.hpp	/^        node_data,          \/\/!< A data node. Name is empty. Value contains data text.$/;"	e	enum:rapidxml::node_type
+node_declaration	include/rapidxml.hpp	/^        node_declaration,   \/\/!< A declaration node. Name and value are empty. Declaration parameters (version, encoding and standalone) are in node attributes.$/;"	e	enum:rapidxml::node_type
+node_doctype	include/rapidxml.hpp	/^        node_doctype,       \/\/!< A DOCTYPE node. Name is empty. Value contains DOCTYPE text.$/;"	e	enum:rapidxml::node_type
+node_document	include/rapidxml.hpp	/^        node_document,      \/\/!< A document node. Name and value are empty.$/;"	e	enum:rapidxml::node_type
+node_element	include/rapidxml.hpp	/^        node_element,       \/\/!< An element node. Name contains element name. Value contains text of first data node.$/;"	e	enum:rapidxml::node_type
+node_name_pred	include/rapidxml.hpp	/^        struct node_name_pred$/;"	s	class:rapidxml::xml_document
+node_pi	include/rapidxml.hpp	/^        node_pi             \/\/!< A PI node. Name contains target. Value contains instructions.$/;"	e	enum:rapidxml::node_type
+node_type	include/rapidxml.hpp	/^    enum node_type$/;"	g	namespace:rapidxml
+nullstr	include/rapidxml.hpp	/^        static Ch *nullstr()$/;"	f	class:rapidxml::xml_base
+operator !=	proxy/master/gen-cpp/Master.h	/^  bool operator != (const Master_AddVC_args &rhs) const {$/;"	f	class:Master_AddVC_args
+operator !=	proxy/master/gen-cpp/Master.h	/^  bool operator != (const Master_AddVC_result &rhs) const {$/;"	f	class:Master_AddVC_result
+operator !=	proxy/master/gen-cpp/Master.h	/^  bool operator != (const Master_Heartbeat_args &rhs) const {$/;"	f	class:Master_Heartbeat_args
+operator !=	proxy/master/gen-cpp/Master.h	/^  bool operator != (const Master_Heartbeat_result &rhs) const {$/;"	f	class:Master_Heartbeat_result
+operator !=	proxy/master/gen-cpp/master_types.h	/^  bool operator != (const MachineInfo &rhs) const {$/;"	f	class:MachineInfo
+operator !=	proxy/master/gen-cpp/master_types.h	/^  bool operator != (const TaskInfo &rhs) const {$/;"	f	class:TaskInfo
+operator !=	proxy/master/gen-cpp/master_types.h	/^  bool operator != (const VCInfo &rhs) const {$/;"	f	class:VCInfo
+operator !=	proxy/master/gen-cpp/master_types.h	/^  bool operator != (const VMStat &rhs) const {$/;"	f	class:VMStat
+operator !=	proxy/worker/gen-cpp/Master.h	/^  bool operator != (const Master_AddVC_args &rhs) const {$/;"	f	class:Master_AddVC_args
+operator !=	proxy/worker/gen-cpp/Master.h	/^  bool operator != (const Master_AddVC_result &rhs) const {$/;"	f	class:Master_AddVC_result
+operator !=	proxy/worker/gen-cpp/Master.h	/^  bool operator != (const Master_Heartbeat_args &rhs) const {$/;"	f	class:Master_Heartbeat_args
+operator !=	proxy/worker/gen-cpp/Master.h	/^  bool operator != (const Master_Heartbeat_result &rhs) const {$/;"	f	class:Master_Heartbeat_result
+operator !=	proxy/worker/gen-cpp/Worker.h	/^  bool operator != (const Worker_StartTask_args &rhs) const {$/;"	f	class:Worker_StartTask_args
+operator !=	proxy/worker/gen-cpp/Worker.h	/^  bool operator != (const Worker_StartTask_result &rhs) const {$/;"	f	class:Worker_StartTask_result
+operator !=	proxy/worker/gen-cpp/master_types.h	/^  bool operator != (const MachineInfo &rhs) const {$/;"	f	class:MachineInfo
+operator !=	proxy/worker/gen-cpp/master_types.h	/^  bool operator != (const TaskInfo &rhs) const {$/;"	f	class:TaskInfo
+operator !=	proxy/worker/gen-cpp/master_types.h	/^  bool operator != (const VCInfo &rhs) const {$/;"	f	class:VCInfo
+operator !=	proxy/worker/gen-cpp/master_types.h	/^  bool operator != (const VMStat &rhs) const {$/;"	f	class:VMStat
+operator ()	include/rpc.h	/^    T& operator()() {$/;"	f	class:Proxy
+operator ==	proxy/master/gen-cpp/Master.h	/^  bool operator == (const Master_AddVC_args & rhs) const$/;"	f	class:Master_AddVC_args
+operator ==	proxy/master/gen-cpp/Master.h	/^  bool operator == (const Master_AddVC_result & rhs) const$/;"	f	class:Master_AddVC_result
+operator ==	proxy/master/gen-cpp/Master.h	/^  bool operator == (const Master_Heartbeat_args & rhs) const$/;"	f	class:Master_Heartbeat_args
+operator ==	proxy/master/gen-cpp/Master.h	/^  bool operator == (const Master_Heartbeat_result & \/* rhs *\/) const$/;"	f	class:Master_Heartbeat_result
+operator ==	proxy/master/gen-cpp/master_types.h	/^  bool operator == (const MachineInfo & rhs) const$/;"	f	class:MachineInfo
+operator ==	proxy/master/gen-cpp/master_types.h	/^  bool operator == (const TaskInfo & rhs) const$/;"	f	class:TaskInfo
+operator ==	proxy/master/gen-cpp/master_types.h	/^  bool operator == (const VCInfo & rhs) const$/;"	f	class:VCInfo
+operator ==	proxy/master/gen-cpp/master_types.h	/^  bool operator == (const VMStat & rhs) const$/;"	f	class:VMStat
+operator ==	proxy/worker/gen-cpp/Master.h	/^  bool operator == (const Master_AddVC_args & rhs) const$/;"	f	class:Master_AddVC_args
+operator ==	proxy/worker/gen-cpp/Master.h	/^  bool operator == (const Master_AddVC_result & rhs) const$/;"	f	class:Master_AddVC_result
+operator ==	proxy/worker/gen-cpp/Master.h	/^  bool operator == (const Master_Heartbeat_args & rhs) const$/;"	f	class:Master_Heartbeat_args
+operator ==	proxy/worker/gen-cpp/Master.h	/^  bool operator == (const Master_Heartbeat_result & \/* rhs *\/) const$/;"	f	class:Master_Heartbeat_result
+operator ==	proxy/worker/gen-cpp/Worker.h	/^  bool operator == (const Worker_StartTask_args & rhs) const$/;"	f	class:Worker_StartTask_args
+operator ==	proxy/worker/gen-cpp/Worker.h	/^  bool operator == (const Worker_StartTask_result & rhs) const$/;"	f	class:Worker_StartTask_result
+operator ==	proxy/worker/gen-cpp/master_types.h	/^  bool operator == (const MachineInfo & rhs) const$/;"	f	class:MachineInfo
+operator ==	proxy/worker/gen-cpp/master_types.h	/^  bool operator == (const TaskInfo & rhs) const$/;"	f	class:TaskInfo
+operator ==	proxy/worker/gen-cpp/master_types.h	/^  bool operator == (const VCInfo & rhs) const$/;"	f	class:VCInfo
+operator ==	proxy/worker/gen-cpp/master_types.h	/^  bool operator == (const VMStat & rhs) const$/;"	f	class:VMStat
+oprot_	proxy/master/gen-cpp/Master.h	/^  ::apache::thrift::protocol::TProtocol* oprot_;$/;"	m	class:MasterClient
+oprot_	proxy/worker/gen-cpp/Master.h	/^  ::apache::thrift::protocol::TProtocol* oprot_;$/;"	m	class:MasterClient
+oprot_	proxy/worker/gen-cpp/Worker.h	/^  ::apache::thrift::protocol::TProtocol* oprot_;$/;"	m	class:WorkerClient
+parent	include/rapidxml.hpp	/^        xml_node<Ch> *parent() const$/;"	f	class:rapidxml::xml_base
+parse	include/rapidxml.hpp	/^        void parse(Ch *text)$/;"	f	class:rapidxml::xml_document
+parse_and_append_data	include/rapidxml.hpp	/^        Ch parse_and_append_data(xml_node<Ch> *node, Ch *&text, Ch *contents_start)$/;"	f	class:rapidxml::xml_document
+parse_bom	include/rapidxml.hpp	/^        void parse_bom(Ch *&text)$/;"	f	class:rapidxml::xml_document
+parse_cdata	include/rapidxml.hpp	/^        xml_node<Ch> *parse_cdata(Ch *&text)$/;"	f	class:rapidxml::xml_document
+parse_comment	include/rapidxml.hpp	/^        xml_node<Ch> *parse_comment(Ch *&text)$/;"	f	class:rapidxml::xml_document
+parse_comment_nodes	include/rapidxml.hpp	/^    const int parse_comment_nodes = 0x40;$/;"	m	namespace:rapidxml
+parse_declaration_node	include/rapidxml.hpp	/^    const int parse_declaration_node = 0x20;$/;"	m	namespace:rapidxml
+parse_default	include/rapidxml.hpp	/^    const int parse_default = 0;$/;"	m	namespace:rapidxml
+parse_doctype	include/rapidxml.hpp	/^        xml_node<Ch> *parse_doctype(Ch *&text)$/;"	f	class:rapidxml::xml_document
+parse_doctype_node	include/rapidxml.hpp	/^    const int parse_doctype_node = 0x80;$/;"	m	namespace:rapidxml
+parse_element	include/rapidxml.hpp	/^        xml_node<Ch> *parse_element(Ch *&text)$/;"	f	class:rapidxml::xml_document
+parse_fastest	include/rapidxml.hpp	/^    const int parse_fastest = parse_non_destructive | parse_no_data_nodes;$/;"	m	namespace:rapidxml
+parse_full	include/rapidxml.hpp	/^    const int parse_full = parse_declaration_node | parse_comment_nodes | parse_doctype_node | parse_pi_nodes | parse_validate_closing_tags;$/;"	m	namespace:rapidxml
+parse_no_data_nodes	include/rapidxml.hpp	/^    const int parse_no_data_nodes = 0x1;            $/;"	m	namespace:rapidxml
+parse_no_element_values	include/rapidxml.hpp	/^    const int parse_no_element_values = 0x2;$/;"	m	namespace:rapidxml
+parse_no_entity_translation	include/rapidxml.hpp	/^    const int parse_no_entity_translation = 0x8;$/;"	m	namespace:rapidxml
+parse_no_string_terminators	include/rapidxml.hpp	/^    const int parse_no_string_terminators = 0x4;$/;"	m	namespace:rapidxml
+parse_no_utf8	include/rapidxml.hpp	/^    const int parse_no_utf8 = 0x10;$/;"	m	namespace:rapidxml
+parse_node	include/rapidxml.hpp	/^        xml_node<Ch> *parse_node(Ch *&text)$/;"	f	class:rapidxml::xml_document
+parse_node_attributes	include/rapidxml.hpp	/^        void parse_node_attributes(Ch *&text, xml_node<Ch> *node)$/;"	f	class:rapidxml::xml_document
+parse_node_contents	include/rapidxml.hpp	/^        void parse_node_contents(Ch *&text, xml_node<Ch> *node)$/;"	f	class:rapidxml::xml_document
+parse_non_destructive	include/rapidxml.hpp	/^    const int parse_non_destructive = parse_no_string_terminators | parse_no_entity_translation;$/;"	m	namespace:rapidxml
+parse_normalize_whitespace	include/rapidxml.hpp	/^    const int parse_normalize_whitespace = 0x800;$/;"	m	namespace:rapidxml
+parse_pi	include/rapidxml.hpp	/^        xml_node<Ch> *parse_pi(Ch *&text)$/;"	f	class:rapidxml::xml_document
+parse_pi_nodes	include/rapidxml.hpp	/^    const int parse_pi_nodes = 0x100;$/;"	m	namespace:rapidxml
+parse_trim_whitespace	include/rapidxml.hpp	/^    const int parse_trim_whitespace = 0x400;$/;"	m	namespace:rapidxml
+parse_validate_closing_tags	include/rapidxml.hpp	/^    const int parse_validate_closing_tags = 0x200;$/;"	m	namespace:rapidxml
+parse_xml_declaration	include/rapidxml.hpp	/^        xml_node<Ch> *parse_xml_declaration(Ch *&text)$/;"	f	class:rapidxml::xml_document
+piprot_	proxy/master/gen-cpp/Master.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;$/;"	m	class:MasterClient
+piprot_	proxy/worker/gen-cpp/Master.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;$/;"	m	class:MasterClient
+piprot_	proxy/worker/gen-cpp/Worker.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;$/;"	m	class:WorkerClient
+poprot_	proxy/master/gen-cpp/Master.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;$/;"	m	class:MasterClient
+poprot_	proxy/worker/gen-cpp/Master.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;$/;"	m	class:MasterClient
+poprot_	proxy/worker/gen-cpp/Worker.h	/^  boost::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;$/;"	m	class:WorkerClient
+prepend_attribute	include/rapidxml.hpp	/^        void prepend_attribute(xml_attribute<Ch> *attribute)$/;"	f	class:rapidxml::xml_node
+prepend_node	include/rapidxml.hpp	/^        void prepend_node(xml_node<Ch> *child)$/;"	f	class:rapidxml::xml_node
+previous_attribute	include/rapidxml.hpp	/^        xml_attribute<Ch> *previous_attribute(const Ch *name = 0, std::size_t name_size = 0, bool case_sensitive = true) const$/;"	f	class:rapidxml::xml_attribute
+previous_begin	include/rapidxml.hpp	/^            char *previous_begin;$/;"	m	struct:rapidxml::memory_pool::header
+previous_sibling	include/rapidxml.hpp	/^        xml_node<Ch> *previous_sibling(const Ch *name = 0, std::size_t name_size = 0, bool case_sensitive = true) const$/;"	f	class:rapidxml::xml_node
+processMap_	proxy/master/gen-cpp/Master.h	/^  ProcessMap processMap_;$/;"	m	class:MasterProcessor
+processMap_	proxy/worker/gen-cpp/Master.h	/^  ProcessMap processMap_;$/;"	m	class:MasterProcessor
+processMap_	proxy/worker/gen-cpp/Worker.h	/^  ProcessMap processMap_;$/;"	m	class:WorkerProcessor
+process_AddVC	proxy/master/gen-cpp/Master.cpp	/^void MasterProcessor::process_AddVC(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext)$/;"	f	class:MasterProcessor
+process_AddVC	proxy/worker/gen-cpp/Master.cpp	/^void MasterProcessor::process_AddVC(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext)$/;"	f	class:MasterProcessor
+process_Heartbeat	proxy/master/gen-cpp/Master.cpp	/^void MasterProcessor::process_Heartbeat(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext)$/;"	f	class:MasterProcessor
+process_Heartbeat	proxy/worker/gen-cpp/Master.cpp	/^void MasterProcessor::process_Heartbeat(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext)$/;"	f	class:MasterProcessor
+process_StartTask	proxy/worker/gen-cpp/Worker.cpp	/^void WorkerProcessor::process_StartTask(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext)$/;"	f	class:WorkerProcessor
+quota	proxy/master/gen-cpp/master_types.h	/^  bool quota;$/;"	m	struct:_VCInfo__isset
+quota	proxy/master/gen-cpp/master_types.h	/^  int32_t quota;$/;"	m	class:VCInfo
+quota	proxy/worker/gen-cpp/master_types.h	/^  bool quota;$/;"	m	struct:_VCInfo__isset
+quota	proxy/worker/gen-cpp/master_types.h	/^  int32_t quota;$/;"	m	class:VCInfo
+rapidxml	include/rapidxml.hpp	/^namespace rapidxml$/;"	n
+rapidxml	include/rapidxml_utils.hpp	/^namespace rapidxml$/;"	n
+read	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_args::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_AddVC_args
+read	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_presult::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_AddVC_presult
+read	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_result::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_AddVC_result
+read	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_args::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_Heartbeat_args
+read	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_presult::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_Heartbeat_presult
+read	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_result::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_Heartbeat_result
+read	proxy/master/gen-cpp/master_types.cpp	/^uint32_t MachineInfo::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:MachineInfo
+read	proxy/master/gen-cpp/master_types.cpp	/^uint32_t TaskInfo::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:TaskInfo
+read	proxy/master/gen-cpp/master_types.cpp	/^uint32_t VCInfo::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:VCInfo
+read	proxy/master/gen-cpp/master_types.cpp	/^uint32_t VMStat::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:VMStat
+read	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_args::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_AddVC_args
+read	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_presult::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_AddVC_presult
+read	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_result::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_AddVC_result
+read	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_args::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_Heartbeat_args
+read	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_presult::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_Heartbeat_presult
+read	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_result::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Master_Heartbeat_result
+read	proxy/worker/gen-cpp/Worker.cpp	/^uint32_t Worker_StartTask_args::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Worker_StartTask_args
+read	proxy/worker/gen-cpp/Worker.cpp	/^uint32_t Worker_StartTask_presult::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Worker_StartTask_presult
+read	proxy/worker/gen-cpp/Worker.cpp	/^uint32_t Worker_StartTask_result::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:Worker_StartTask_result
+read	proxy/worker/gen-cpp/master_types.cpp	/^uint32_t MachineInfo::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:MachineInfo
+read	proxy/worker/gen-cpp/master_types.cpp	/^uint32_t TaskInfo::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:TaskInfo
+read	proxy/worker/gen-cpp/master_types.cpp	/^uint32_t VCInfo::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:VCInfo
+read	proxy/worker/gen-cpp/master_types.cpp	/^uint32_t VMStat::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:VMStat
+recv_AddVC	proxy/master/gen-cpp/Master.cpp	/^int32_t MasterClient::recv_AddVC()$/;"	f	class:MasterClient
+recv_AddVC	proxy/worker/gen-cpp/Master.cpp	/^int32_t MasterClient::recv_AddVC()$/;"	f	class:MasterClient
+recv_Heartbeat	proxy/master/gen-cpp/Master.cpp	/^void MasterClient::recv_Heartbeat()$/;"	f	class:MasterClient
+recv_Heartbeat	proxy/worker/gen-cpp/Master.cpp	/^void MasterClient::recv_Heartbeat()$/;"	f	class:MasterClient
+recv_StartTask	proxy/worker/gen-cpp/Worker.cpp	/^bool WorkerClient::recv_StartTask()$/;"	f	class:WorkerClient
+releaseHandler	proxy/master/gen-cpp/Master.h	/^  virtual void releaseHandler(MasterIf* \/* handler *\/) {}$/;"	f	class:MasterIfSingletonFactory
+releaseHandler	proxy/worker/gen-cpp/Master.h	/^  virtual void releaseHandler(MasterIf* \/* handler *\/) {}$/;"	f	class:MasterIfSingletonFactory
+releaseHandler	proxy/worker/gen-cpp/Worker.h	/^  virtual void releaseHandler(WorkerIf* \/* handler *\/) {}$/;"	f	class:WorkerIfSingletonFactory
+remove_all_attributes	include/rapidxml.hpp	/^        void remove_all_attributes()$/;"	f	class:rapidxml::xml_node
+remove_all_nodes	include/rapidxml.hpp	/^        void remove_all_nodes()$/;"	f	class:rapidxml::xml_node
+remove_attribute	include/rapidxml.hpp	/^        void remove_attribute(xml_attribute<Ch> *where)$/;"	f	class:rapidxml::xml_node
+remove_first_attribute	include/rapidxml.hpp	/^        void remove_first_attribute()$/;"	f	class:rapidxml::xml_node
+remove_first_node	include/rapidxml.hpp	/^        void remove_first_node()$/;"	f	class:rapidxml::xml_node
+remove_last_attribute	include/rapidxml.hpp	/^        void remove_last_attribute()$/;"	f	class:rapidxml::xml_node
+remove_last_node	include/rapidxml.hpp	/^        void remove_last_node()$/;"	f	class:rapidxml::xml_node
+remove_node	include/rapidxml.hpp	/^        void remove_node(xml_node<Ch> *where)$/;"	f	class:rapidxml::xml_node
+send_AddVC	proxy/master/gen-cpp/Master.cpp	/^void MasterClient::send_AddVC(const VCInfo& vc_info)$/;"	f	class:MasterClient
+send_AddVC	proxy/worker/gen-cpp/Master.cpp	/^void MasterClient::send_AddVC(const VCInfo& vc_info)$/;"	f	class:MasterClient
+send_Heartbeat	proxy/master/gen-cpp/Master.cpp	/^void MasterClient::send_Heartbeat(const MachineInfo& info)$/;"	f	class:MasterClient
+send_Heartbeat	proxy/worker/gen-cpp/Master.cpp	/^void MasterClient::send_Heartbeat(const MachineInfo& info)$/;"	f	class:MasterClient
+send_StartTask	proxy/worker/gen-cpp/Worker.cpp	/^void WorkerClient::send_StartTask(const  ::TaskInfo& info)$/;"	f	class:WorkerClient
+set_allocator	include/rapidxml.hpp	/^        void set_allocator(alloc_func *af, free_func *ff)$/;"	f	class:rapidxml::memory_pool
+size	include/rapidxml_utils.hpp	/^        std::size_t size() const$/;"	f	class:rapidxml::file
+skip	include/rapidxml.hpp	/^        static void skip(Ch *&text)$/;"	f	class:rapidxml::xml_document
+skip_and_expand_character_refs	include/rapidxml.hpp	/^        static Ch *skip_and_expand_character_refs(Ch *&text)$/;"	f	class:rapidxml::xml_document
+success	proxy/master/gen-cpp/Master.h	/^  bool success;$/;"	m	struct:_Master_AddVC_presult__isset
+success	proxy/master/gen-cpp/Master.h	/^  bool success;$/;"	m	struct:_Master_AddVC_result__isset
+success	proxy/master/gen-cpp/Master.h	/^  int32_t success;$/;"	m	class:Master_AddVC_result
+success	proxy/master/gen-cpp/Master.h	/^  int32_t* success;$/;"	m	class:Master_AddVC_presult
+success	proxy/worker/gen-cpp/Master.h	/^  bool success;$/;"	m	struct:_Master_AddVC_presult__isset
+success	proxy/worker/gen-cpp/Master.h	/^  bool success;$/;"	m	struct:_Master_AddVC_result__isset
+success	proxy/worker/gen-cpp/Master.h	/^  int32_t success;$/;"	m	class:Master_AddVC_result
+success	proxy/worker/gen-cpp/Master.h	/^  int32_t* success;$/;"	m	class:Master_AddVC_presult
+success	proxy/worker/gen-cpp/Worker.h	/^  bool success;$/;"	m	class:Worker_StartTask_result
+success	proxy/worker/gen-cpp/Worker.h	/^  bool success;$/;"	m	struct:_Worker_StartTask_presult__isset
+success	proxy/worker/gen-cpp/Worker.h	/^  bool success;$/;"	m	struct:_Worker_StartTask_result__isset
+success	proxy/worker/gen-cpp/Worker.h	/^  bool* success;$/;"	m	class:Worker_StartTask_presult
+swap	proxy/master/gen-cpp/master_types.cpp	/^void swap(MachineInfo &a, MachineInfo &b) {$/;"	f
+swap	proxy/master/gen-cpp/master_types.cpp	/^void swap(TaskInfo &a, TaskInfo &b) {$/;"	f
+swap	proxy/master/gen-cpp/master_types.cpp	/^void swap(VCInfo &a, VCInfo &b) {$/;"	f
+swap	proxy/master/gen-cpp/master_types.cpp	/^void swap(VMStat &a, VMStat &b) {$/;"	f
+swap	proxy/worker/gen-cpp/master_types.cpp	/^void swap(MachineInfo &a, MachineInfo &b) {$/;"	f
+swap	proxy/worker/gen-cpp/master_types.cpp	/^void swap(TaskInfo &a, TaskInfo &b) {$/;"	f
+swap	proxy/worker/gen-cpp/master_types.cpp	/^void swap(VCInfo &a, VCInfo &b) {$/;"	f
+swap	proxy/worker/gen-cpp/master_types.cpp	/^void swap(VMStat &a, VMStat &b) {$/;"	f
+task_id	proxy/master/gen-cpp/master_types.h	/^  bool task_id;$/;"	m	struct:_VMStat__isset
+task_id	proxy/master/gen-cpp/master_types.h	/^  int64_t task_id;$/;"	m	class:VMStat
+task_id	proxy/worker/gen-cpp/master_types.h	/^  bool task_id;$/;"	m	struct:_VMStat__isset
+task_id	proxy/worker/gen-cpp/master_types.h	/^  int64_t task_id;$/;"	m	class:VMStat
+test	include/rapidxml.hpp	/^            static unsigned char test(Ch ch)$/;"	f	struct:rapidxml::xml_document::attribute_name_pred
+test	include/rapidxml.hpp	/^            static unsigned char test(Ch ch)$/;"	f	struct:rapidxml::xml_document::attribute_value_pred
+test	include/rapidxml.hpp	/^            static unsigned char test(Ch ch)$/;"	f	struct:rapidxml::xml_document::attribute_value_pure_pred
+test	include/rapidxml.hpp	/^            static unsigned char test(Ch ch)$/;"	f	struct:rapidxml::xml_document::node_name_pred
+test	include/rapidxml.hpp	/^            static unsigned char test(Ch ch)$/;"	f	struct:rapidxml::xml_document::text_pred
+test	include/rapidxml.hpp	/^            static unsigned char test(Ch ch)$/;"	f	struct:rapidxml::xml_document::text_pure_no_ws_pred
+test	include/rapidxml.hpp	/^            static unsigned char test(Ch ch)$/;"	f	struct:rapidxml::xml_document::text_pure_with_ws_pred
+test	include/rapidxml.hpp	/^            static unsigned char test(Ch ch)$/;"	f	struct:rapidxml::xml_document::whitespace_pred
+text_pred	include/rapidxml.hpp	/^        struct text_pred$/;"	s	class:rapidxml::xml_document
+text_pure_no_ws_pred	include/rapidxml.hpp	/^        struct text_pure_no_ws_pred$/;"	s	class:rapidxml::xml_document
+text_pure_with_ws_pred	include/rapidxml.hpp	/^        struct text_pure_with_ws_pred$/;"	s	class:rapidxml::xml_document
+total_memory	proxy/master/gen-cpp/master_types.h	/^  bool total_memory;$/;"	m	struct:_MachineInfo__isset
+total_memory	proxy/master/gen-cpp/master_types.h	/^  int32_t total_memory;$/;"	m	class:MachineInfo
+total_memory	proxy/worker/gen-cpp/master_types.h	/^  bool total_memory;$/;"	m	struct:_MachineInfo__isset
+total_memory	proxy/worker/gen-cpp/master_types.h	/^  int32_t total_memory;$/;"	m	class:MachineInfo
+total_vcpu	proxy/master/gen-cpp/master_types.h	/^  bool total_vcpu;$/;"	m	struct:_MachineInfo__isset
+total_vcpu	proxy/master/gen-cpp/master_types.h	/^  int32_t total_vcpu;$/;"	m	class:MachineInfo
+total_vcpu	proxy/worker/gen-cpp/master_types.h	/^  bool total_vcpu;$/;"	m	struct:_MachineInfo__isset
+total_vcpu	proxy/worker/gen-cpp/master_types.h	/^  int32_t total_vcpu;$/;"	m	class:MachineInfo
+type	include/rapidxml.hpp	/^        node_type type() const$/;"	f	class:rapidxml::xml_node
+type	include/rapidxml.hpp	/^        void type(node_type type)$/;"	f	class:rapidxml::xml_node
+used_memory	proxy/master/gen-cpp/master_types.h	/^  bool used_memory;$/;"	m	struct:_VMStat__isset
+used_memory	proxy/master/gen-cpp/master_types.h	/^  int32_t used_memory;$/;"	m	class:VMStat
+used_memory	proxy/worker/gen-cpp/master_types.h	/^  bool used_memory;$/;"	m	struct:_VMStat__isset
+used_memory	proxy/worker/gen-cpp/master_types.h	/^  int32_t used_memory;$/;"	m	class:VMStat
+used_vcpu	proxy/master/gen-cpp/master_types.h	/^  bool used_vcpu;$/;"	m	struct:_VMStat__isset
+used_vcpu	proxy/master/gen-cpp/master_types.h	/^  double used_vcpu;$/;"	m	class:VMStat
+used_vcpu	proxy/worker/gen-cpp/master_types.h	/^  bool used_vcpu;$/;"	m	struct:_VMStat__isset
+used_vcpu	proxy/worker/gen-cpp/master_types.h	/^  double used_vcpu;$/;"	m	class:VMStat
+value	include/rapidxml.hpp	/^        Ch *value() const$/;"	f	class:rapidxml::xml_base
+value	include/rapidxml.hpp	/^        void value(const Ch *value)$/;"	f	class:rapidxml::xml_base
+value	include/rapidxml.hpp	/^        void value(const Ch *value, std::size_t size)$/;"	f	class:rapidxml::xml_base
+value_size	include/rapidxml.hpp	/^        std::size_t value_size() const$/;"	f	class:rapidxml::xml_base
+vc_info	proxy/master/gen-cpp/Master.h	/^  VCInfo vc_info;$/;"	m	class:Master_AddVC_args
+vc_info	proxy/master/gen-cpp/Master.h	/^  bool vc_info;$/;"	m	struct:_Master_AddVC_args__isset
+vc_info	proxy/master/gen-cpp/Master.h	/^  const VCInfo* vc_info;$/;"	m	class:Master_AddVC_pargs
+vc_info	proxy/worker/gen-cpp/Master.h	/^  VCInfo vc_info;$/;"	m	class:Master_AddVC_args
+vc_info	proxy/worker/gen-cpp/Master.h	/^  bool vc_info;$/;"	m	struct:_Master_AddVC_args__isset
+vc_info	proxy/worker/gen-cpp/Master.h	/^  const VCInfo* vc_info;$/;"	m	class:Master_AddVC_pargs
+vc_name	proxy/master/gen-cpp/master_types.h	/^  bool vc_name;$/;"	m	struct:_TaskInfo__isset
+vc_name	proxy/master/gen-cpp/master_types.h	/^  bool vc_name;$/;"	m	struct:_VMStat__isset
+vc_name	proxy/master/gen-cpp/master_types.h	/^  std::string vc_name;$/;"	m	class:TaskInfo
+vc_name	proxy/master/gen-cpp/master_types.h	/^  std::string vc_name;$/;"	m	class:VMStat
+vc_name	proxy/worker/gen-cpp/master_types.h	/^  bool vc_name;$/;"	m	struct:_TaskInfo__isset
+vc_name	proxy/worker/gen-cpp/master_types.h	/^  bool vc_name;$/;"	m	struct:_VMStat__isset
+vc_name	proxy/worker/gen-cpp/master_types.h	/^  std::string vc_name;$/;"	m	class:TaskInfo
+vc_name	proxy/worker/gen-cpp/master_types.h	/^  std::string vc_name;$/;"	m	class:VMStat
+vcpu	proxy/master/gen-cpp/master_types.h	/^  bool vcpu;$/;"	m	struct:_VCInfo__isset
+vcpu	proxy/master/gen-cpp/master_types.h	/^  int32_t vcpu;$/;"	m	class:VCInfo
+vcpu	proxy/worker/gen-cpp/master_types.h	/^  bool vcpu;$/;"	m	struct:_VCInfo__isset
+vcpu	proxy/worker/gen-cpp/master_types.h	/^  int32_t vcpu;$/;"	m	class:VCInfo
+vm_list	proxy/master/gen-cpp/master_types.h	/^  bool vm_list;$/;"	m	struct:_MachineInfo__isset
+vm_list	proxy/master/gen-cpp/master_types.h	/^  std::vector<VMStat>  vm_list;$/;"	m	class:MachineInfo
+vm_list	proxy/worker/gen-cpp/master_types.h	/^  bool vm_list;$/;"	m	struct:_MachineInfo__isset
+vm_list	proxy/worker/gen-cpp/master_types.h	/^  std::vector<VMStat>  vm_list;$/;"	m	class:MachineInfo
+whitespace_pred	include/rapidxml.hpp	/^        struct whitespace_pred$/;"	s	class:rapidxml::xml_document
+workerConstants	proxy/worker/gen-cpp/worker_constants.cpp	/^workerConstants::workerConstants() {$/;"	f	class:workerConstants
+workerConstants	proxy/worker/gen-cpp/worker_constants.h	/^class workerConstants {$/;"	c
+worker_CONSTANTS_H	proxy/worker/gen-cpp/worker_constants.h	8;"	d
+worker_TYPES_H	proxy/worker/gen-cpp/worker_types.h	8;"	d
+write	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_args::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_AddVC_args
+write	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_pargs::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_AddVC_pargs
+write	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_result::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_AddVC_result
+write	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_args::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_Heartbeat_args
+write	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_pargs::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_Heartbeat_pargs
+write	proxy/master/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_result::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_Heartbeat_result
+write	proxy/master/gen-cpp/master_types.cpp	/^uint32_t MachineInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:MachineInfo
+write	proxy/master/gen-cpp/master_types.cpp	/^uint32_t TaskInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:TaskInfo
+write	proxy/master/gen-cpp/master_types.cpp	/^uint32_t VCInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:VCInfo
+write	proxy/master/gen-cpp/master_types.cpp	/^uint32_t VMStat::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:VMStat
+write	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_args::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_AddVC_args
+write	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_pargs::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_AddVC_pargs
+write	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_AddVC_result::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_AddVC_result
+write	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_args::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_Heartbeat_args
+write	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_pargs::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_Heartbeat_pargs
+write	proxy/worker/gen-cpp/Master.cpp	/^uint32_t Master_Heartbeat_result::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Master_Heartbeat_result
+write	proxy/worker/gen-cpp/Worker.cpp	/^uint32_t Worker_StartTask_args::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Worker_StartTask_args
+write	proxy/worker/gen-cpp/Worker.cpp	/^uint32_t Worker_StartTask_pargs::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Worker_StartTask_pargs
+write	proxy/worker/gen-cpp/Worker.cpp	/^uint32_t Worker_StartTask_result::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:Worker_StartTask_result
+write	proxy/worker/gen-cpp/master_types.cpp	/^uint32_t MachineInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:MachineInfo
+write	proxy/worker/gen-cpp/master_types.cpp	/^uint32_t TaskInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:TaskInfo
+write	proxy/worker/gen-cpp/master_types.cpp	/^uint32_t VCInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:VCInfo
+write	proxy/worker/gen-cpp/master_types.cpp	/^uint32_t VMStat::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:VMStat
+xml_attribute	include/rapidxml.hpp	/^        xml_attribute()$/;"	f	class:rapidxml::xml_attribute
+xml_attribute	include/rapidxml.hpp	/^    class xml_attribute: public xml_base<Ch>$/;"	c	namespace:rapidxml
+xml_base	include/rapidxml.hpp	/^        xml_base()$/;"	f	class:rapidxml::xml_base
+xml_base	include/rapidxml.hpp	/^    class xml_base$/;"	c	namespace:rapidxml
+xml_document	include/rapidxml.hpp	/^        xml_document()$/;"	f	class:rapidxml::xml_document
+xml_document	include/rapidxml.hpp	/^    class xml_document: public xml_node<Ch>, public memory_pool<Ch>$/;"	c	namespace:rapidxml
+xml_node	include/rapidxml.hpp	/^        xml_node(node_type type)$/;"	f	class:rapidxml::xml_node
+xml_node	include/rapidxml.hpp	/^    class xml_node: public xml_base<Ch>$/;"	c	namespace:rapidxml
+~BlockQueue	include/block_queue.h	/^            ~BlockQueue() {$/;"	f	class:lynn::BlockQueue
+~Cond	include/cond.h	/^            ~Cond(){$/;"	f	class:lynn::Cond
+~Machine	master/machine.h	/^    ~Machine() throw() {};$/;"	f	class:Machine
+~MachineInfo	proxy/master/gen-cpp/master_types.h	/^  virtual ~MachineInfo() throw() {}$/;"	f	class:MachineInfo
+~MachineInfo	proxy/worker/gen-cpp/master_types.h	/^  virtual ~MachineInfo() throw() {}$/;"	f	class:MachineInfo
+~MasterIf	proxy/master/gen-cpp/Master.h	/^  virtual ~MasterIf() {}$/;"	f	class:MasterIf
+~MasterIf	proxy/worker/gen-cpp/Master.h	/^  virtual ~MasterIf() {}$/;"	f	class:MasterIf
+~MasterIfFactory	proxy/master/gen-cpp/Master.h	/^  virtual ~MasterIfFactory() {}$/;"	f	class:MasterIfFactory
+~MasterIfFactory	proxy/worker/gen-cpp/Master.h	/^  virtual ~MasterIfFactory() {}$/;"	f	class:MasterIfFactory
+~MasterIfSingletonFactory	proxy/master/gen-cpp/Master.h	/^  virtual ~MasterIfSingletonFactory() {}$/;"	f	class:MasterIfSingletonFactory
+~MasterIfSingletonFactory	proxy/worker/gen-cpp/Master.h	/^  virtual ~MasterIfSingletonFactory() {}$/;"	f	class:MasterIfSingletonFactory
+~MasterMultiface	proxy/master/gen-cpp/Master.h	/^  virtual ~MasterMultiface() {}$/;"	f	class:MasterMultiface
+~MasterMultiface	proxy/worker/gen-cpp/Master.h	/^  virtual ~MasterMultiface() {}$/;"	f	class:MasterMultiface
+~MasterNull	proxy/master/gen-cpp/Master.h	/^  virtual ~MasterNull() {}$/;"	f	class:MasterNull
+~MasterNull	proxy/worker/gen-cpp/Master.h	/^  virtual ~MasterNull() {}$/;"	f	class:MasterNull
+~MasterProcessor	proxy/master/gen-cpp/Master.h	/^  virtual ~MasterProcessor() {}$/;"	f	class:MasterProcessor
+~MasterProcessor	proxy/worker/gen-cpp/Master.h	/^  virtual ~MasterProcessor() {}$/;"	f	class:MasterProcessor
+~Master_AddVC_args	proxy/master/gen-cpp/Master.h	/^  virtual ~Master_AddVC_args() throw() {}$/;"	f	class:Master_AddVC_args
+~Master_AddVC_args	proxy/worker/gen-cpp/Master.h	/^  virtual ~Master_AddVC_args() throw() {}$/;"	f	class:Master_AddVC_args
+~Master_AddVC_pargs	proxy/master/gen-cpp/Master.h	/^  virtual ~Master_AddVC_pargs() throw() {}$/;"	f	class:Master_AddVC_pargs
+~Master_AddVC_pargs	proxy/worker/gen-cpp/Master.h	/^  virtual ~Master_AddVC_pargs() throw() {}$/;"	f	class:Master_AddVC_pargs
+~Master_AddVC_presult	proxy/master/gen-cpp/Master.h	/^  virtual ~Master_AddVC_presult() throw() {}$/;"	f	class:Master_AddVC_presult
+~Master_AddVC_presult	proxy/worker/gen-cpp/Master.h	/^  virtual ~Master_AddVC_presult() throw() {}$/;"	f	class:Master_AddVC_presult
+~Master_AddVC_result	proxy/master/gen-cpp/Master.h	/^  virtual ~Master_AddVC_result() throw() {}$/;"	f	class:Master_AddVC_result
+~Master_AddVC_result	proxy/worker/gen-cpp/Master.h	/^  virtual ~Master_AddVC_result() throw() {}$/;"	f	class:Master_AddVC_result
+~Master_Heartbeat_args	proxy/master/gen-cpp/Master.h	/^  virtual ~Master_Heartbeat_args() throw() {}$/;"	f	class:Master_Heartbeat_args
+~Master_Heartbeat_args	proxy/worker/gen-cpp/Master.h	/^  virtual ~Master_Heartbeat_args() throw() {}$/;"	f	class:Master_Heartbeat_args
+~Master_Heartbeat_pargs	proxy/master/gen-cpp/Master.h	/^  virtual ~Master_Heartbeat_pargs() throw() {}$/;"	f	class:Master_Heartbeat_pargs
+~Master_Heartbeat_pargs	proxy/worker/gen-cpp/Master.h	/^  virtual ~Master_Heartbeat_pargs() throw() {}$/;"	f	class:Master_Heartbeat_pargs
+~Master_Heartbeat_presult	proxy/master/gen-cpp/Master.h	/^  virtual ~Master_Heartbeat_presult() throw() {}$/;"	f	class:Master_Heartbeat_presult
+~Master_Heartbeat_presult	proxy/worker/gen-cpp/Master.h	/^  virtual ~Master_Heartbeat_presult() throw() {}$/;"	f	class:Master_Heartbeat_presult
+~Master_Heartbeat_result	proxy/master/gen-cpp/Master.h	/^  virtual ~Master_Heartbeat_result() throw() {}$/;"	f	class:Master_Heartbeat_result
+~Master_Heartbeat_result	proxy/worker/gen-cpp/Master.h	/^  virtual ~Master_Heartbeat_result() throw() {}$/;"	f	class:Master_Heartbeat_result
+~Mutex	include/mutex.h	/^            ~Mutex() {$/;"	f	class:lynn::Mutex
+~MutexLocker	include/mutex.h	/^            ~MutexLocker() {$/;"	f	class:lynn::MutexLocker
+~Proxy	include/rpc.h	/^    ~Proxy() {$/;"	f	class:Proxy
+~RWLock	include/rwlock.h	/^            ~RWLock() {$/;"	f	class:lynn::RWLock
+~ReadLocker	include/rwlock.h	/^            ~ReadLocker() {$/;"	f	class:lynn::ReadLocker
+~Task	master/task.h	/^    ~Task() throw() {};$/;"	f	class:Task
+~TaskInfo	proxy/master/gen-cpp/master_types.h	/^  virtual ~TaskInfo() throw() {}$/;"	f	class:TaskInfo
+~TaskInfo	proxy/worker/gen-cpp/master_types.h	/^  virtual ~TaskInfo() throw() {}$/;"	f	class:TaskInfo
+~VC	master/virtual_cluster.h	/^    ~VC() throw() {}$/;"	f	class:VC
+~VCInfo	proxy/master/gen-cpp/master_types.h	/^  virtual ~VCInfo() throw() {}$/;"	f	class:VCInfo
+~VCInfo	proxy/worker/gen-cpp/master_types.h	/^  virtual ~VCInfo() throw() {}$/;"	f	class:VCInfo
+~VMStat	proxy/master/gen-cpp/master_types.h	/^  virtual ~VMStat() throw() {}$/;"	f	class:VMStat
+~VMStat	proxy/worker/gen-cpp/master_types.h	/^  virtual ~VMStat() throw() {}$/;"	f	class:VMStat
+~WorkerIf	proxy/worker/gen-cpp/Worker.h	/^  virtual ~WorkerIf() {}$/;"	f	class:WorkerIf
+~WorkerIfFactory	proxy/worker/gen-cpp/Worker.h	/^  virtual ~WorkerIfFactory() {}$/;"	f	class:WorkerIfFactory
+~WorkerIfSingletonFactory	proxy/worker/gen-cpp/Worker.h	/^  virtual ~WorkerIfSingletonFactory() {}$/;"	f	class:WorkerIfSingletonFactory
+~WorkerMultiface	proxy/worker/gen-cpp/Worker.h	/^  virtual ~WorkerMultiface() {}$/;"	f	class:WorkerMultiface
+~WorkerNull	proxy/worker/gen-cpp/Worker.h	/^  virtual ~WorkerNull() {}$/;"	f	class:WorkerNull
+~WorkerProcessor	proxy/worker/gen-cpp/Worker.h	/^  virtual ~WorkerProcessor() {}$/;"	f	class:WorkerProcessor
+~Worker_StartTask_args	proxy/worker/gen-cpp/Worker.h	/^  virtual ~Worker_StartTask_args() throw() {}$/;"	f	class:Worker_StartTask_args
+~Worker_StartTask_pargs	proxy/worker/gen-cpp/Worker.h	/^  virtual ~Worker_StartTask_pargs() throw() {}$/;"	f	class:Worker_StartTask_pargs
+~Worker_StartTask_presult	proxy/worker/gen-cpp/Worker.h	/^  virtual ~Worker_StartTask_presult() throw() {}$/;"	f	class:Worker_StartTask_presult
+~Worker_StartTask_result	proxy/worker/gen-cpp/Worker.h	/^  virtual ~Worker_StartTask_result() throw() {}$/;"	f	class:Worker_StartTask_result
+~WriteLocker	include/rwlock.h	/^            ~WriteLocker() {$/;"	f	class:lynn::WriteLocker
+~memory_pool	include/rapidxml.hpp	/^        ~memory_pool()$/;"	f	class:rapidxml::memory_pool

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<master_endpoint>127.0.0.1:9999</master_endpoint>
+<port>9998</port>
+<interface>br0</interface>
+<heartbeat_interval>5</heartbeat_interval>
+

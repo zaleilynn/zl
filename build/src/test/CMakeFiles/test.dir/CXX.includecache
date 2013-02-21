@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/./include/attributes.h
+string
+-
+
+/home/zaleilynn/workspace/lynn/src/test/test.cpp
+stdio.h
+-
+boost/shared_ptr.hpp
+-
+list
+-
+classad/classad.h
+-
+classad/classad_distribution.h
+-
+include/attributes.h
+/home/zaleilynn/workspace/lynn/src/test/include/attributes.h
+
