@@ -13,6 +13,7 @@
 #include "include/rpc.h"
 #include "master/config.h"
 #include "master/service.h"
+#include "master/ip_pool.h"
 
 extern void* TaskProcessor();
 extern void* SchedulerProcessor();
@@ -60,8 +61,14 @@ int32_t main(int argc, char ** argv) {
     }
 
     string zlynn_home(p);
-    if(MasterConfigI::Instance()->Init(zlynn_home + "/conf/master.xml") != 0) {
+    string conf_file = zlynn_home + "/conf/master.xml";
+    if(MasterConfigI::Instance()->Init(conf_file) != 0) {
         LOG4CPLUS_ERROR(logger, "error in reading master config");
+        exit(1);
+    }
+   
+    if(IpPoolI::Instance()->Init() != 0) {
+        LOG4CPLUS_ERROR(logger, "error in init ip pool");
         exit(1);
     }
 

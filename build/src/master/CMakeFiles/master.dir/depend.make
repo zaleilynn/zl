@@ -34,6 +34,16 @@ src/master/CMakeFiles/master.dir/config.cpp.o: ../src/./include/singleton.h
 src/master/CMakeFiles/master.dir/config.cpp.o: ../src/./master/config.h
 src/master/CMakeFiles/master.dir/config.cpp.o: ../src/master/config.cpp
 
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/config.h
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/mutex.h
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/rapidxml.hpp
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/rapidxml_utils.hpp
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/rwlock.h
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/singleton.h
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./master/config.h
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./master/ip_pool.h
+src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/master/ip_pool.cpp
+
 src/master/CMakeFiles/master.dir/machine.cpp.o: ../src/./include/attributes.h
 src/master/CMakeFiles/master.dir/machine.cpp.o: ../src/./include/proxy.h
 src/master/CMakeFiles/master.dir/machine.cpp.o: ../src/./master/machine.h
@@ -61,8 +71,10 @@ src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./include/proxy.h
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./include/rapidxml.hpp
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./include/rapidxml_utils.hpp
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./include/rpc.h
+src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./include/rwlock.h
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./include/singleton.h
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./master/config.h
+src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./master/ip_pool.h
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./master/service.h
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h

@@ -1,3 +1,5 @@
+#include <sys/stat.h>
+#include <sys/types.h>
 #include <log4cplus/logger.h>
 #include <log4cplus/loggingmacros.h>
 #include <log4cplus/configurator.h>
@@ -50,6 +52,28 @@ int32_t main(int argc, char ** argv){
         logger.setLogLevel(log4cplus::INFO_LOG_LEVEL);
     }
     
+    //创建一些目录
+    if(access("/var/lib/lynn", F_OK) == -1) {
+       if(mkdir("/var/lib/lynn",0755) != 0){
+           LOG4CPLUS_ERROR(logger, "cannot create /var/lib/lynn\n");
+           exit(1);
+       }
+    }
+
+    if(access("/var/lib/lynn/iso", F_OK) == -1) {
+       if(mkdir("/var/lib/lynn/iso",0755) != 0){
+           LOG4CPLUS_ERROR(logger, "cannot create /var/lib/lynn/iso\n");
+           exit(1);
+       }
+    }
+
+    if(access("/var/lib/lynn/img", F_OK) == -1) {
+       if(mkdir("/var/lib/lynn/img",0755) != 0){
+           LOG4CPLUS_ERROR(logger, "cannot create /var/lib/lynn/img\n");
+           exit(1);
+       }
+    }
+ 
     char *p = getenv("LYNN_HOME");
 
     if( NULL == p) {

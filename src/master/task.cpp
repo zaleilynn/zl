@@ -19,8 +19,8 @@ Task::Task(const TaskInfo& info): m_task_info(info) {
     m_state = TASK_WAIT;
     m_run_on = "";
     //要不要处理一下错误的情况?
-    m_ad.InsertAttr(ATTR_NEED_VCPU, m_task_info.need_vcpu);
-    m_ad.InsertAttr(ATTR_NEED_MEMORY, m_task_info.need_memory);
+    m_ad.InsertAttr(ATTR_NEED_VCPU, m_task_info.vm_info.vcpu);
+    m_ad.InsertAttr(ATTR_NEED_MEMORY, m_task_info.vm_info.memory);
     ClassAdParser parser;
     //rank的算法, 选择比例最大的
     ExprTree* expr = parser.ParseExpression(EXP_TASK_RANK);

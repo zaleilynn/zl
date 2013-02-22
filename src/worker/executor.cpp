@@ -18,8 +18,8 @@ Executor::Executor(const TaskInfo& info){
 void Executor::LogInfo(){
     LOG4CPLUS_INFO(logger, "new task :" << m_task_info.id 
                   << " virtual cluster:" << m_task_info.vc_name 
-                  << " vcpu:" << m_task_info.need_vcpu
-                  << " memory:" << m_task_info.need_memory);
+                  << " vcpu:" << m_task_info.vm_info.vcpu
+                  << " memory:" << m_task_info.vm_info.memory);
 }
 
 ExecutorState Executor::GetStatus() {
@@ -32,7 +32,6 @@ void Executor::Start() {
     VMPtr ptr(new VM(m_task_info));  
     if(ptr->Init() == 0) {
     } else {
-
     } 
 }
 

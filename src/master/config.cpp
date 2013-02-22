@@ -8,7 +8,8 @@ using log4cplus::Logger;
 static Logger logger = Logger::getInstance("master");
 
 int32_t MasterConfig::CheckCompleteness() {
-    const char* s[] = {"port", 
+    const char* s[] = {"port",
+                       "net", 
                       };
     int32_t size = sizeof(s)/sizeof(s[0]);
     for(int32_t i = 0; i < size; i++) {     

@@ -16,6 +16,18 @@ proxy/worker/gen-cpp/Worker.h
 proxy/worker/gen-cpp/worker_types.h
 ../src/./include/proxy/worker/gen-cpp/worker_types.h
 
+../src/./include/rwlock.h
+pthread.h
+-
+errno.h
+-
+string.h
+-
+string
+-
+stdexcept
+-
+
 ../src/./proxy/master/gen-cpp/Master.h
 thrift/TDispatchProcessor.h
 -
@@ -50,13 +62,45 @@ thrift/transport/TTransport.h
 master_types.h
 ../src/./proxy/worker/gen-cpp/master_types.h
 
+../src/./worker/executor.h
+boost/shared_ptr.hpp
+-
+include/rwlock.h
+../src/./worker/include/rwlock.h
+include/proxy.h
+../src/./worker/include/proxy.h
+
 ../src/./worker/vm.h
 boost/shared_ptr.hpp
 -
 include/proxy.h
 ../src/./worker/include/proxy.h
 
+/home/zaleilynn/workspace/lynn/src/worker/executor.cpp
+log4cplus/logger.h
+-
+log4cplus/loggingmacros.h
+-
+worker/executor.h
+/home/zaleilynn/workspace/lynn/src/worker/worker/executor.h
+worker/vm.h
+/home/zaleilynn/workspace/lynn/src/worker/worker/vm.h
+
 /home/zaleilynn/workspace/lynn/src/worker/vm.cpp
+fstream
+-
+sstream
+-
+string
+-
+log4cplus/logger.h
+-
+log4cplus/loggingmacros.h
+-
+sys/stat.h
+-
+sys/types.h
+-
 worker/vm.h
 /home/zaleilynn/workspace/lynn/src/worker/worker/vm.h
 

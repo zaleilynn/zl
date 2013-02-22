@@ -14,8 +14,7 @@ VC::VC(const VCInfo& info) : m_vc_info(info) {
    m_task_info.vc_name = m_vc_info.name;
    //被插入pool的时候会更新id
    m_task_info.id = -1; 
-   m_task_info.need_vcpu = m_vc_info.vcpu;
-   m_task_info.need_memory = m_vc_info.memory;
+   m_task_info.vm_info = m_vc_info.vm_info;
 }
 
 void VC::LogInfo() {

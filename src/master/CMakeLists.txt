@@ -41,6 +41,7 @@ SET(SRC
     task_pool.cpp 
     task_queue.cpp
     work_thread.cpp
+    ip_pool.cpp
     master.cpp
     )
 
