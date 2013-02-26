@@ -438,6 +438,30 @@ vm.cpp.s:
 	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/vm.cpp.s
 .PHONY : vm.cpp.s
 
+vm_pool.o: vm_pool.cpp.o
+.PHONY : vm_pool.o
+
+# target to build an object file
+vm_pool.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o
+.PHONY : vm_pool.cpp.o
+
+vm_pool.i: vm_pool.cpp.i
+.PHONY : vm_pool.i
+
+# target to preprocess a source file
+vm_pool.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/vm_pool.cpp.i
+.PHONY : vm_pool.cpp.i
+
+vm_pool.s: vm_pool.cpp.s
+.PHONY : vm_pool.s
+
+# target to generate assembly for a file
+vm_pool.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/vm_pool.cpp.s
+.PHONY : vm_pool.cpp.s
+
 work_thread.o: work_thread.cpp.o
 .PHONY : work_thread.o
 
@@ -535,6 +559,9 @@ help:
 	@echo "... vm.o"
 	@echo "... vm.i"
 	@echo "... vm.s"
+	@echo "... vm_pool.o"
+	@echo "... vm_pool.i"
+	@echo "... vm_pool.s"
 	@echo "... work_thread.o"
 	@echo "... work_thread.i"
 	@echo "... work_thread.s"

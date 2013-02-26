@@ -27,5 +27,28 @@ src/test/CMakeFiles/test.dir/__/proxy/worker/gen-cpp/worker_types.cpp.o
  /home/zaleilynn/workspace/lynn/src/proxy/worker/gen-cpp/worker_types.cpp
  /home/zaleilynn/workspace/lynn/src/proxy/worker/gen-cpp/worker_types.h
 src/test/CMakeFiles/test.dir/test.cpp.o
- ../src/./include/attributes.h
+ ../src/./include/proxy.h
+ ../src/./include/rpc.h
+ ../src/./proxy/master/gen-cpp/Master.h
+ ../src/./proxy/master/gen-cpp/master_types.h
+ ../src/./proxy/worker/gen-cpp/Worker.h
+ ../src/./proxy/worker/gen-cpp/worker_types.h
  /home/zaleilynn/workspace/lynn/src/test/test.cpp
+ /usr/local/include/thrift/concurrency/PosixThreadFactory.h
+ /usr/local/include/thrift/concurrency/Thread.h
+ /usr/local/include/thrift/concurrency/ThreadManager.h
+ /usr/local/include/thrift/config.h
+ /usr/local/include/thrift/protocol/TBinaryProtocol.h
+ /usr/local/include/thrift/protocol/TBinaryProtocol.tcc
+ /usr/local/include/thrift/protocol/TProtocol.h
+ /usr/local/include/thrift/protocol/TVirtualProtocol.h
+ /usr/local/include/thrift/server/TSimpleServer.h
+ /usr/local/include/thrift/server/TThreadPoolServer.h
+ /usr/local/include/thrift/server/TThreadedServer.h
+ /usr/local/include/thrift/transport/TServerSocket.h
+ /usr/local/include/thrift/transport/TServerTransport.h
+ /usr/local/include/thrift/transport/TSocket.h
+ /usr/local/include/thrift/transport/TTransport.h
+ /usr/local/include/thrift/transport/TTransportException.h
+ /usr/local/include/thrift/transport/TTransportUtils.h
+ /usr/local/include/thrift/transport/TVirtualTransport.h

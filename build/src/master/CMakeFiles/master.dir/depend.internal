@@ -130,6 +130,7 @@ src/master/CMakeFiles/master.dir/task.cpp.o
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
  ../src/./master/identity.h
+ ../src/./master/ip_pool.h
  ../src/./master/machine.h
  ../src/./master/machine_pool.h
  ../src/./master/task.h

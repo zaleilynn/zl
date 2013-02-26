@@ -1,7 +1,9 @@
-#ifndef _LYNN_WORKER_EVENT_H_
-#define _LYNN_WORKER_EVENT_H_
+#include <stdint.h>
+#include <string>
+
+using std::string;
 
 class Event {
+public:
 };
-
 #endif

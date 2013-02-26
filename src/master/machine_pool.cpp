@@ -39,7 +39,6 @@ string MachinePool::AssignTask(const ClassAd& ad){
     }
 
     candidate_machine.sort(Compare);  
- 
     return candidate_machine.front()->GetEndpoint();
 }
 

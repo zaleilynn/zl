@@ -26,14 +26,17 @@ src/worker/CMakeFiles/worker.dir/config.cpp.o: ../src/./include/singleton.h
 src/worker/CMakeFiles/worker.dir/config.cpp.o: ../src/./worker/config.h
 src/worker/CMakeFiles/worker.dir/config.cpp.o: ../src/worker/config.cpp
 
+src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./include/mutex.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./include/proxy.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./include/rwlock.h
+src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./include/singleton.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./worker/executor.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./worker/vm.h
+src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./worker/vm_pool.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/worker/executor.cpp
 
 src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o: ../src/./include/mutex.h
@@ -46,6 +49,7 @@ src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o: ../src/./proxy/worker/gen-
 src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
 src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o: ../src/./worker/executor.h
 src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o: ../src/./worker/executor_pool.h
+src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o: ../src/./worker/vm.h
 src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o: ../src/worker/executor_pool.cpp
 
 src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./include/config.h
@@ -74,15 +78,31 @@ src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/./proxy/worker/gen-cpp/wo
 src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/./worker/executor.h
 src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/./worker/executor_pool.h
 src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/./worker/service.h
+src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/./worker/vm.h
 src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/worker/service.cpp
 
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/mutex.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/proxy.h
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/singleton.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./worker/resource_manager.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./worker/vm.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/worker/vm.cpp
+
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./include/mutex.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./include/proxy.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./include/rwlock.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./include/singleton.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./worker/vm.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./worker/vm_pool.h
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/worker/vm_pool.cpp
 
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/config.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/mutex.h
@@ -100,6 +120,7 @@ src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/config.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/executor.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/executor_pool.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/resource_manager.h
+src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/vm.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/worker/work_thread.cpp
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: /usr/local/include/thrift/concurrency/PosixThreadFactory.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: /usr/local/include/thrift/concurrency/Thread.h

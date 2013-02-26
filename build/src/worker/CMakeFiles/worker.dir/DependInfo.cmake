@@ -16,6 +16,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/zaleilynn/workspace/lynn/src/worker/resource_manager.cpp" "/home/zaleilynn/workspace/lynn/build/src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/worker/service.cpp" "/home/zaleilynn/workspace/lynn/build/src/worker/CMakeFiles/worker.dir/service.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/worker/vm.cpp" "/home/zaleilynn/workspace/lynn/build/src/worker/CMakeFiles/worker.dir/vm.cpp.o"
+  "/home/zaleilynn/workspace/lynn/src/worker/vm_pool.cpp" "/home/zaleilynn/workspace/lynn/build/src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/worker/work_thread.cpp" "/home/zaleilynn/workspace/lynn/build/src/worker/CMakeFiles/worker.dir/work_thread.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/worker/worker.cpp" "/home/zaleilynn/workspace/lynn/build/src/worker/CMakeFiles/worker.dir/worker.cpp.o"
   )

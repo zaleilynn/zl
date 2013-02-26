@@ -15,16 +15,12 @@ struct MachineInfo {
     7: list<VMStat> vm_list,
 }
 
-struct VMInfo {
-    1: string os,
-    2: i32 vcpu,
-    3: i32 memory,
-}
-
 struct VCInfo {
     1: string name,
     2: i32 quota,
-    3: VMInfo vm_info,
+    3: string os,
+    4: i32 vcpu,
+    5: i32 memory,
 }
 
 struct TaskInfo {
@@ -32,7 +28,10 @@ struct TaskInfo {
     1: string vc_name,
     //任务id号
     2: i64 id,
-    3: VMInfo vm_info,
+    3: string os,
+    4: i32 vcpu,
+    5: i32 memory,
+    6: string ip,
 }
 
 service Master {

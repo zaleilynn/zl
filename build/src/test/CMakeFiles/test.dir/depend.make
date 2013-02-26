@@ -26,6 +26,29 @@ src/test/CMakeFiles/test.dir/__/proxy/worker/gen-cpp/worker_types.cpp.o: ../src/
 src/test/CMakeFiles/test.dir/__/proxy/worker/gen-cpp/worker_types.cpp.o: ../src/proxy/worker/gen-cpp/worker_types.cpp
 src/test/CMakeFiles/test.dir/__/proxy/worker/gen-cpp/worker_types.cpp.o: ../src/proxy/worker/gen-cpp/worker_types.h
 
-src/test/CMakeFiles/test.dir/test.cpp.o: ../src/./include/attributes.h
+src/test/CMakeFiles/test.dir/test.cpp.o: ../src/./include/proxy.h
+src/test/CMakeFiles/test.dir/test.cpp.o: ../src/./include/rpc.h
+src/test/CMakeFiles/test.dir/test.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
+src/test/CMakeFiles/test.dir/test.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
+src/test/CMakeFiles/test.dir/test.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
+src/test/CMakeFiles/test.dir/test.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
 src/test/CMakeFiles/test.dir/test.cpp.o: ../src/test/test.cpp
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/concurrency/PosixThreadFactory.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/concurrency/Thread.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/concurrency/ThreadManager.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/config.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/protocol/TBinaryProtocol.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/protocol/TBinaryProtocol.tcc
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/protocol/TProtocol.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/protocol/TVirtualProtocol.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/server/TSimpleServer.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/server/TThreadPoolServer.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/server/TThreadedServer.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/transport/TServerSocket.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/transport/TServerTransport.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/transport/TSocket.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/transport/TTransport.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/transport/TTransportException.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/transport/TTransportUtils.h
+src/test/CMakeFiles/test.dir/test.cpp.o: /usr/local/include/thrift/transport/TVirtualTransport.h
 

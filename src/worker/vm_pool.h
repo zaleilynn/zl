@@ -2,12 +2,16 @@
 #define _LYNN_WORKER_VM_POOL_H_
 
 #include <map>
+#include <tr1/memory>
+#include <tr1/functional>
 #include "include/singleton.h"
 #include "include/rwlock.h"
 #include "worker/vm.h"
 
 using std::map;
 using lynn::RWLock;
+using std::tr1::function;
+
 
 class VMPool {
 public:

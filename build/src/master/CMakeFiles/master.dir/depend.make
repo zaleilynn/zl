@@ -129,6 +129,7 @@ src/master/CMakeFiles/master.dir/task.cpp.o: ../src/./include/rpc.h
 src/master/CMakeFiles/master.dir/task.cpp.o: ../src/./include/rwlock.h
 src/master/CMakeFiles/master.dir/task.cpp.o: ../src/./include/singleton.h
 src/master/CMakeFiles/master.dir/task.cpp.o: ../src/./master/identity.h
+src/master/CMakeFiles/master.dir/task.cpp.o: ../src/./master/ip_pool.h
 src/master/CMakeFiles/master.dir/task.cpp.o: ../src/./master/machine.h
 src/master/CMakeFiles/master.dir/task.cpp.o: ../src/./master/machine_pool.h
 src/master/CMakeFiles/master.dir/task.cpp.o: ../src/./master/task.h

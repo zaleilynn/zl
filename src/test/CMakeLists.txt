@@ -35,7 +35,7 @@ SET(SRC
     test.cpp)
 
 ADD_EXECUTABLE(test ${SRC})
-TARGET_LINK_LIBRARIES(test classad thrift)
+TARGET_LINK_LIBRARIES(test classad thrift virt)
 
 INSTALL(TARGETS test RUNTIME DESTINATION test)
 

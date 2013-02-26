@@ -7,7 +7,6 @@
 #include "include/rwlock.h"
 #include "include/singleton.h"
 
-
 using std::string;
 using std::set;
 using lynn::RWLock;
@@ -19,6 +18,7 @@ public:
     bool ReleaseIp(const string& ip);
     string GetNextIp();
 private:
+    bool Match(const string& ip);
     RWLock m_lock;
     string m_prefix;
     int32_t m_start, m_end, m_cur;

@@ -39,6 +39,7 @@ SET(SRC
     executor.cpp
     executor_pool.cpp
     vm.cpp
+    vm_pool.cpp
     worker.cpp
     )
 

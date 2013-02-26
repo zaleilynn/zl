@@ -15,7 +15,7 @@ int32_t ResourceManager::Init(){
                   + ":" + WorkerConfigI::Instance()->Get("port");
     m_all_vcpu = System::CpuNum();
     m_all_memory = System::TotalMemory();
-    LOG4CPLUS_DEBUG(logger, m_all_memory);
+    LOG4CPLUS_DEBUG(logger, "all memory:" << m_all_memory);
     m_avail_vcpu = m_all_vcpu;
     m_avail_memory = m_all_memory; 
     return 0;

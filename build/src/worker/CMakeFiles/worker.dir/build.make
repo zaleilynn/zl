@@ -345,9 +345,32 @@ src/worker/CMakeFiles/worker.dir/vm.cpp.o.provides: src/worker/CMakeFiles/worker
 
 src/worker/CMakeFiles/worker.dir/vm.cpp.o.provides.build: src/worker/CMakeFiles/worker.dir/vm.cpp.o
 
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: src/worker/CMakeFiles/worker.dir/flags.make
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/worker/vm_pool.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o"
+	cd /home/zaleilynn/workspace/lynn/build/src/worker && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/worker.dir/vm_pool.cpp.o -c /home/zaleilynn/workspace/lynn/src/worker/vm_pool.cpp
+
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/worker.dir/vm_pool.cpp.i"
+	cd /home/zaleilynn/workspace/lynn/build/src/worker && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zaleilynn/workspace/lynn/src/worker/vm_pool.cpp > CMakeFiles/worker.dir/vm_pool.cpp.i
+
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/worker.dir/vm_pool.cpp.s"
+	cd /home/zaleilynn/workspace/lynn/build/src/worker && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zaleilynn/workspace/lynn/src/worker/vm_pool.cpp -o CMakeFiles/worker.dir/vm_pool.cpp.s
+
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o.requires:
+.PHONY : src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o.requires
+
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o.provides: src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o.requires
+	$(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o.provides.build
+.PHONY : src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o.provides
+
+src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o.provides.build: src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o
+
 src/worker/CMakeFiles/worker.dir/worker.cpp.o: src/worker/CMakeFiles/worker.dir/flags.make
 src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/worker/worker.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/worker/CMakeFiles/worker.dir/worker.cpp.o"
 	cd /home/zaleilynn/workspace/lynn/build/src/worker && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/worker.dir/worker.cpp.o -c /home/zaleilynn/workspace/lynn/src/worker/worker.cpp
 
@@ -369,7 +392,7 @@ src/worker/CMakeFiles/worker.dir/worker.cpp.o.provides: src/worker/CMakeFiles/wo
 src/worker/CMakeFiles/worker.dir/worker.cpp.o.provides.build: src/worker/CMakeFiles/worker.dir/worker.cpp.o
 
 ../src/proxy/master/gen-cpp/master_constants.cpp:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../../../src/proxy/master/gen-cpp/master_constants.cpp, ../../../src/proxy/master/gen-cpp/Master.h, ../../../src/proxy/master/gen-cpp/master_types.h, ../../../src/proxy/master/gen-cpp/master_constants.h, ../../../src/proxy/master/gen-cpp/Master.cpp, ../../../src/proxy/master/gen-cpp/master_types.cpp"
 	cd /home/zaleilynn/workspace/lynn/build/src/worker && thrift --gen cpp -r -o /home/zaleilynn/workspace/lynn/src/proxy/master /home/zaleilynn/workspace/lynn/src/proxy/master/master.thrift
 
@@ -384,7 +407,7 @@ src/worker/CMakeFiles/worker.dir/worker.cpp.o.provides.build: src/worker/CMakeFi
 ../src/proxy/master/gen-cpp/master_types.cpp: ../src/proxy/master/gen-cpp/master_constants.cpp
 
 ../src/proxy/worker/gen-cpp/worker_constants.cpp:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../../../src/proxy/worker/gen-cpp/worker_constants.cpp, ../../../src/proxy/worker/gen-cpp/Worker.h, ../../../src/proxy/worker/gen-cpp/worker_types.h, ../../../src/proxy/worker/gen-cpp/worker_constants.h, ../../../src/proxy/worker/gen-cpp/Worker.cpp, ../../../src/proxy/worker/gen-cpp/worker_types.cpp"
 	cd /home/zaleilynn/workspace/lynn/build/src/worker && thrift --gen cpp -r -o /home/zaleilynn/workspace/lynn/src/proxy/worker /home/zaleilynn/workspace/lynn/src/proxy/worker/worker.thrift
 
@@ -413,6 +436,7 @@ worker_OBJECTS = \
 "CMakeFiles/worker.dir/executor.cpp.o" \
 "CMakeFiles/worker.dir/executor_pool.cpp.o" \
 "CMakeFiles/worker.dir/vm.cpp.o" \
+"CMakeFiles/worker.dir/vm_pool.cpp.o" \
 "CMakeFiles/worker.dir/worker.cpp.o"
 
 # External object files for target worker
@@ -431,6 +455,7 @@ src/worker/worker: src/worker/CMakeFiles/worker.dir/service.cpp.o
 src/worker/worker: src/worker/CMakeFiles/worker.dir/executor.cpp.o
 src/worker/worker: src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o
 src/worker/worker: src/worker/CMakeFiles/worker.dir/vm.cpp.o
+src/worker/worker: src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o
 src/worker/worker: src/worker/CMakeFiles/worker.dir/worker.cpp.o
 src/worker/worker: src/worker/CMakeFiles/worker.dir/build.make
 src/worker/worker: src/worker/CMakeFiles/worker.dir/link.txt
@@ -454,6 +479,7 @@ src/worker/CMakeFiles/worker.dir/requires: src/worker/CMakeFiles/worker.dir/serv
 src/worker/CMakeFiles/worker.dir/requires: src/worker/CMakeFiles/worker.dir/executor.cpp.o.requires
 src/worker/CMakeFiles/worker.dir/requires: src/worker/CMakeFiles/worker.dir/executor_pool.cpp.o.requires
 src/worker/CMakeFiles/worker.dir/requires: src/worker/CMakeFiles/worker.dir/vm.cpp.o.requires
+src/worker/CMakeFiles/worker.dir/requires: src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o.requires
 src/worker/CMakeFiles/worker.dir/requires: src/worker/CMakeFiles/worker.dir/worker.cpp.o.requires
 .PHONY : src/worker/CMakeFiles/worker.dir/requires
 

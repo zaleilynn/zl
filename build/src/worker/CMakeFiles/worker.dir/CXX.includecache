@@ -6,17 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../src/./include/proxy.h
-proxy/master/gen-cpp/Master.h
-../src/./include/proxy/master/gen-cpp/Master.h
-proxy/master/gen-cpp/master_types.h
-../src/./include/proxy/master/gen-cpp/master_types.h
-proxy/worker/gen-cpp/Worker.h
-../src/./include/proxy/worker/gen-cpp/Worker.h
-proxy/worker/gen-cpp/worker_types.h
-../src/./include/proxy/worker/gen-cpp/worker_types.h
-
-../src/./include/rwlock.h
+../src/./include/mutex.h
 pthread.h
 -
 errno.h
@@ -27,6 +17,20 @@ string
 -
 stdexcept
 -
+
+../src/./include/proxy.h
+proxy/master/gen-cpp/Master.h
+../src/./include/proxy/master/gen-cpp/Master.h
+proxy/master/gen-cpp/master_types.h
+../src/./include/proxy/master/gen-cpp/master_types.h
+proxy/worker/gen-cpp/Worker.h
+../src/./include/proxy/worker/gen-cpp/Worker.h
+proxy/worker/gen-cpp/worker_types.h
+../src/./include/proxy/worker/gen-cpp/worker_types.h
+
+../src/./include/singleton.h
+include/mutex.h
+../src/./include/include/mutex.h
 
 ../src/./proxy/master/gen-cpp/Master.h
 thrift/TDispatchProcessor.h
@@ -62,29 +66,25 @@ thrift/transport/TTransport.h
 master_types.h
 ../src/./proxy/worker/gen-cpp/master_types.h
 
-../src/./worker/executor.h
-boost/shared_ptr.hpp
+../src/./worker/resource_manager.h
+string
 -
-include/rwlock.h
-../src/./worker/include/rwlock.h
+include/singleton.h
+../src/./worker/include/singleton.h
 include/proxy.h
 ../src/./worker/include/proxy.h
 
 ../src/./worker/vm.h
 boost/shared_ptr.hpp
 -
+libvirt/libvirt.h
+-
+libvirt/virterror.h
+-
+string
+-
 include/proxy.h
 ../src/./worker/include/proxy.h
-
-/home/zaleilynn/workspace/lynn/src/worker/executor.cpp
-log4cplus/logger.h
--
-log4cplus/loggingmacros.h
--
-worker/executor.h
-/home/zaleilynn/workspace/lynn/src/worker/worker/executor.h
-worker/vm.h
-/home/zaleilynn/workspace/lynn/src/worker/worker/vm.h
 
 /home/zaleilynn/workspace/lynn/src/worker/vm.cpp
 fstream
@@ -103,4 +103,6 @@ sys/types.h
 -
 worker/vm.h
 /home/zaleilynn/workspace/lynn/src/worker/worker/vm.h
+worker/resource_manager.h
+/home/zaleilynn/workspace/lynn/src/worker/worker/resource_manager.h
 

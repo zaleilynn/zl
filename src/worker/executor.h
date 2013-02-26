@@ -4,6 +4,7 @@
 #include <boost/shared_ptr.hpp>
 #include "include/rwlock.h"
 #include "include/proxy.h"
+#include "worker/vm.h"
 
 using std::string;
 using boost::shared_ptr;
@@ -27,6 +28,10 @@ public:
     ExecutorState GetStatus();
     void Start();
     void Kill();
+    void ExecutorStarted();
+    void ExecutorFailed();
+    void ExecutorFinished();
+    VMInfo GetVMInfo();
 private:
     RWLock m_lock;
     TaskInfo m_task_info;
@@ -34,5 +39,4 @@ private:
 };
 
 typedef shared_ptr<Executor> ExecutorPtr;
-
 #endif

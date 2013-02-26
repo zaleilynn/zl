@@ -11,6 +11,10 @@ class ResourceManager {
 public:
    int32_t Init();
    int32_t GetMachineInfo(MachineInfo& info);
+   string GetEndpoint(){
+       return m_endpoint;
+   }
+
 private:
    string m_endpoint;
    int32_t m_avail_vcpu;

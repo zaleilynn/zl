@@ -271,96 +271,8 @@ void swap(MachineInfo &a, MachineInfo &b) {
   swap(a.__isset, b.__isset);
 }
 
-const char* VMInfo::ascii_fingerprint = "28C2ECC89260BADB9C70330FBF47BFA8";
-const uint8_t VMInfo::binary_fingerprint[16] = {0x28,0xC2,0xEC,0xC8,0x92,0x60,0xBA,0xDB,0x9C,0x70,0x33,0x0F,0xBF,0x47,0xBF,0xA8};
-
-uint32_t VMInfo::read(::apache::thrift::protocol::TProtocol* iprot) {
-
-  uint32_t xfer = 0;
-  std::string fname;
-  ::apache::thrift::protocol::TType ftype;
-  int16_t fid;
-
-  xfer += iprot->readStructBegin(fname);
-
-  using ::apache::thrift::protocol::TProtocolException;
-
-
-  while (true)
-  {
-    xfer += iprot->readFieldBegin(fname, ftype, fid);
-    if (ftype == ::apache::thrift::protocol::T_STOP) {
-      break;
-    }
-    switch (fid)
-    {
-      case 1:
-        if (ftype == ::apache::thrift::protocol::T_STRING) {
-          xfer += iprot->readString(this->os);
-          this->__isset.os = true;
-        } else {
-          xfer += iprot->skip(ftype);
-        }
-        break;
-      case 2:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->vcpu);
-          this->__isset.vcpu = true;
-        } else {
-          xfer += iprot->skip(ftype);
-        }
-        break;
-      case 3:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->memory);
-          this->__isset.memory = true;
-        } else {
-          xfer += iprot->skip(ftype);
-        }
-        break;
-      default:
-        xfer += iprot->skip(ftype);
-        break;
-    }
-    xfer += iprot->readFieldEnd();
-  }
-
-  xfer += iprot->readStructEnd();
-
-  return xfer;
-}
-
-uint32_t VMInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {
-  uint32_t xfer = 0;
-  xfer += oprot->writeStructBegin("VMInfo");
-
-  xfer += oprot->writeFieldBegin("os", ::apache::thrift::protocol::T_STRING, 1);
-  xfer += oprot->writeString(this->os);
-  xfer += oprot->writeFieldEnd();
-
-  xfer += oprot->writeFieldBegin("vcpu", ::apache::thrift::protocol::T_I32, 2);
-  xfer += oprot->writeI32(this->vcpu);
-  xfer += oprot->writeFieldEnd();
-
-  xfer += oprot->writeFieldBegin("memory", ::apache::thrift::protocol::T_I32, 3);
-  xfer += oprot->writeI32(this->memory);
-  xfer += oprot->writeFieldEnd();
-
-  xfer += oprot->writeFieldStop();
-  xfer += oprot->writeStructEnd();
-  return xfer;
-}
-
-void swap(VMInfo &a, VMInfo &b) {
-  using ::std::swap;
-  swap(a.os, b.os);
-  swap(a.vcpu, b.vcpu);
-  swap(a.memory, b.memory);
-  swap(a.__isset, b.__isset);
-}
-
-const char* VCInfo::ascii_fingerprint = "4699B625E4680339957632F93E9D3328";
-const uint8_t VCInfo::binary_fingerprint[16] = {0x46,0x99,0xB6,0x25,0xE4,0x68,0x03,0x39,0x95,0x76,0x32,0xF9,0x3E,0x9D,0x33,0x28};
+const char* VCInfo::ascii_fingerprint = "F30B43547AD0CF89944AC297D104BC06";
+const uint8_t VCInfo::binary_fingerprint[16] = {0xF3,0x0B,0x43,0x54,0x7A,0xD0,0xCF,0x89,0x94,0x4A,0xC2,0x97,0xD1,0x04,0xBC,0x06};
 
 uint32_t VCInfo::read(::apache::thrift::protocol::TProtocol* iprot) {
 
@@ -399,9 +311,25 @@ uint32_t VCInfo::read(::apache::thrift::protocol::TProtocol* iprot) {
         }
         break;
       case 3:
-        if (ftype == ::apache::thrift::protocol::T_STRUCT) {
-          xfer += this->vm_info.read(iprot);
-          this->__isset.vm_info = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->os);
+          this->__isset.os = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 4:
+        if (ftype == ::apache::thrift::protocol::T_I32) {
+          xfer += iprot->readI32(this->vcpu);
+          this->__isset.vcpu = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 5:
+        if (ftype == ::apache::thrift::protocol::T_I32) {
+          xfer += iprot->readI32(this->memory);
+          this->__isset.memory = true;
         } else {
           xfer += iprot->skip(ftype);
         }
@@ -430,8 +358,16 @@ uint32_t VCInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {
   xfer += oprot->writeI32(this->quota);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("vm_info", ::apache::thrift::protocol::T_STRUCT, 3);
-  xfer += this->vm_info.write(oprot);
+  xfer += oprot->writeFieldBegin("os", ::apache::thrift::protocol::T_STRING, 3);
+  xfer += oprot->writeString(this->os);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("vcpu", ::apache::thrift::protocol::T_I32, 4);
+  xfer += oprot->writeI32(this->vcpu);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("memory", ::apache::thrift::protocol::T_I32, 5);
+  xfer += oprot->writeI32(this->memory);
   xfer += oprot->writeFieldEnd();
 
   xfer += oprot->writeFieldStop();
@@ -443,12 +379,14 @@ void swap(VCInfo &a, VCInfo &b) {
   using ::std::swap;
   swap(a.name, b.name);
   swap(a.quota, b.quota);
-  swap(a.vm_info, b.vm_info);
+  swap(a.os, b.os);
+  swap(a.vcpu, b.vcpu);
+  swap(a.memory, b.memory);
   swap(a.__isset, b.__isset);
 }
 
-const char* TaskInfo::ascii_fingerprint = "28FA8100862E37EDAD9AFC1961ADAF88";
-const uint8_t TaskInfo::binary_fingerprint[16] = {0x28,0xFA,0x81,0x00,0x86,0x2E,0x37,0xED,0xAD,0x9A,0xFC,0x19,0x61,0xAD,0xAF,0x88};
+const char* TaskInfo::ascii_fingerprint = "F55E6FC6EF25297F4EEFFCA87E2BA82A";
+const uint8_t TaskInfo::binary_fingerprint[16] = {0xF5,0x5E,0x6F,0xC6,0xEF,0x25,0x29,0x7F,0x4E,0xEF,0xFC,0xA8,0x7E,0x2B,0xA8,0x2A};
 
 uint32_t TaskInfo::read(::apache::thrift::protocol::TProtocol* iprot) {
 
@@ -487,9 +425,33 @@ uint32_t TaskInfo::read(::apache::thrift::protocol::TProtocol* iprot) {
         }
         break;
       case 3:
-        if (ftype == ::apache::thrift::protocol::T_STRUCT) {
-          xfer += this->vm_info.read(iprot);
-          this->__isset.vm_info = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->os);
+          this->__isset.os = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 4:
+        if (ftype == ::apache::thrift::protocol::T_I32) {
+          xfer += iprot->readI32(this->vcpu);
+          this->__isset.vcpu = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 5:
+        if (ftype == ::apache::thrift::protocol::T_I32) {
+          xfer += iprot->readI32(this->memory);
+          this->__isset.memory = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 6:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ip);
+          this->__isset.ip = true;
         } else {
           xfer += iprot->skip(ftype);
         }
@@ -518,8 +480,20 @@ uint32_t TaskInfo::write(::apache::thrift::protocol::TProtocol* oprot) const {
   xfer += oprot->writeI64(this->id);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("vm_info", ::apache::thrift::protocol::T_STRUCT, 3);
-  xfer += this->vm_info.write(oprot);
+  xfer += oprot->writeFieldBegin("os", ::apache::thrift::protocol::T_STRING, 3);
+  xfer += oprot->writeString(this->os);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("vcpu", ::apache::thrift::protocol::T_I32, 4);
+  xfer += oprot->writeI32(this->vcpu);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("memory", ::apache::thrift::protocol::T_I32, 5);
+  xfer += oprot->writeI32(this->memory);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ip", ::apache::thrift::protocol::T_STRING, 6);
+  xfer += oprot->writeString(this->ip);
   xfer += oprot->writeFieldEnd();
 
   xfer += oprot->writeFieldStop();
@@ -531,7 +505,10 @@ void swap(TaskInfo &a, TaskInfo &b) {
   using ::std::swap;
   swap(a.vc_name, b.vc_name);
   swap(a.id, b.id);
-  swap(a.vm_info, b.vm_info);
+  swap(a.os, b.os);
+  swap(a.vcpu, b.vcpu);
+  swap(a.memory, b.memory);
+  swap(a.ip, b.ip);
   swap(a.__isset, b.__isset);
 }
 
