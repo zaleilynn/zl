@@ -6,21 +6,19 @@
 
 using std::string;
 
-class Event {
+class StateEvent {
 public:
-     Event() {
-         m_error_code = 0;
-         m_retry_times = 0;
-     }
-     virtual int32_t Handle() = 0;
-     virtual string GetType() = 0;
-     virtual int32_t HandleError() = 0;
-     int32_t GetErrorCode() {
-         return m_error_code;
-     }
+    StateEvent(int64_t task_id) {
+        m_task_id = task_id;
+    }
+    virtual int32_t Handle() = 0;
+    int64_t GetId() {
+        return m_task_id;
+    }
 protected:
-     int32_t m_error_code;
-     int32_t m_retry_times;
+    int64_t m_task_id;
+};
+
+class ActionEvent {
 };
 #endif
-

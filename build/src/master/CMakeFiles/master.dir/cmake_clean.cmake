@@ -16,6 +16,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/master.dir/task_queue.cpp.o"
   "CMakeFiles/master.dir/work_thread.cpp.o"
   "CMakeFiles/master.dir/ip_pool.cpp.o"
+  "CMakeFiles/master.dir/event.cpp.o"
   "CMakeFiles/master.dir/master.cpp.o"
   "../../../src/proxy/master/gen-cpp/master_constants.cpp"
   "../../../src/proxy/master/gen-cpp/Master.h"

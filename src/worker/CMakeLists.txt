@@ -40,6 +40,7 @@ SET(SRC
     executor_pool.cpp
     vm.cpp
     vm_pool.cpp
+    event.cpp
     worker.cpp
     )
 

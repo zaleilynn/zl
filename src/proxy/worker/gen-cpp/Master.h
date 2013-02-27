@@ -17,6 +17,9 @@ class MasterIf {
   virtual ~MasterIf() {}
   virtual void Heartbeat(const MachineInfo& info) = 0;
   virtual int32_t AddVC(const VCInfo& vc_info) = 0;
+  virtual int32_t TaskStarted(const int64_t task_id) = 0;
+  virtual int32_t TaskFinished(const int64_t task_id) = 0;
+  virtual int32_t TaskFailed(const int64_t task_id) = 0;
 };
 
 class MasterIfFactory {
@@ -50,6 +53,18 @@ class MasterNull : virtual public MasterIf {
     return;
   }
   int32_t AddVC(const VCInfo& /* vc_info */) {
+    int32_t _return = 0;
+    return _return;
+  }
+  int32_t TaskStarted(const int64_t /* task_id */) {
+    int32_t _return = 0;
+    return _return;
+  }
+  int32_t TaskFinished(const int64_t /* task_id */) {
+    int32_t _return = 0;
+    return _return;
+  }
+  int32_t TaskFailed(const int64_t /* task_id */) {
     int32_t _return = 0;
     return _return;
   }
@@ -251,6 +266,330 @@ class Master_AddVC_presult {
 
 };
 
+typedef struct _Master_TaskStarted_args__isset {
+  _Master_TaskStarted_args__isset() : task_id(false) {}
+  bool task_id;
+} _Master_TaskStarted_args__isset;
+
+class Master_TaskStarted_args {
+ public:
+
+  Master_TaskStarted_args() : task_id(0) {
+  }
+
+  virtual ~Master_TaskStarted_args() throw() {}
+
+  int64_t task_id;
+
+  _Master_TaskStarted_args__isset __isset;
+
+  void __set_task_id(const int64_t val) {
+    task_id = val;
+  }
+
+  bool operator == (const Master_TaskStarted_args & rhs) const
+  {
+    if (!(task_id == rhs.task_id))
+      return false;
+    return true;
+  }
+  bool operator != (const Master_TaskStarted_args &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Master_TaskStarted_args & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class Master_TaskStarted_pargs {
+ public:
+
+
+  virtual ~Master_TaskStarted_pargs() throw() {}
+
+  const int64_t* task_id;
+
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Master_TaskStarted_result__isset {
+  _Master_TaskStarted_result__isset() : success(false) {}
+  bool success;
+} _Master_TaskStarted_result__isset;
+
+class Master_TaskStarted_result {
+ public:
+
+  Master_TaskStarted_result() : success(0) {
+  }
+
+  virtual ~Master_TaskStarted_result() throw() {}
+
+  int32_t success;
+
+  _Master_TaskStarted_result__isset __isset;
+
+  void __set_success(const int32_t val) {
+    success = val;
+  }
+
+  bool operator == (const Master_TaskStarted_result & rhs) const
+  {
+    if (!(success == rhs.success))
+      return false;
+    return true;
+  }
+  bool operator != (const Master_TaskStarted_result &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Master_TaskStarted_result & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Master_TaskStarted_presult__isset {
+  _Master_TaskStarted_presult__isset() : success(false) {}
+  bool success;
+} _Master_TaskStarted_presult__isset;
+
+class Master_TaskStarted_presult {
+ public:
+
+
+  virtual ~Master_TaskStarted_presult() throw() {}
+
+  int32_t* success;
+
+  _Master_TaskStarted_presult__isset __isset;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+
+};
+
+typedef struct _Master_TaskFinished_args__isset {
+  _Master_TaskFinished_args__isset() : task_id(false) {}
+  bool task_id;
+} _Master_TaskFinished_args__isset;
+
+class Master_TaskFinished_args {
+ public:
+
+  Master_TaskFinished_args() : task_id(0) {
+  }
+
+  virtual ~Master_TaskFinished_args() throw() {}
+
+  int64_t task_id;
+
+  _Master_TaskFinished_args__isset __isset;
+
+  void __set_task_id(const int64_t val) {
+    task_id = val;
+  }
+
+  bool operator == (const Master_TaskFinished_args & rhs) const
+  {
+    if (!(task_id == rhs.task_id))
+      return false;
+    return true;
+  }
+  bool operator != (const Master_TaskFinished_args &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Master_TaskFinished_args & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class Master_TaskFinished_pargs {
+ public:
+
+
+  virtual ~Master_TaskFinished_pargs() throw() {}
+
+  const int64_t* task_id;
+
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Master_TaskFinished_result__isset {
+  _Master_TaskFinished_result__isset() : success(false) {}
+  bool success;
+} _Master_TaskFinished_result__isset;
+
+class Master_TaskFinished_result {
+ public:
+
+  Master_TaskFinished_result() : success(0) {
+  }
+
+  virtual ~Master_TaskFinished_result() throw() {}
+
+  int32_t success;
+
+  _Master_TaskFinished_result__isset __isset;
+
+  void __set_success(const int32_t val) {
+    success = val;
+  }
+
+  bool operator == (const Master_TaskFinished_result & rhs) const
+  {
+    if (!(success == rhs.success))
+      return false;
+    return true;
+  }
+  bool operator != (const Master_TaskFinished_result &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Master_TaskFinished_result & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Master_TaskFinished_presult__isset {
+  _Master_TaskFinished_presult__isset() : success(false) {}
+  bool success;
+} _Master_TaskFinished_presult__isset;
+
+class Master_TaskFinished_presult {
+ public:
+
+
+  virtual ~Master_TaskFinished_presult() throw() {}
+
+  int32_t* success;
+
+  _Master_TaskFinished_presult__isset __isset;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+
+};
+
+typedef struct _Master_TaskFailed_args__isset {
+  _Master_TaskFailed_args__isset() : task_id(false) {}
+  bool task_id;
+} _Master_TaskFailed_args__isset;
+
+class Master_TaskFailed_args {
+ public:
+
+  Master_TaskFailed_args() : task_id(0) {
+  }
+
+  virtual ~Master_TaskFailed_args() throw() {}
+
+  int64_t task_id;
+
+  _Master_TaskFailed_args__isset __isset;
+
+  void __set_task_id(const int64_t val) {
+    task_id = val;
+  }
+
+  bool operator == (const Master_TaskFailed_args & rhs) const
+  {
+    if (!(task_id == rhs.task_id))
+      return false;
+    return true;
+  }
+  bool operator != (const Master_TaskFailed_args &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Master_TaskFailed_args & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class Master_TaskFailed_pargs {
+ public:
+
+
+  virtual ~Master_TaskFailed_pargs() throw() {}
+
+  const int64_t* task_id;
+
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Master_TaskFailed_result__isset {
+  _Master_TaskFailed_result__isset() : success(false) {}
+  bool success;
+} _Master_TaskFailed_result__isset;
+
+class Master_TaskFailed_result {
+ public:
+
+  Master_TaskFailed_result() : success(0) {
+  }
+
+  virtual ~Master_TaskFailed_result() throw() {}
+
+  int32_t success;
+
+  _Master_TaskFailed_result__isset __isset;
+
+  void __set_success(const int32_t val) {
+    success = val;
+  }
+
+  bool operator == (const Master_TaskFailed_result & rhs) const
+  {
+    if (!(success == rhs.success))
+      return false;
+    return true;
+  }
+  bool operator != (const Master_TaskFailed_result &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Master_TaskFailed_result & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Master_TaskFailed_presult__isset {
+  _Master_TaskFailed_presult__isset() : success(false) {}
+  bool success;
+} _Master_TaskFailed_presult__isset;
+
+class Master_TaskFailed_presult {
+ public:
+
+
+  virtual ~Master_TaskFailed_presult() throw() {}
+
+  int32_t* success;
+
+  _Master_TaskFailed_presult__isset __isset;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+
+};
+
 class MasterClient : virtual public MasterIf {
  public:
   MasterClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> prot) :
@@ -277,6 +616,15 @@ class MasterClient : virtual public MasterIf {
   int32_t AddVC(const VCInfo& vc_info);
   void send_AddVC(const VCInfo& vc_info);
   int32_t recv_AddVC();
+  int32_t TaskStarted(const int64_t task_id);
+  void send_TaskStarted(const int64_t task_id);
+  int32_t recv_TaskStarted();
+  int32_t TaskFinished(const int64_t task_id);
+  void send_TaskFinished(const int64_t task_id);
+  int32_t recv_TaskFinished();
+  int32_t TaskFailed(const int64_t task_id);
+  void send_TaskFailed(const int64_t task_id);
+  int32_t recv_TaskFailed();
  protected:
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;
@@ -294,11 +642,17 @@ class MasterProcessor : public ::apache::thrift::TDispatchProcessor {
   ProcessMap processMap_;
   void process_Heartbeat(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
   void process_AddVC(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
+  void process_TaskStarted(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
+  void process_TaskFinished(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
+  void process_TaskFailed(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
  public:
   MasterProcessor(boost::shared_ptr<MasterIf> iface) :
     iface_(iface) {
     processMap_["Heartbeat"] = &MasterProcessor::process_Heartbeat;
     processMap_["AddVC"] = &MasterProcessor::process_AddVC;
+    processMap_["TaskStarted"] = &MasterProcessor::process_TaskStarted;
+    processMap_["TaskFinished"] = &MasterProcessor::process_TaskFinished;
+    processMap_["TaskFailed"] = &MasterProcessor::process_TaskFailed;
   }
 
   virtual ~MasterProcessor() {}
@@ -343,6 +697,33 @@ class MasterMultiface : virtual public MasterIf {
       ifaces_[i]->AddVC(vc_info);
     }
     return ifaces_[i]->AddVC(vc_info);
+  }
+
+  int32_t TaskStarted(const int64_t task_id) {
+    size_t sz = ifaces_.size();
+    size_t i = 0;
+    for (; i < (sz - 1); ++i) {
+      ifaces_[i]->TaskStarted(task_id);
+    }
+    return ifaces_[i]->TaskStarted(task_id);
+  }
+
+  int32_t TaskFinished(const int64_t task_id) {
+    size_t sz = ifaces_.size();
+    size_t i = 0;
+    for (; i < (sz - 1); ++i) {
+      ifaces_[i]->TaskFinished(task_id);
+    }
+    return ifaces_[i]->TaskFinished(task_id);
+  }
+
+  int32_t TaskFailed(const int64_t task_id) {
+    size_t sz = ifaces_.size();
+    size_t i = 0;
+    for (; i < (sz - 1); ++i) {
+      ifaces_[i]->TaskFailed(task_id);
+    }
+    return ifaces_[i]->TaskFailed(task_id);
   }
 
 };

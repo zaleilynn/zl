@@ -34,6 +34,25 @@ src/master/CMakeFiles/master.dir/config.cpp.o: ../src/./include/singleton.h
 src/master/CMakeFiles/master.dir/config.cpp.o: ../src/./master/config.h
 src/master/CMakeFiles/master.dir/config.cpp.o: ../src/master/config.cpp
 
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./include/block_queue.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./include/cond.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./include/event.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./include/mutex.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./include/proxy.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./include/rwlock.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./include/singleton.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./master/event.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./master/task.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./master/task_pool.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./master/task_queue.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./master/vc_pool.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./master/virtual_cluster.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
+src/master/CMakeFiles/master.dir/event.cpp.o: ../src/master/event.cpp
+
 src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/config.h
 src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/mutex.h
 src/master/CMakeFiles/master.dir/ip_pool.cpp.o: ../src/./include/rapidxml.hpp
@@ -102,10 +121,12 @@ src/master/CMakeFiles/master.dir/master.cpp.o: /usr/local/include/thrift/transpo
 
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./include/block_queue.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./include/cond.h
+src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./include/event.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./include/mutex.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./include/proxy.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./include/rwlock.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./include/singleton.h
+src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/event.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/machine.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/machine_pool.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/service.h
@@ -220,10 +241,12 @@ src/master/CMakeFiles/master.dir/virtual_cluster.cpp.o: ../src/master/virtual_cl
 
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./include/block_queue.h
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./include/cond.h
+src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./include/event.h
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./include/mutex.h
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./include/proxy.h
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./include/rwlock.h
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./include/singleton.h
+src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./master/event.h
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./master/task.h
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./master/task_pool.h
 src/master/CMakeFiles/master.dir/work_thread.cpp.o: ../src/./master/task_queue.h

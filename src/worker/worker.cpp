@@ -24,6 +24,7 @@ using boost::thread;
 
 extern void* HeartbeatProcessor();
 extern void* SchedulerProcessor();
+extern void* StateEventProcessor();
 
 int32_t main(int argc, char ** argv){
     //获得命令行参数
@@ -95,6 +96,7 @@ int32_t main(int argc, char ** argv){
 
     thread heartbeat_processor_t(HeartbeatProcessor);
     thread scheduler_processor_t(SchedulerProcessor);
+    thread state_event_processor_t(StateEventProcessor);
  
     Rpc<WorkerService, WorkerProcessor>::Listen(atoi(WorkerConfigI::Instance()->Get("port").c_str()));
 }

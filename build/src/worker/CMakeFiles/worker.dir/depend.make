@@ -26,6 +26,42 @@ src/worker/CMakeFiles/worker.dir/config.cpp.o: ../src/./include/singleton.h
 src/worker/CMakeFiles/worker.dir/config.cpp.o: ../src/./worker/config.h
 src/worker/CMakeFiles/worker.dir/config.cpp.o: ../src/worker/config.cpp
 
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/block_queue.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/cond.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/config.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/event.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/mutex.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/proxy.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/rapidxml.hpp
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/rapidxml_utils.hpp
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/rpc.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./include/singleton.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./worker/config.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/./worker/event.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: ../src/worker/event.cpp
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/concurrency/PosixThreadFactory.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/concurrency/Thread.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/concurrency/ThreadManager.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/config.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/protocol/TBinaryProtocol.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/protocol/TBinaryProtocol.tcc
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/protocol/TProtocol.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/protocol/TVirtualProtocol.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/server/TSimpleServer.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/server/TThreadPoolServer.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/server/TThreadedServer.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/transport/TServerSocket.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/transport/TServerTransport.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/transport/TSocket.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/transport/TTransport.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/transport/TTransportException.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/transport/TTransportUtils.h
+src/worker/CMakeFiles/worker.dir/event.cpp.o: /usr/local/include/thrift/transport/TVirtualTransport.h
+
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./include/mutex.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./include/proxy.h
 src/worker/CMakeFiles/worker.dir/executor.cpp.o: ../src/./include/rwlock.h
@@ -81,13 +117,18 @@ src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/./worker/service.h
 src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/./worker/vm.h
 src/worker/CMakeFiles/worker.dir/service.cpp.o: ../src/worker/service.cpp
 
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/block_queue.h
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/cond.h
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/event.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/mutex.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/proxy.h
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/rwlock.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/singleton.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./worker/event.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./worker/resource_manager.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./worker/vm.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/worker/vm.cpp
@@ -104,7 +145,10 @@ src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./worker/vm.h
 src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/./worker/vm_pool.h
 src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o: ../src/worker/vm_pool.cpp
 
+src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/block_queue.h
+src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/cond.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/config.h
+src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/event.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/mutex.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/proxy.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/rapidxml.hpp
@@ -117,6 +161,7 @@ src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./proxy/master/gen-cp
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/config.h
+src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/event.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/executor.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/executor_pool.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./worker/resource_manager.h

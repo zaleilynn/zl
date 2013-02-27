@@ -4,6 +4,7 @@
 #include "master/service.h"
 #include "master/machine_pool.h"
 #include "master/vc_pool.h"
+#include "master/event.h"
 
 using log4cplus::Logger;
 
@@ -22,4 +23,22 @@ int32_t MasterService::AddVC(const VCInfo& vc_info){
     VCPtr ptr(new VC(vc_info));
     ptr->LogInfo();
     return VCPoolI::Instance()->AddVC(ptr); 
+}
+
+int32_t MasterService::TaskStarted(int64_t task_id){
+    StateEventPtr event(new StartEvent(task_id));
+    StateEventBufferI::Instance()->PushBack(event);
+    return 0;
+}
+
+int32_t MasterService::TaskFinished(int64_t task_id){
+    StateEventPtr event(new FinishEvent(task_id));
+    StateEventBufferI::Instance()->PushBack(event);
+    return 0;
+}
+
+int32_t MasterService::TaskFailed(int64_t task_id){
+    StateEventPtr event(new FailEvent(task_id));
+    StateEventBufferI::Instance()->PushBack(event);
+    return 0;
 }

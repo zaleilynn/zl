@@ -318,6 +318,30 @@ config.cpp.s:
 	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/config.cpp.s
 .PHONY : config.cpp.s
 
+event.o: event.cpp.o
+.PHONY : event.o
+
+# target to build an object file
+event.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/event.cpp.o
+.PHONY : event.cpp.o
+
+event.i: event.cpp.i
+.PHONY : event.i
+
+# target to preprocess a source file
+event.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/event.cpp.i
+.PHONY : event.cpp.i
+
+event.s: event.cpp.s
+.PHONY : event.s
+
+# target to generate assembly for a file
+event.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/event.cpp.s
+.PHONY : event.cpp.s
+
 ip_pool.o: ip_pool.cpp.o
 .PHONY : ip_pool.o
 
@@ -616,6 +640,9 @@ help:
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"
+	@echo "... event.o"
+	@echo "... event.i"
+	@echo "... event.s"
 	@echo "... ip_pool.o"
 	@echo "... ip_pool.i"
 	@echo "... ip_pool.s"

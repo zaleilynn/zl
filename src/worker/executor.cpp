@@ -39,7 +39,6 @@ VMInfo Executor::GetVMInfo() {
 }
 
 void Executor::Start() {
-    //获得锁的时间应该尽量的少
     ExecutorStarted();
     VMPtr ptr(new VM(GetVMInfo()));  
     if(ptr->Init() == 0) {
@@ -47,12 +46,17 @@ void Executor::Start() {
         if(ptr->Execute() == 0) {
             //启动成功
             VMPoolI::Instance()->Insert(ptr);
+            ptr->VMStarted();
+            ExecutorFinished();
             LOG4CPLUS_INFO(logger, "vm start succeed");
-        } else { 
+        } else {
+            ptr->VMFailed();
+            ExecutorFailed(); 
             LOG4CPLUS_ERROR(logger, "start vm failed");
         }
     } else {
         ptr->VMFailed();
+        ExecutorFailed(); 
         LOG4CPLUS_ERROR(logger, "init vm env failed");
     } 
 }

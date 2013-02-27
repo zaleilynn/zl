@@ -9,7 +9,6 @@ using std::tr1::bind;
 
 static Logger logger = Logger::getInstance("master");
 
-
 //初始化一个框架,并添加一个task
 int32_t VCPool::AddVC(const VCPtr& vc) {
     Insert(vc);
@@ -37,6 +36,12 @@ TaskPtr VCPool::GetTask() {
 void VCPool::AddTask(const TaskPtr& task){
     //bind 这个名字可能是socket里面的函数，用using限定一下
     VCFunc func = bind(&VC::PushTask, _1, task);
+    //只要系统不出差错，这个地方应该不会出错，故用此函数用void返回
+    FindToDo(task->GetVCName(), func);
+}
+
+void VCPool::RemoveTask(const TaskPtr& task){
+    VCFunc func = bind(&VC::RemoveTask, _1, task);
     FindToDo(task->GetVCName(), func);
 }
 

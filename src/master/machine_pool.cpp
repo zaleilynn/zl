@@ -23,6 +23,7 @@ void MachinePool::MapToDo(MachineFunc func) {
     }
 }
 
+//把这个移除出去有帮助于代码的统一性，但是存在一个方便性的问题？
 string MachinePool::AssignTask(const ClassAd& ad){
     ReadLocker locker(m_lock);
     list<MachinePtr> candidate_machine;

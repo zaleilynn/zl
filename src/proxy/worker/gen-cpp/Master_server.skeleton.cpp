@@ -32,6 +32,21 @@ class MasterHandler : virtual public MasterIf {
     printf("AddVC\n");
   }
 
+  int32_t TaskStarted(const int64_t task_id) {
+    // Your implementation goes here
+    printf("TaskStarted\n");
+  }
+
+  int32_t TaskFinished(const int64_t task_id) {
+    // Your implementation goes here
+    printf("TaskFinished\n");
+  }
+
+  int32_t TaskFailed(const int64_t task_id) {
+    // Your implementation goes here
+    printf("TaskFailed\n");
+  }
+
 };
 
 int main(int argc, char **argv) {

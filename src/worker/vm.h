@@ -6,9 +6,18 @@
 #include <libvirt/virterror.h>
 #include <string>
 #include "include/proxy.h"
+#include "include/rwlock.h"
 
 using boost::shared_ptr;
 using std::string;
+using lynn::RWLock;
+
+enum VMState {
+    VM_WAIT,
+    VM_RUN,
+    VM_FINISH,
+    VM_FAIL,
+};
 
 struct VMInfo {
     int64_t id;
@@ -33,6 +42,7 @@ public:
     }
 
 private:
+    RWLock m_lock;
     int32_t CopyImage();
     int32_t CloneImage();
     VMInfo m_info;
@@ -41,6 +51,7 @@ private:
     string m_img;
     string m_xml;
     string m_iso;
+    VMState m_state;
     static string m_xml_template;
 };
 

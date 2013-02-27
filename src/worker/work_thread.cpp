@@ -9,6 +9,7 @@
 #include "worker/config.h"
 #include "worker/resource_manager.h"
 #include "worker/executor_pool.h"
+#include "worker/event.h"
 
 using log4cplus::Logger;
 
@@ -33,6 +34,17 @@ void* SchedulerProcessor(){
     while(true) {
         ExecutorPoolI::Instance()->StartExecutor();
         usleep(1000*100);
+    }
+    return NULL;
+}
+
+void* StateEventProcessor(){
+    while(true) {
+        StateEventPtr event;
+        StateEventBufferI::Instance()->PopFront(&event);
+        if(event->Handle() != 0) {
+            LOG4CPLUS_ERROR(logger, "process state error"); 
+        }
     }
     return NULL;
 }

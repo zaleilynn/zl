@@ -37,4 +37,7 @@ struct TaskInfo {
 service Master {
     void Heartbeat(1: MachineInfo info),
     i32 AddVC(1: VCInfo vc_info),
+    i32 TaskStarted(1: i64 task_id),
+    i32 TaskFinished(1: i64 task_id),
+    i32 TaskFailed(1: i64 task_id),
 }

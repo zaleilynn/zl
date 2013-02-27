@@ -318,6 +318,30 @@ config.cpp.s:
 	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/config.cpp.s
 .PHONY : config.cpp.s
 
+event.o: event.cpp.o
+.PHONY : event.o
+
+# target to build an object file
+event.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/event.cpp.o
+.PHONY : event.cpp.o
+
+event.i: event.cpp.i
+.PHONY : event.i
+
+# target to preprocess a source file
+event.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/event.cpp.i
+.PHONY : event.cpp.i
+
+event.s: event.cpp.s
+.PHONY : event.s
+
+# target to generate assembly for a file
+event.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/event.cpp.s
+.PHONY : event.cpp.s
+
 executor.o: executor.cpp.o
 .PHONY : executor.o
 
@@ -544,6 +568,9 @@ help:
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"
+	@echo "... event.o"
+	@echo "... event.i"
+	@echo "... event.s"
 	@echo "... executor.o"
 	@echo "... executor.i"
 	@echo "... executor.s"

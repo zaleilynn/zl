@@ -17,6 +17,7 @@
 
 extern void* TaskProcessor();
 extern void* SchedulerProcessor();
+extern void* StateEventProcessor();
 
 using log4cplus::Logger;
 using log4cplus::ConsoleAppender;
@@ -74,6 +75,8 @@ int32_t main(int argc, char ** argv) {
 
     thread task_processor_t(TaskProcessor);
     thread scheduler_processor_t(SchedulerProcessor);
+    thread state_event_processor_t(StateEventProcessor);
+   
     Rpc<MasterService, MasterProcessor>::Listen(atoi(MasterConfigI::Instance()->Get("port").c_str()));
     return 0;
 }

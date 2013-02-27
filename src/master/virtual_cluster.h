@@ -23,7 +23,7 @@ public:
     TaskInfo GetTaskInfo();
     TaskPtr PopTask(TaskState type);
     void PushTask(const TaskPtr& task);
-    
+    void RemoveTask(const TaskPtr& task); 
 private:
     VCInfo m_vc_info;
     TaskInfo m_task_info;

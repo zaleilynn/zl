@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include "worker/vm.h"
 #include "worker/resource_manager.h"
+#include "worker/event.h"
 
 using std::stringstream;
 using std::ofstream;
@@ -14,6 +15,7 @@ using std::ifstream;
 using std::string;
 using std::endl;
 using log4cplus::Logger;
+using lynn::WriteLocker;
 
 static Logger logger = Logger::getInstance("worker");
 
@@ -23,6 +25,7 @@ string VM::m_xml_template = "";
 //Init需要使用Task的一些信息
 VM::VM(const VMInfo& info){
     m_info = info;
+    m_state = VM_WAIT;
 }
 
 //不能用了
@@ -163,6 +166,7 @@ int32_t VM::Init() {
 }
 
 int32_t VM::Execute() {
+    //就不保存连接吧
     virConnectPtr conn = virConnectOpen("qemu:///system");
     if(conn == NULL) {
         LOG4CPLUS_ERROR(logger, "fails to open connection to qemu:///system");
@@ -177,16 +181,29 @@ int32_t VM::Execute() {
         virConnectClose(conn);
         return 1;
     }
+
     virDomainFree(vm_ptr);
     virConnectClose(conn);
     return 0;
 }
 
 void VM::VMFailed(){
+    StateEventPtr event(new FailedEvent(m_info.id, ""));
+    StateEventBufferI::Instance()->PushBack(event); 
+    WriteLocker locker(m_lock);
+    m_state = VM_FAIL;
 }
 
 void VM::VMFinished(){
+    StateEventPtr event(new FinishedEvent(m_info.id));
+    StateEventBufferI::Instance()->PushBack(event);
+    WriteLocker locker(m_lock);
+    m_state = VM_FINISH;
 }
 
 void VM::VMStarted(){
+    StateEventPtr event(new StartedEvent(m_info.id));
+    StateEventBufferI::Instance()->PushBack(event);
+    WriteLocker locker(m_lock);
+    m_state = VM_RUN;
 }

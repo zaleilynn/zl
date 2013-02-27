@@ -13,6 +13,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/worker.dir/executor_pool.cpp.o"
   "CMakeFiles/worker.dir/vm.cpp.o"
   "CMakeFiles/worker.dir/vm_pool.cpp.o"
+  "CMakeFiles/worker.dir/event.cpp.o"
   "CMakeFiles/worker.dir/worker.cpp.o"
   "../../../src/proxy/master/gen-cpp/master_constants.cpp"
   "../../../src/proxy/master/gen-cpp/Master.h"

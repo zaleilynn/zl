@@ -35,6 +35,7 @@ TaskInfo VC::GetTaskInfo(){
     return m_task_info;
 }
 
+//根据状态插入到相应队列中
 void VC::PushTask(const TaskPtr& task) {
     TaskState ts = task->GetTaskState(); 
     assert(ts == TASK_WAIT || ts == TASK_RUN);
@@ -42,6 +43,16 @@ void VC::PushTask(const TaskPtr& task) {
         m_wait_queue.PushBack(task);
     else 
         m_run_queue.PushBack(task);
+}
+
+void VC::RemoveTask(const TaskPtr& task) {
+    TaskState ts = task->GetTaskState();
+    assert(ts == TASK_WAIT || ts == TASK_RUN);
+    if(ts == TASK_WAIT) {
+        m_wait_queue.Erase(task->GetId());    
+    } else {
+        m_run_queue.Erase(task->GetId());
+    }
 }
 
 TaskPtr VC::PopTask(TaskState type) {

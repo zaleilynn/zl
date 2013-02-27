@@ -3,6 +3,7 @@
 
 #include "master/task_pool.h"
 #include "master/vc_pool.h"
+#include "master/event.h"
 
 using log4cplus::Logger;
 
@@ -22,7 +23,7 @@ void* SchedulerProcessor() {
                << " run on " << task->GetRunOn()); 
            } else {
                LOG4CPLUS_WARN(logger, "scheduler task error");
-               //会重新进行调度
+               //可以考虑重新进行调度
                //VCPoolI::Instance()->AddTask(task);
            }
         }
@@ -38,6 +39,17 @@ void* TaskProcessor() {
         TaskBufferI::Instance()->PopFront(&task);
         LOG4CPLUS_INFO(logger, "receive a task");
         VCPoolI::Instance()->AddTask(task);
+    }
+    return NULL;
+}
+
+void* StateEventProcessor() {
+    while(true) {
+        StateEventPtr event;
+        StateEventBufferI::Instance()->PopFront(&event);
+        if(event->Handle() != 0) {
+            LOG4CPLUS_ERROR(logger, "process state error");
+        }
     }
     return NULL;
 }
