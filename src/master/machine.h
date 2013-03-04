@@ -23,6 +23,7 @@ public:
     double GetRankValue() const {
         return m_rank_value;
     }
+    void ForwardEvent();
 private:
     MachineInfo m_machine_info;
     ClassAd m_ad;

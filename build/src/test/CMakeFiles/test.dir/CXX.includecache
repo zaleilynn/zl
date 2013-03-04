@@ -159,7 +159,13 @@ master_types.h
 /home/zaleilynn/workspace/lynn/src/proxy/worker/gen-cpp/master_types.h
 
 /home/zaleilynn/workspace/lynn/src/test/test.cpp
-stdint.h
+stdio.h
+-
+sys/time.h
+-
+libvirt/libvirt.h
+-
+libvirt/virterror.h
 -
 include/proxy.h
 /home/zaleilynn/workspace/lynn/src/test/include/proxy.h

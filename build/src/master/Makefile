@@ -342,6 +342,54 @@ event.cpp.s:
 	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/event.cpp.s
 .PHONY : event.cpp.s
 
+executor.o: executor.cpp.o
+.PHONY : executor.o
+
+# target to build an object file
+executor.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/executor.cpp.o
+.PHONY : executor.cpp.o
+
+executor.i: executor.cpp.i
+.PHONY : executor.i
+
+# target to preprocess a source file
+executor.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/executor.cpp.i
+.PHONY : executor.cpp.i
+
+executor.s: executor.cpp.s
+.PHONY : executor.s
+
+# target to generate assembly for a file
+executor.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/executor.cpp.s
+.PHONY : executor.cpp.s
+
+executor_pool.o: executor_pool.cpp.o
+.PHONY : executor_pool.o
+
+# target to build an object file
+executor_pool.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/executor_pool.cpp.o
+.PHONY : executor_pool.cpp.o
+
+executor_pool.i: executor_pool.cpp.i
+.PHONY : executor_pool.i
+
+# target to preprocess a source file
+executor_pool.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/executor_pool.cpp.i
+.PHONY : executor_pool.cpp.i
+
+executor_pool.s: executor_pool.cpp.s
+.PHONY : executor_pool.s
+
+# target to generate assembly for a file
+executor_pool.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/executor_pool.cpp.s
+.PHONY : executor_pool.cpp.s
+
 ip_pool.o: ip_pool.cpp.o
 .PHONY : ip_pool.o
 
@@ -582,6 +630,30 @@ virtual_cluster.cpp.s:
 	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/virtual_cluster.cpp.s
 .PHONY : virtual_cluster.cpp.s
 
+watcher.o: watcher.cpp.o
+.PHONY : watcher.o
+
+# target to build an object file
+watcher.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/watcher.cpp.o
+.PHONY : watcher.cpp.o
+
+watcher.i: watcher.cpp.i
+.PHONY : watcher.i
+
+# target to preprocess a source file
+watcher.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/watcher.cpp.i
+.PHONY : watcher.cpp.i
+
+watcher.s: watcher.cpp.s
+.PHONY : watcher.s
+
+# target to generate assembly for a file
+watcher.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/watcher.cpp.s
+.PHONY : watcher.cpp.s
+
 work_thread.o: work_thread.cpp.o
 .PHONY : work_thread.o
 
@@ -643,6 +715,12 @@ help:
 	@echo "... event.o"
 	@echo "... event.i"
 	@echo "... event.s"
+	@echo "... executor.o"
+	@echo "... executor.i"
+	@echo "... executor.s"
+	@echo "... executor_pool.o"
+	@echo "... executor_pool.i"
+	@echo "... executor_pool.s"
 	@echo "... ip_pool.o"
 	@echo "... ip_pool.i"
 	@echo "... ip_pool.s"
@@ -673,6 +751,9 @@ help:
 	@echo "... virtual_cluster.o"
 	@echo "... virtual_cluster.i"
 	@echo "... virtual_cluster.s"
+	@echo "... watcher.o"
+	@echo "... watcher.i"
+	@echo "... watcher.s"
 	@echo "... work_thread.o"
 	@echo "... work_thread.i"
 	@echo "... work_thread.s"

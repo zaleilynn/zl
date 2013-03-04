@@ -10,7 +10,7 @@ int32_t main(int argc, char ** argv) {
     VCInfo info;
     info.name = "test";
     info.quota = 0.3;
-    info.vcpu = 1;
+    info.vcpu = 4;
     info.memory = 512; 
     info.os = "winxp";
     Proxy<MasterClient> proxy = Rpc<MasterClient, MasterClient>::GetProxy(master_endpoint);

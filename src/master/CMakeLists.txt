@@ -43,6 +43,9 @@ SET(SRC
     work_thread.cpp
     ip_pool.cpp
     event.cpp
+    watcher.cpp
+    executor.cpp
+    executor_pool.cpp
     master.cpp
     )
 

@@ -11,7 +11,6 @@ using std::string;
 using std::runtime_error;
 
 namespace lynn {
-
     class Mutex {
         public:
             Mutex() {

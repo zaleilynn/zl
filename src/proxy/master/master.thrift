@@ -1,4 +1,4 @@
-struct VMStat {
+struct ExecutorStat {
     1: string vc_name,
     2: i64 task_id,
     3: double used_vcpu,
@@ -12,7 +12,7 @@ struct MachineInfo {
     4: i32 all_memory,
     5: i32 avail_vcpu,
     6: i32 avail_memory,
-    7: list<VMStat> vm_list,
+    7: list<ExecutorStat> vm_list,
 }
 
 struct VCInfo {

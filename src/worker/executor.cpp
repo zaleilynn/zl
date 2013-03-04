@@ -47,16 +47,16 @@ void Executor::Start() {
             //启动成功
             VMPoolI::Instance()->Insert(ptr);
             ptr->VMStarted();
-            ExecutorFinished();
+            ExecutorStarted();
             LOG4CPLUS_INFO(logger, "vm start succeed");
         } else {
             ptr->VMFailed();
-            ExecutorFailed(); 
+            ExecutorFailed();
             LOG4CPLUS_ERROR(logger, "start vm failed");
         }
     } else {
         ptr->VMFailed();
-        ExecutorFailed(); 
+        ExecutorFailed();
         LOG4CPLUS_ERROR(logger, "init vm env failed");
     } 
 }

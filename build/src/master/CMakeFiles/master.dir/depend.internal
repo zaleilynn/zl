@@ -42,10 +42,16 @@ src/master/CMakeFiles/master.dir/event.cpp.o
  ../src/./include/proxy.h
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
+ ../src/./include/thread.h
  ../src/./master/event.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
+ ../src/./master/machine.h
  ../src/./master/task.h
  ../src/./master/task_pool.h
  ../src/./master/task_queue.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
  ../src/./master/vc_pool.h
  ../src/./master/virtual_cluster.h
  ../src/./proxy/master/gen-cpp/Master.h
@@ -53,6 +59,25 @@ src/master/CMakeFiles/master.dir/event.cpp.o
  ../src/./proxy/worker/gen-cpp/Worker.h
  ../src/./proxy/worker/gen-cpp/worker_types.h
  /home/zaleilynn/workspace/lynn/src/master/event.cpp
+src/master/CMakeFiles/master.dir/executor.cpp.o
+ ../src/./include/proxy.h
+ ../src/./include/rwlock.h
+ ../src/./master/executor.h
+ ../src/./proxy/master/gen-cpp/Master.h
+ ../src/./proxy/master/gen-cpp/master_types.h
+ ../src/./proxy/worker/gen-cpp/Worker.h
+ ../src/./proxy/worker/gen-cpp/worker_types.h
+ /home/zaleilynn/workspace/lynn/src/master/executor.cpp
+src/master/CMakeFiles/master.dir/executor_pool.cpp.o
+ ../src/./include/proxy.h
+ ../src/./include/rwlock.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
+ ../src/./proxy/master/gen-cpp/Master.h
+ ../src/./proxy/master/gen-cpp/master_types.h
+ ../src/./proxy/worker/gen-cpp/Worker.h
+ ../src/./proxy/worker/gen-cpp/worker_types.h
+ /home/zaleilynn/workspace/lynn/src/master/executor_pool.cpp
 src/master/CMakeFiles/master.dir/ip_pool.cpp.o
  ../src/./include/config.h
  ../src/./include/mutex.h
@@ -65,8 +90,22 @@ src/master/CMakeFiles/master.dir/ip_pool.cpp.o
  /home/zaleilynn/workspace/lynn/src/master/ip_pool.cpp
 src/master/CMakeFiles/master.dir/machine.cpp.o
  ../src/./include/attributes.h
+ ../src/./include/block_queue.h
+ ../src/./include/cond.h
+ ../src/./include/mutex.h
  ../src/./include/proxy.h
+ ../src/./include/rwlock.h
+ ../src/./include/singleton.h
+ ../src/./include/thread.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
  ../src/./master/machine.h
+ ../src/./master/task.h
+ ../src/./master/task_queue.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
+ ../src/./master/vc_pool.h
+ ../src/./master/virtual_cluster.h
  ../src/./proxy/master/gen-cpp/Master.h
  ../src/./proxy/master/gen-cpp/master_types.h
  ../src/./proxy/worker/gen-cpp/Worker.h
@@ -85,6 +124,8 @@ src/master/CMakeFiles/master.dir/machine_pool.cpp.o
  ../src/./proxy/worker/gen-cpp/worker_types.h
  /home/zaleilynn/workspace/lynn/src/master/machine_pool.cpp
 src/master/CMakeFiles/master.dir/master.cpp.o
+ ../src/./include/block_queue.h
+ ../src/./include/cond.h
  ../src/./include/config.h
  ../src/./include/mutex.h
  ../src/./include/proxy.h
@@ -93,9 +134,20 @@ src/master/CMakeFiles/master.dir/master.cpp.o
  ../src/./include/rpc.h
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
+ ../src/./include/thread.h
  ../src/./master/config.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
  ../src/./master/ip_pool.h
+ ../src/./master/machine.h
  ../src/./master/service.h
+ ../src/./master/task.h
+ ../src/./master/task_queue.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
+ ../src/./master/vc_pool.h
+ ../src/./master/virtual_cluster.h
+ ../src/./master/watcher.h
  ../src/./proxy/master/gen-cpp/Master.h
  ../src/./proxy/master/gen-cpp/master_types.h
  ../src/./proxy/worker/gen-cpp/Worker.h
@@ -127,14 +179,20 @@ src/master/CMakeFiles/master.dir/service.cpp.o
  ../src/./include/proxy.h
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
+ ../src/./include/thread.h
  ../src/./master/event.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
  ../src/./master/machine.h
  ../src/./master/machine_pool.h
  ../src/./master/service.h
  ../src/./master/task.h
  ../src/./master/task_queue.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
  ../src/./master/vc_pool.h
  ../src/./master/virtual_cluster.h
+ ../src/./master/watcher.h
  ../src/./proxy/master/gen-cpp/Master.h
  ../src/./proxy/master/gen-cpp/master_types.h
  ../src/./proxy/worker/gen-cpp/Worker.h
@@ -213,8 +271,14 @@ src/master/CMakeFiles/master.dir/vc_pool.cpp.o
  ../src/./include/proxy.h
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
+ ../src/./include/thread.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
+ ../src/./master/machine.h
  ../src/./master/task.h
  ../src/./master/task_queue.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
  ../src/./master/vc_pool.h
  ../src/./master/virtual_cluster.h
  ../src/./proxy/master/gen-cpp/Master.h
@@ -229,9 +293,15 @@ src/master/CMakeFiles/master.dir/virtual_cluster.cpp.o
  ../src/./include/proxy.h
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
+ ../src/./include/thread.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
+ ../src/./master/machine.h
  ../src/./master/task.h
  ../src/./master/task_pool.h
  ../src/./master/task_queue.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
  ../src/./master/vc_pool.h
  ../src/./master/virtual_cluster.h
  ../src/./proxy/master/gen-cpp/Master.h
@@ -239,6 +309,29 @@ src/master/CMakeFiles/master.dir/virtual_cluster.cpp.o
  ../src/./proxy/worker/gen-cpp/Worker.h
  ../src/./proxy/worker/gen-cpp/worker_types.h
  /home/zaleilynn/workspace/lynn/src/master/virtual_cluster.cpp
+src/master/CMakeFiles/master.dir/watcher.cpp.o
+ ../src/./include/block_queue.h
+ ../src/./include/cond.h
+ ../src/./include/mutex.h
+ ../src/./include/proxy.h
+ ../src/./include/rwlock.h
+ ../src/./include/singleton.h
+ ../src/./include/thread.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
+ ../src/./master/machine.h
+ ../src/./master/task.h
+ ../src/./master/task_queue.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
+ ../src/./master/vc_pool.h
+ ../src/./master/virtual_cluster.h
+ ../src/./master/watcher.h
+ ../src/./proxy/master/gen-cpp/Master.h
+ ../src/./proxy/master/gen-cpp/master_types.h
+ ../src/./proxy/worker/gen-cpp/Worker.h
+ ../src/./proxy/worker/gen-cpp/worker_types.h
+ /home/zaleilynn/workspace/lynn/src/master/watcher.cpp
 src/master/CMakeFiles/master.dir/work_thread.cpp.o
  ../src/./include/block_queue.h
  ../src/./include/cond.h
@@ -247,10 +340,16 @@ src/master/CMakeFiles/master.dir/work_thread.cpp.o
  ../src/./include/proxy.h
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
+ ../src/./include/thread.h
  ../src/./master/event.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
+ ../src/./master/machine.h
  ../src/./master/task.h
  ../src/./master/task_pool.h
  ../src/./master/task_queue.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
  ../src/./master/vc_pool.h
  ../src/./master/virtual_cluster.h
  ../src/./proxy/master/gen-cpp/Master.h

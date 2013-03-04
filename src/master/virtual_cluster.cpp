@@ -1,11 +1,13 @@
 #include <log4cplus/logger.h>
 #include <log4cplus/loggingmacros.h>
 
-
 #include "master/vc_pool.h"
 #include "master/task_pool.h"
 
 using log4cplus::Logger;
+using lynn::ReadLocker;
+using lynn::WriteLocker;
+using std::tr1::bind;
 
 static Logger logger = Logger::getInstance("master");
 
@@ -15,7 +17,27 @@ VC::VC(const VCInfo& info) : m_vc_info(info) {
     m_task_info.id = -1;
     m_task_info.os = info.os;
     m_task_info.vcpu = info.vcpu;
-    m_task_info.memory = info.memory; 
+    m_task_info.memory = info.memory;
+    //有一点走火了
+    ExecutorPoolPtr ptr(new ExecutorPool(info.name)); 
+    m_executor_pool = ptr;
+}
+
+VC::~VC() throw () {
+    delete m_thread;
+}
+
+void VC::Start() {
+    Thread::ThreadFunc func = bind(&VC::Entry, this);
+    m_thread = new Thread(func);
+    m_thread->Start();
+}
+
+void VC::Entry() {
+    while(true) {
+        ExecutorStat stat;
+        m_queue.PopFront(&stat);
+    }
 }
 
 void VC::LogInfo() {
@@ -25,6 +47,9 @@ void VC::LogInfo() {
 }
 
 void VC::Init() {
+   //开启线程监控虚拟集群状态
+   Start();
+   //
    TaskPtr task(new Task(m_task_info));
    LOG4CPLUS_INFO(logger, "add a task from vc:" << m_vc_info.name);
    TaskPoolI::Instance()->Insert(task);
@@ -46,6 +71,7 @@ void VC::PushTask(const TaskPtr& task) {
 }
 
 void VC::RemoveTask(const TaskPtr& task) {
+    //里面有并发控制机制
     TaskState ts = task->GetTaskState();
     assert(ts == TASK_WAIT || ts == TASK_RUN);
     if(ts == TASK_WAIT) {
@@ -62,4 +88,15 @@ TaskPtr VC::PopTask(TaskState type) {
     } else {
         return m_run_queue.PopFront();
     }
+}
+
+void VC::AddEvent(const ExecutorStat& stat) {
+    if(m_executor_pool->Find(stat.task_id) == false) { 
+        //其实这里有一个race condition，但是发生的概率应该是没有的
+        ExecutorPtr executor_ptr(new Executor(stat.task_id));
+        m_executor_pool->Insert(executor_ptr);
+        LOG4CPLUS_INFO(logger, "add an executor with" 
+                               << " Id: " << stat.task_id);
+    }  
+    m_queue.PushBack(stat);
 }

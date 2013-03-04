@@ -10,10 +10,10 @@
 
 
 
-const char* VMStat::ascii_fingerprint = "CA686CC0868D3556820A8027F5E9EE8D";
-const uint8_t VMStat::binary_fingerprint[16] = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};
+const char* ExecutorStat::ascii_fingerprint = "CA686CC0868D3556820A8027F5E9EE8D";
+const uint8_t ExecutorStat::binary_fingerprint[16] = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};
 
-uint32_t VMStat::read(::apache::thrift::protocol::TProtocol* iprot) {
+uint32_t ExecutorStat::read(::apache::thrift::protocol::TProtocol* iprot) {
 
   uint32_t xfer = 0;
   std::string fname;
@@ -77,9 +77,9 @@ uint32_t VMStat::read(::apache::thrift::protocol::TProtocol* iprot) {
   return xfer;
 }
 
-uint32_t VMStat::write(::apache::thrift::protocol::TProtocol* oprot) const {
+uint32_t ExecutorStat::write(::apache::thrift::protocol::TProtocol* oprot) const {
   uint32_t xfer = 0;
-  xfer += oprot->writeStructBegin("VMStat");
+  xfer += oprot->writeStructBegin("ExecutorStat");
 
   xfer += oprot->writeFieldBegin("vc_name", ::apache::thrift::protocol::T_STRING, 1);
   xfer += oprot->writeString(this->vc_name);
@@ -102,7 +102,7 @@ uint32_t VMStat::write(::apache::thrift::protocol::TProtocol* oprot) const {
   return xfer;
 }
 
-void swap(VMStat &a, VMStat &b) {
+void swap(ExecutorStat &a, ExecutorStat &b) {
   using ::std::swap;
   swap(a.vc_name, b.vc_name);
   swap(a.task_id, b.task_id);
@@ -245,7 +245,7 @@ uint32_t MachineInfo::write(::apache::thrift::protocol::TProtocol* oprot) const 
   xfer += oprot->writeFieldBegin("vm_list", ::apache::thrift::protocol::T_LIST, 7);
   {
     xfer += oprot->writeListBegin(::apache::thrift::protocol::T_STRUCT, static_cast<uint32_t>(this->vm_list.size()));
-    std::vector<VMStat> ::const_iterator _iter5;
+    std::vector<ExecutorStat> ::const_iterator _iter5;
     for (_iter5 = this->vm_list.begin(); _iter5 != this->vm_list.end(); ++_iter5)
     {
       xfer += (*_iter5).write(oprot);

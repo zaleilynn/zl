@@ -16,31 +16,31 @@
 
 
 
-typedef struct _VMStat__isset {
-  _VMStat__isset() : vc_name(false), task_id(false), used_vcpu(false), used_memory(false) {}
+typedef struct _ExecutorStat__isset {
+  _ExecutorStat__isset() : vc_name(false), task_id(false), used_vcpu(false), used_memory(false) {}
   bool vc_name;
   bool task_id;
   bool used_vcpu;
   bool used_memory;
-} _VMStat__isset;
+} _ExecutorStat__isset;
 
-class VMStat {
+class ExecutorStat {
  public:
 
   static const char* ascii_fingerprint; // = "CA686CC0868D3556820A8027F5E9EE8D";
   static const uint8_t binary_fingerprint[16]; // = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};
 
-  VMStat() : vc_name(), task_id(0), used_vcpu(0), used_memory(0) {
+  ExecutorStat() : vc_name(), task_id(0), used_vcpu(0), used_memory(0) {
   }
 
-  virtual ~VMStat() throw() {}
+  virtual ~ExecutorStat() throw() {}
 
   std::string vc_name;
   int64_t task_id;
   double used_vcpu;
   int32_t used_memory;
 
-  _VMStat__isset __isset;
+  _ExecutorStat__isset __isset;
 
   void __set_vc_name(const std::string& val) {
     vc_name = val;
@@ -58,7 +58,7 @@ class VMStat {
     used_memory = val;
   }
 
-  bool operator == (const VMStat & rhs) const
+  bool operator == (const ExecutorStat & rhs) const
   {
     if (!(vc_name == rhs.vc_name))
       return false;
@@ -70,18 +70,18 @@ class VMStat {
       return false;
     return true;
   }
-  bool operator != (const VMStat &rhs) const {
+  bool operator != (const ExecutorStat &rhs) const {
     return !(*this == rhs);
   }
 
-  bool operator < (const VMStat & ) const;
+  bool operator < (const ExecutorStat & ) const;
 
   uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
   uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
 
 };
 
-void swap(VMStat &a, VMStat &b);
+void swap(ExecutorStat &a, ExecutorStat &b);
 
 typedef struct _MachineInfo__isset {
   _MachineInfo__isset() : endpoint(false), cpu_usage(false), all_vcpu(false), all_memory(false), avail_vcpu(false), avail_memory(false), vm_list(false) {}
@@ -111,7 +111,7 @@ class MachineInfo {
   int32_t all_memory;
   int32_t avail_vcpu;
   int32_t avail_memory;
-  std::vector<VMStat>  vm_list;
+  std::vector<ExecutorStat>  vm_list;
 
   _MachineInfo__isset __isset;
 
@@ -139,7 +139,7 @@ class MachineInfo {
     avail_memory = val;
   }
 
-  void __set_vm_list(const std::vector<VMStat> & val) {
+  void __set_vm_list(const std::vector<ExecutorStat> & val) {
     vm_list = val;
   }
 

@@ -460,9 +460,78 @@ src/master/CMakeFiles/master.dir/event.cpp.o.provides: src/master/CMakeFiles/mas
 
 src/master/CMakeFiles/master.dir/event.cpp.o.provides.build: src/master/CMakeFiles/master.dir/event.cpp.o
 
+src/master/CMakeFiles/master.dir/watcher.cpp.o: src/master/CMakeFiles/master.dir/flags.make
+src/master/CMakeFiles/master.dir/watcher.cpp.o: ../src/master/watcher.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/master/CMakeFiles/master.dir/watcher.cpp.o"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/master.dir/watcher.cpp.o -c /home/zaleilynn/workspace/lynn/src/master/watcher.cpp
+
+src/master/CMakeFiles/master.dir/watcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/master.dir/watcher.cpp.i"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zaleilynn/workspace/lynn/src/master/watcher.cpp > CMakeFiles/master.dir/watcher.cpp.i
+
+src/master/CMakeFiles/master.dir/watcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/master.dir/watcher.cpp.s"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zaleilynn/workspace/lynn/src/master/watcher.cpp -o CMakeFiles/master.dir/watcher.cpp.s
+
+src/master/CMakeFiles/master.dir/watcher.cpp.o.requires:
+.PHONY : src/master/CMakeFiles/master.dir/watcher.cpp.o.requires
+
+src/master/CMakeFiles/master.dir/watcher.cpp.o.provides: src/master/CMakeFiles/master.dir/watcher.cpp.o.requires
+	$(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/watcher.cpp.o.provides.build
+.PHONY : src/master/CMakeFiles/master.dir/watcher.cpp.o.provides
+
+src/master/CMakeFiles/master.dir/watcher.cpp.o.provides.build: src/master/CMakeFiles/master.dir/watcher.cpp.o
+
+src/master/CMakeFiles/master.dir/executor.cpp.o: src/master/CMakeFiles/master.dir/flags.make
+src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/master/executor.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/master/CMakeFiles/master.dir/executor.cpp.o"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/master.dir/executor.cpp.o -c /home/zaleilynn/workspace/lynn/src/master/executor.cpp
+
+src/master/CMakeFiles/master.dir/executor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/master.dir/executor.cpp.i"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zaleilynn/workspace/lynn/src/master/executor.cpp > CMakeFiles/master.dir/executor.cpp.i
+
+src/master/CMakeFiles/master.dir/executor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/master.dir/executor.cpp.s"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zaleilynn/workspace/lynn/src/master/executor.cpp -o CMakeFiles/master.dir/executor.cpp.s
+
+src/master/CMakeFiles/master.dir/executor.cpp.o.requires:
+.PHONY : src/master/CMakeFiles/master.dir/executor.cpp.o.requires
+
+src/master/CMakeFiles/master.dir/executor.cpp.o.provides: src/master/CMakeFiles/master.dir/executor.cpp.o.requires
+	$(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/executor.cpp.o.provides.build
+.PHONY : src/master/CMakeFiles/master.dir/executor.cpp.o.provides
+
+src/master/CMakeFiles/master.dir/executor.cpp.o.provides.build: src/master/CMakeFiles/master.dir/executor.cpp.o
+
+src/master/CMakeFiles/master.dir/executor_pool.cpp.o: src/master/CMakeFiles/master.dir/flags.make
+src/master/CMakeFiles/master.dir/executor_pool.cpp.o: ../src/master/executor_pool.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/master/CMakeFiles/master.dir/executor_pool.cpp.o"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/master.dir/executor_pool.cpp.o -c /home/zaleilynn/workspace/lynn/src/master/executor_pool.cpp
+
+src/master/CMakeFiles/master.dir/executor_pool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/master.dir/executor_pool.cpp.i"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zaleilynn/workspace/lynn/src/master/executor_pool.cpp > CMakeFiles/master.dir/executor_pool.cpp.i
+
+src/master/CMakeFiles/master.dir/executor_pool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/master.dir/executor_pool.cpp.s"
+	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zaleilynn/workspace/lynn/src/master/executor_pool.cpp -o CMakeFiles/master.dir/executor_pool.cpp.s
+
+src/master/CMakeFiles/master.dir/executor_pool.cpp.o.requires:
+.PHONY : src/master/CMakeFiles/master.dir/executor_pool.cpp.o.requires
+
+src/master/CMakeFiles/master.dir/executor_pool.cpp.o.provides: src/master/CMakeFiles/master.dir/executor_pool.cpp.o.requires
+	$(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/executor_pool.cpp.o.provides.build
+.PHONY : src/master/CMakeFiles/master.dir/executor_pool.cpp.o.provides
+
+src/master/CMakeFiles/master.dir/executor_pool.cpp.o.provides.build: src/master/CMakeFiles/master.dir/executor_pool.cpp.o
+
 src/master/CMakeFiles/master.dir/master.cpp.o: src/master/CMakeFiles/master.dir/flags.make
 src/master/CMakeFiles/master.dir/master.cpp.o: ../src/master/master.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/master/CMakeFiles/master.dir/master.cpp.o"
 	cd /home/zaleilynn/workspace/lynn/build/src/master && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/master.dir/master.cpp.o -c /home/zaleilynn/workspace/lynn/src/master/master.cpp
 
@@ -484,7 +553,7 @@ src/master/CMakeFiles/master.dir/master.cpp.o.provides: src/master/CMakeFiles/ma
 src/master/CMakeFiles/master.dir/master.cpp.o.provides.build: src/master/CMakeFiles/master.dir/master.cpp.o
 
 ../src/proxy/master/gen-cpp/master_constants.cpp:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../../../src/proxy/master/gen-cpp/master_constants.cpp, ../../../src/proxy/master/gen-cpp/Master.h, ../../../src/proxy/master/gen-cpp/master_types.h, ../../../src/proxy/master/gen-cpp/master_constants.h, ../../../src/proxy/master/gen-cpp/Master.cpp, ../../../src/proxy/master/gen-cpp/master_types.cpp"
 	cd /home/zaleilynn/workspace/lynn/build/src/master && thrift --gen cpp -r -o /home/zaleilynn/workspace/lynn/src/proxy/master /home/zaleilynn/workspace/lynn/src/proxy/master/master.thrift
 
@@ -499,7 +568,7 @@ src/master/CMakeFiles/master.dir/master.cpp.o.provides.build: src/master/CMakeFi
 ../src/proxy/master/gen-cpp/master_types.cpp: ../src/proxy/master/gen-cpp/master_constants.cpp
 
 ../src/proxy/worker/gen-cpp/worker_constants.cpp:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../../../src/proxy/worker/gen-cpp/worker_constants.cpp, ../../../src/proxy/worker/gen-cpp/Worker.h, ../../../src/proxy/worker/gen-cpp/worker_types.h, ../../../src/proxy/worker/gen-cpp/worker_constants.h, ../../../src/proxy/worker/gen-cpp/Worker.cpp, ../../../src/proxy/worker/gen-cpp/worker_types.cpp"
 	cd /home/zaleilynn/workspace/lynn/build/src/master && thrift --gen cpp -r -o /home/zaleilynn/workspace/lynn/src/proxy/worker /home/zaleilynn/workspace/lynn/src/proxy/worker/worker.thrift
 
@@ -533,6 +602,9 @@ master_OBJECTS = \
 "CMakeFiles/master.dir/work_thread.cpp.o" \
 "CMakeFiles/master.dir/ip_pool.cpp.o" \
 "CMakeFiles/master.dir/event.cpp.o" \
+"CMakeFiles/master.dir/watcher.cpp.o" \
+"CMakeFiles/master.dir/executor.cpp.o" \
+"CMakeFiles/master.dir/executor_pool.cpp.o" \
 "CMakeFiles/master.dir/master.cpp.o"
 
 # External object files for target master
@@ -556,6 +628,9 @@ src/master/master: src/master/CMakeFiles/master.dir/task_queue.cpp.o
 src/master/master: src/master/CMakeFiles/master.dir/work_thread.cpp.o
 src/master/master: src/master/CMakeFiles/master.dir/ip_pool.cpp.o
 src/master/master: src/master/CMakeFiles/master.dir/event.cpp.o
+src/master/master: src/master/CMakeFiles/master.dir/watcher.cpp.o
+src/master/master: src/master/CMakeFiles/master.dir/executor.cpp.o
+src/master/master: src/master/CMakeFiles/master.dir/executor_pool.cpp.o
 src/master/master: src/master/CMakeFiles/master.dir/master.cpp.o
 src/master/master: src/master/CMakeFiles/master.dir/build.make
 src/master/master: src/master/CMakeFiles/master.dir/link.txt
@@ -584,6 +659,9 @@ src/master/CMakeFiles/master.dir/requires: src/master/CMakeFiles/master.dir/task
 src/master/CMakeFiles/master.dir/requires: src/master/CMakeFiles/master.dir/work_thread.cpp.o.requires
 src/master/CMakeFiles/master.dir/requires: src/master/CMakeFiles/master.dir/ip_pool.cpp.o.requires
 src/master/CMakeFiles/master.dir/requires: src/master/CMakeFiles/master.dir/event.cpp.o.requires
+src/master/CMakeFiles/master.dir/requires: src/master/CMakeFiles/master.dir/watcher.cpp.o.requires
+src/master/CMakeFiles/master.dir/requires: src/master/CMakeFiles/master.dir/executor.cpp.o.requires
+src/master/CMakeFiles/master.dir/requires: src/master/CMakeFiles/master.dir/executor_pool.cpp.o.requires
 src/master/CMakeFiles/master.dir/requires: src/master/CMakeFiles/master.dir/master.cpp.o.requires
 .PHONY : src/master/CMakeFiles/master.dir/requires
 

@@ -2,10 +2,13 @@
 #include <log4cplus/loggingmacros.h>
 #include <classad/classad.h>
 #include <classad/classad_distribution.h>
+#include <vector>
 
 #include "master/machine.h"
 #include "include/attributes.h"
+#include "master/vc_pool.h"
 
+using std::vector;
 using log4cplus::Logger;
 
 static Logger logger = Logger::getInstance("master");
@@ -50,7 +53,16 @@ bool Machine::IsMatch(ClassAd ad){
 
     //for debug
     ad.EvaluateAttrNumber(ATTR_TASK_RANK, m_rank_value);
-
     LOG4CPLUS_DEBUG(logger, "rank " << m_rank_value);
     return true;
 }
+
+//将其内部的VMStat信息转发到相应VC中去
+//这个也可直接实现在Watcher中,但是可能就是在内存多存一份MachineInfo数据
+void Machine::ForwardEvent() {
+    for(vector<ExecutorStat>::iterator it = m_machine_info.vm_list.begin();
+        it != m_machine_info.vm_list.end(); ++it) {
+        VCPool::VCFunc func = bind(&VC::AddEvent, _1, *it); 
+        VCPoolI::Instance()->FindToDo(it->vc_name, func); 
+    }
+} 

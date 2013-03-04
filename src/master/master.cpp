@@ -14,6 +14,7 @@
 #include "master/config.h"
 #include "master/service.h"
 #include "master/ip_pool.h"
+#include "master/watcher.h"
 
 extern void* TaskProcessor();
 extern void* SchedulerProcessor();
@@ -76,6 +77,9 @@ int32_t main(int argc, char ** argv) {
     thread task_processor_t(TaskProcessor);
     thread scheduler_processor_t(SchedulerProcessor);
     thread state_event_processor_t(StateEventProcessor);
+   
+    //启动Watcher线程
+    WatcherI::Instance()->Start(); 
    
     Rpc<MasterService, MasterProcessor>::Listen(atoi(MasterConfigI::Instance()->Get("port").c_str()));
     return 0;
