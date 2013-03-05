@@ -5,6 +5,7 @@
 #include <log4cplus/loggingmacros.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <sys/time.h>
 #include "worker/vm.h"
 #include "worker/resource_manager.h"
 #include "worker/event.h"
@@ -16,11 +17,14 @@ using std::string;
 using std::endl;
 using log4cplus::Logger;
 using lynn::WriteLocker;
+using lynn::ReadLocker;
 
 static Logger logger = Logger::getInstance("worker");
 
 //一个类共用一个配置
 string VM::m_xml_template = "";
+//程序运行的时候会一直在的
+virConnectPtr VM::m_conn = NULL;
 
 //Init需要使用Task的一些信息
 VM::VM(const VMInfo& info){
@@ -28,7 +32,13 @@ VM::VM(const VMInfo& info){
     m_state = VM_WAIT;
 }
 
-//不能用了
+VM::~VM() {
+    if(m_ptr == NULL) {
+        virDomainFree(m_ptr);
+    }
+}
+
+//这个函数没有用了
 //template里面需要修改为type = raw
 //要加判断
 int32_t VM::CopyImage() {
@@ -166,24 +176,20 @@ int32_t VM::Init() {
 }
 
 int32_t VM::Execute() {
-    //就不保存连接吧
-    virConnectPtr conn = virConnectOpen("qemu:///system");
-    if(conn == NULL) {
-        LOG4CPLUS_ERROR(logger, "fails to open connection to qemu:///system");
-        return 1;
+    if(VM::m_conn == NULL) {
+        m_conn = virConnectOpen("qemu:///system");
+        if(m_conn == NULL) {
+            LOG4CPLUS_ERROR(logger, "fails to open connection to qemu:///system");
+            return 1;
+        }
     }
+    m_ptr = virDomainCreateXML(m_conn, m_xml.c_str(), 0);
 
-    virDomainPtr vm_ptr = virDomainCreateXML(conn, m_xml.c_str(), 0);
-
-    if(!vm_ptr) {
+    if(!m_ptr) {
         virErrorPtr error = virGetLastError();
         LOG4CPLUS_ERROR(logger, error->message);
-        virConnectClose(conn);
         return 1;
     }
-
-    virDomainFree(vm_ptr);
-    virConnectClose(conn);
     return 0;
 }
 
@@ -206,4 +212,55 @@ void VM::VMStarted(){
     StateEventBufferI::Instance()->PushBack(event);
     WriteLocker locker(m_lock);
     m_state = VM_RUN;
+}
+
+VMState VM::GetState() {
+    ReadLocker locker(m_lock);
+    return m_state;
+}
+
+ExecutorStat VM::GetUsedResource() {
+    ExecutorStat stat;
+    stat.cpu_usage = GetCpuUsage();
+    stat.memory_usage = GetMemoryUsage();
+    stat.vc_name = m_info.vc_name;
+    stat.task_id = m_info.id;
+    return stat;
+}
+
+double VM::GetCpuUsage() {
+    static virDomainInfo p_info;
+    static timeval p_real_time;
+    static bool first = true;
+    virDomainInfo info;
+    struct timeval real_time;
+    if(virDomainGetInfo(m_ptr, &info) != 0) {
+        LOG4CPLUS_ERROR(logger, "can get domain info!");
+        return 0;
+    }
+    if(gettimeofday(&real_time, NULL) == -1) {
+        LOG4CPLUS_ERROR(logger, "can get real time!");
+        return 0;
+    }
+    if(first) {
+       first = false;
+       p_info = info;
+       p_real_time = real_time;
+       return 0.0;
+    }
+    //换算成微秒
+    int32_t cpu_diff = (info.cpuTime - p_info.cpuTime) / 1000;
+    int32_t real_diff = 1000000 * (real_time.tv_sec - p_real_time.tv_sec) +
+                        (real_time.tv_usec - p_real_time.tv_usec);
+    return cpu_diff / (double) (real_diff);
+}
+
+//TODO
+double VM::GetMemoryUsage() {
+    return 0;
+}
+
+//TODO
+double VM::GetIOUsage() {
+    return 0;
 }

@@ -17,28 +17,28 @@
 
 
 typedef struct _ExecutorStat__isset {
-  _ExecutorStat__isset() : vc_name(false), task_id(false), used_vcpu(false), used_memory(false) {}
+  _ExecutorStat__isset() : vc_name(false), task_id(false), cpu_usage(false), memory_usage(false) {}
   bool vc_name;
   bool task_id;
-  bool used_vcpu;
-  bool used_memory;
+  bool cpu_usage;
+  bool memory_usage;
 } _ExecutorStat__isset;
 
 class ExecutorStat {
  public:
 
-  static const char* ascii_fingerprint; // = "CA686CC0868D3556820A8027F5E9EE8D";
-  static const uint8_t binary_fingerprint[16]; // = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};
+  static const char* ascii_fingerprint; // = "FB11FF08354CE6EBB7BFE0173A4D13DC";
+  static const uint8_t binary_fingerprint[16]; // = {0xFB,0x11,0xFF,0x08,0x35,0x4C,0xE6,0xEB,0xB7,0xBF,0xE0,0x17,0x3A,0x4D,0x13,0xDC};
 
-  ExecutorStat() : vc_name(), task_id(0), used_vcpu(0), used_memory(0) {
+  ExecutorStat() : vc_name(), task_id(0), cpu_usage(0), memory_usage(0) {
   }
 
   virtual ~ExecutorStat() throw() {}
 
   std::string vc_name;
   int64_t task_id;
-  double used_vcpu;
-  int32_t used_memory;
+  double cpu_usage;
+  double memory_usage;
 
   _ExecutorStat__isset __isset;
 
@@ -50,12 +50,12 @@ class ExecutorStat {
     task_id = val;
   }
 
-  void __set_used_vcpu(const double val) {
-    used_vcpu = val;
+  void __set_cpu_usage(const double val) {
+    cpu_usage = val;
   }
 
-  void __set_used_memory(const int32_t val) {
-    used_memory = val;
+  void __set_memory_usage(const double val) {
+    memory_usage = val;
   }
 
   bool operator == (const ExecutorStat & rhs) const
@@ -64,9 +64,9 @@ class ExecutorStat {
       return false;
     if (!(task_id == rhs.task_id))
       return false;
-    if (!(used_vcpu == rhs.used_vcpu))
+    if (!(cpu_usage == rhs.cpu_usage))
       return false;
-    if (!(used_memory == rhs.used_memory))
+    if (!(memory_usage == rhs.memory_usage))
       return false;
     return true;
   }
@@ -97,8 +97,8 @@ typedef struct _MachineInfo__isset {
 class MachineInfo {
  public:
 
-  static const char* ascii_fingerprint; // = "2E26812E0ED4F46F8A3A9E75FA0B9AA9";
-  static const uint8_t binary_fingerprint[16]; // = {0x2E,0x26,0x81,0x2E,0x0E,0xD4,0xF4,0x6F,0x8A,0x3A,0x9E,0x75,0xFA,0x0B,0x9A,0xA9};
+  static const char* ascii_fingerprint; // = "EE689CEA7F4C7CF9B6BEF45B296FAA8C";
+  static const uint8_t binary_fingerprint[16]; // = {0xEE,0x68,0x9C,0xEA,0x7F,0x4C,0x7C,0xF9,0xB6,0xBE,0xF4,0x5B,0x29,0x6F,0xAA,0x8C};
 
   MachineInfo() : endpoint(), cpu_usage(0), all_vcpu(0), all_memory(0), avail_vcpu(0), avail_memory(0) {
   }

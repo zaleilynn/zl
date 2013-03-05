@@ -10,3 +10,11 @@ void VMPool::Insert(const VMPtr& ptr) {
 
 void VMPool::Delete(const string& id) {
 }
+
+void VMPool::MapToDo(VMFunc func) {
+    ReadLocker locker(m_lock);
+    for(map<string, VMPtr>::iterator it = m_vm_pool.begin();
+        it != m_vm_pool.end(); ++it) {
+        func(it->second);
+    }
+}

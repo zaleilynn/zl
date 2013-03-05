@@ -16,13 +16,36 @@ public:
         m_period_threshold(period),
         m_start_time(0),
         m_is_triggered(false) {}
-    Trigger() : m_value_threshold(0), 
-                m_period_threshold(0), 
-                m_start_time(0),
-                m_is_triggered(false) {}
+
+    bool IsTriggered() const {
+        return m_is_triggered;
+    }
+
+    string GetName() const {
+        return m_name;
+    }
+    
+    double GetPeriod() const {
+        return m_period_threshold;
+    }
+
+    int32_t GetValue() const {
+        return m_value_threshold;
+    }
+
+    //给Idle Trigger 覆盖用的
+    virtual int64_t GetId() {
+        return -1;
+    }
+    
+    void SetTriggerState(bool status) {
+        m_is_triggered = status;
+    }
+
     void Action(const ExecutorPoolPtr& epp);
-    virtual bool Condition() = 0;
-    virtual bool Action() = 0;
+    virtual bool Condition(const ExecutorPoolPtr& epp) = 0;
+    virtual bool Operation(const ExecutorPoolPtr& epp) = 0;
+
 private:
     string m_name;
     int32_t m_value_threshold;
@@ -31,24 +54,27 @@ private:
     bool m_is_triggered;
 };
 
-typedef shared_ptr<Trigger> TriggerPtr;
-
 class IdleTrigger : public Trigger {
 public:
-    IdleTrigger(int64_t id): m_id(id) {};
+    IdleTrigger(int64_t id, int32_t value = 20, int period = 5): Trigger("Idle", value, period), m_id(id) {};
+    int64_t GetId() {
+        return m_id;
+    }
     bool Condition(const ExecutorPoolPtr& epp);
-    bool Action(const ExecutorPoolPtr& epp);
+    bool Operation(const ExecutorPoolPtr& epp);
 private:
     int64_t m_id;
 };
 
-class CpuTrigger : public Trigger {
+class OverloadTrigger : public Trigger {
 public:
-    CpuTrigger(int32_t value = 50, double period = 1) : 
-        Trigger("cpu", value, period) {}
+    OverloadTrigger(int32_t value = 80, double period = 1) : 
+        Trigger("Overload", value, period), m_trigger_time(0){}
     bool Condition(const ExecutorPoolPtr& epp);
-    bool Action(const ExecutorPoolPtr& epp);
+    bool Operation(const ExecutorPoolPtr& epp);
 private:
+    time_t m_trigger_time;
 };
 
+typedef shared_ptr<Trigger> TriggerPtr;
 #endif

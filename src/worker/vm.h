@@ -31,16 +31,28 @@ struct VMInfo {
 class VM {
 public:
     VM(const VMInfo& info);
+    ~VM();
     int32_t Init();
     int32_t Execute();
     void VMFailed();
     void VMFinished();
     void VMStarted();
-
     string GetId(){
         return m_id;
     }
 
+    VMState GetState();
+    int32_t GetAllocatedVCpu() {
+        return m_info.vcpu;
+    }
+    int32_t GetAllocatedMemory() {
+        return m_info.memory;
+    }
+    //Executor使用的状态信息其实等于VM的状态信息
+    ExecutorStat GetUsedResource();
+    double GetCpuUsage();
+    double GetMemoryUsage();
+    double GetIOUsage();
 private:
     RWLock m_lock;
     int32_t CopyImage();
@@ -52,6 +64,8 @@ private:
     string m_xml;
     string m_iso;
     VMState m_state;
+    virDomainPtr m_ptr;
+    static virConnectPtr m_conn;
     static string m_xml_template;
 };
 

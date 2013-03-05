@@ -59,8 +59,14 @@ src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./proxy/worker/gen-cpp/Work
 src/master/CMakeFiles/master.dir/event.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
 src/master/CMakeFiles/master.dir/event.cpp.o: ../src/master/event.cpp
 
+src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./include/config.h
+src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./include/mutex.h
 src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./include/proxy.h
+src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./include/rapidxml.hpp
+src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./include/rapidxml_utils.hpp
 src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./include/rwlock.h
+src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./include/singleton.h
+src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./master/config.h
 src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./master/executor.h
 src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/master/CMakeFiles/master.dir/executor.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
@@ -263,6 +269,33 @@ src/master/CMakeFiles/master.dir/task_queue.cpp.o: ../src/./proxy/master/gen-cpp
 src/master/CMakeFiles/master.dir/task_queue.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
 src/master/CMakeFiles/master.dir/task_queue.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
 src/master/CMakeFiles/master.dir/task_queue.cpp.o: ../src/master/task_queue.cpp
+
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./include/mutex.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./include/proxy.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./include/rwlock.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./include/singleton.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./master/executor.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./master/executor_pool.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./master/machine.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./master/machine_pool.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./master/trigger.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
+src/master/CMakeFiles/master.dir/trigger.cpp.o: ../src/master/trigger.cpp
+
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./include/proxy.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./include/rwlock.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./master/executor.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./master/executor_pool.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./master/trigger.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./master/trigger_queue.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/./proxy/worker/gen-cpp/worker_types.h
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o: ../src/master/trigger_queue.cpp
 
 src/master/CMakeFiles/master.dir/vc_pool.cpp.o: ../src/./include/block_queue.h
 src/master/CMakeFiles/master.dir/vc_pool.cpp.o: ../src/./include/cond.h

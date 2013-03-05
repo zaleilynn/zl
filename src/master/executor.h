@@ -19,8 +19,8 @@ public:
         return m_id;
     }
     void AddStatInfo(const ExecutorStat& stat);
-    bool Condition();
-    void Action();
+    bool IsOverLoad(int32_t period, double usage);
+    bool IsIdle(int32_t period, double usage);
 private:  
     int64_t m_id;
     RWLock m_lock;

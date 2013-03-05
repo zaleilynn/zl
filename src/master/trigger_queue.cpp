@@ -13,15 +13,24 @@ void TriggerQueue::Clear() {
     m_list.clear(); 
 }
 
-void TriggerQueue::Map() {
+void TriggerQueue::Map(const ExecutorPoolPtr& ptr) {
     ReadLocker locker(m_lock);
     for(list<TriggerPtr>::iterator it = m_list.begin();
         it != m_list.end(); ++it) {
-        if((*it)->Condition()) {
-            (*it)->Action();
-        }
+            (*it)->Action(ptr);
     }
 }
 
-void TriggerQueue::Flush() {
+void TriggerQueue::Flush(const ExecutorPoolPtr& ptr) {
+    WriteLocker locker(m_lock);
+    for(list<TriggerPtr>::iterator it = m_list.begin();
+        it != m_list.end();) {
+        //去除触发了的Idle触发器
+        if((*it)->IsTriggered() && (*it)->GetName() == "Idle") {
+            ptr->Delete((*it)->GetId());
+            it = m_list.erase(it);
+        } else {
+            ++it;
+        }
+    }
 }

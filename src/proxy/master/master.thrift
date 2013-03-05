@@ -1,13 +1,13 @@
 struct ExecutorStat {
     1: string vc_name,
     2: i64 task_id,
-    3: double used_vcpu,
-    4: i32 used_memory,
+    3: double cpu_usage,
+    4: double memory_usage,
 }
 
 struct MachineInfo {
     1: string endpoint,
-    2: double cpu_usage,
+    2: double cpu_usage, 
     3: i32 all_vcpu,
     4: i32 all_memory,
     5: i32 avail_vcpu,

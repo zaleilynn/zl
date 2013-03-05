@@ -11,7 +11,6 @@ void Watcher::Entry() {
         MachinePtr machine; 
         m_queue.PopFront(&machine);
         machine->ForwardEvent(); 
-        //ForwardEvent(machine);
     }
 }
 

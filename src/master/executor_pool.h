@@ -15,6 +15,11 @@ public:
     explicit ExecutorPool(const string& name) : m_vc_name(name) {}
     bool Find(int64_t id);
     void Insert(const ExecutorPtr& executor);
+    void Delete(int64_t id); 
+    int32_t Size();
+    void Push(const ExecutorStat& stat);
+    bool IsOverLoad(int32_t period, double cpu_usage);
+    bool IsIdle(int32_t period, double vaule, int64_t task_id);
 private:
     string m_vc_name;
     RWLock m_lock;

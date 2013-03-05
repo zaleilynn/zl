@@ -46,6 +46,8 @@ SET(SRC
     watcher.cpp
     executor.cpp
     executor_pool.cpp
+    trigger.cpp
+    trigger_queue.cpp
     master.cpp
     )
 

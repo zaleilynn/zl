@@ -11,13 +11,14 @@
 using std::map;
 using lynn::RWLock;
 using std::tr1::function;
-
+using std::tr1::placeholders::_1;
 
 class VMPool {
 public:
     typedef function<void(VMPtr)> VMFunc;
     void Insert(const VMPtr& ptr);
     void Delete(const string& vm_id);
+    void MapToDo(VMFunc func);
 private:
     RWLock m_lock;
     map<string, VMPtr> m_vm_pool;

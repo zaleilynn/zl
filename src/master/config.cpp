@@ -9,7 +9,8 @@ static Logger logger = Logger::getInstance("master");
 
 int32_t MasterConfig::CheckCompleteness() {
     const char* s[] = {"port",
-                       "net", 
+                       "net",
+                       "heartbeat_interval", 
                       };
     int32_t size = sizeof(s)/sizeof(s[0]);
     for(int32_t i = 0; i < size; i++) {     

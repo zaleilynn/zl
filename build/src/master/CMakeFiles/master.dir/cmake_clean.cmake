@@ -20,6 +20,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/master.dir/watcher.cpp.o"
   "CMakeFiles/master.dir/executor.cpp.o"
   "CMakeFiles/master.dir/executor_pool.cpp.o"
+  "CMakeFiles/master.dir/trigger.cpp.o"
+  "CMakeFiles/master.dir/trigger_queue.cpp.o"
   "CMakeFiles/master.dir/master.cpp.o"
   "../../../src/proxy/master/gen-cpp/master_constants.cpp"
   "../../../src/proxy/master/gen-cpp/Master.h"

@@ -20,6 +20,7 @@ public:
     void Insert(const MachinePtr& machine_ptr);
     void MapToDo(MachineFunc func);
     string AssignTask(const ClassAd& ad);
+    int32_t Size();
 private:
     static bool Compare(const MachinePtr& left, const MachinePtr& right);
     RWLock m_lock;

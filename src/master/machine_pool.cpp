@@ -46,3 +46,8 @@ string MachinePool::AssignTask(const ClassAd& ad){
 bool MachinePool::Compare(const MachinePtr& left, const MachinePtr& right){
     return left->GetRankValue() < right->GetRankValue(); 
 }
+
+int32_t MachinePool::Size() {
+    ReadLocker locker(m_lock); 
+    return m_machine_pool.size();
+}

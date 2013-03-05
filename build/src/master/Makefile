@@ -582,6 +582,54 @@ task_queue.cpp.s:
 	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/task_queue.cpp.s
 .PHONY : task_queue.cpp.s
 
+trigger.o: trigger.cpp.o
+.PHONY : trigger.o
+
+# target to build an object file
+trigger.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/trigger.cpp.o
+.PHONY : trigger.cpp.o
+
+trigger.i: trigger.cpp.i
+.PHONY : trigger.i
+
+# target to preprocess a source file
+trigger.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/trigger.cpp.i
+.PHONY : trigger.cpp.i
+
+trigger.s: trigger.cpp.s
+.PHONY : trigger.s
+
+# target to generate assembly for a file
+trigger.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/trigger.cpp.s
+.PHONY : trigger.cpp.s
+
+trigger_queue.o: trigger_queue.cpp.o
+.PHONY : trigger_queue.o
+
+# target to build an object file
+trigger_queue.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/trigger_queue.cpp.o
+.PHONY : trigger_queue.cpp.o
+
+trigger_queue.i: trigger_queue.cpp.i
+.PHONY : trigger_queue.i
+
+# target to preprocess a source file
+trigger_queue.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/trigger_queue.cpp.i
+.PHONY : trigger_queue.cpp.i
+
+trigger_queue.s: trigger_queue.cpp.s
+.PHONY : trigger_queue.s
+
+# target to generate assembly for a file
+trigger_queue.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/master/CMakeFiles/master.dir/build.make src/master/CMakeFiles/master.dir/trigger_queue.cpp.s
+.PHONY : trigger_queue.cpp.s
+
 vc_pool.o: vc_pool.cpp.o
 .PHONY : vc_pool.o
 
@@ -745,6 +793,12 @@ help:
 	@echo "... task_queue.o"
 	@echo "... task_queue.i"
 	@echo "... task_queue.s"
+	@echo "... trigger.o"
+	@echo "... trigger.i"
+	@echo "... trigger.s"
+	@echo "... trigger_queue.o"
+	@echo "... trigger_queue.i"
+	@echo "... trigger_queue.s"
 	@echo "... vc_pool.o"
 	@echo "... vc_pool.i"
 	@echo "... vc_pool.s"

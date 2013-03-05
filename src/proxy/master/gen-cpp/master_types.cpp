@@ -10,8 +10,8 @@
 
 
 
-const char* ExecutorStat::ascii_fingerprint = "CA686CC0868D3556820A8027F5E9EE8D";
-const uint8_t ExecutorStat::binary_fingerprint[16] = {0xCA,0x68,0x6C,0xC0,0x86,0x8D,0x35,0x56,0x82,0x0A,0x80,0x27,0xF5,0xE9,0xEE,0x8D};
+const char* ExecutorStat::ascii_fingerprint = "FB11FF08354CE6EBB7BFE0173A4D13DC";
+const uint8_t ExecutorStat::binary_fingerprint[16] = {0xFB,0x11,0xFF,0x08,0x35,0x4C,0xE6,0xEB,0xB7,0xBF,0xE0,0x17,0x3A,0x4D,0x13,0xDC};
 
 uint32_t ExecutorStat::read(::apache::thrift::protocol::TProtocol* iprot) {
 
@@ -51,16 +51,16 @@ uint32_t ExecutorStat::read(::apache::thrift::protocol::TProtocol* iprot) {
         break;
       case 3:
         if (ftype == ::apache::thrift::protocol::T_DOUBLE) {
-          xfer += iprot->readDouble(this->used_vcpu);
-          this->__isset.used_vcpu = true;
+          xfer += iprot->readDouble(this->cpu_usage);
+          this->__isset.cpu_usage = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 4:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->used_memory);
-          this->__isset.used_memory = true;
+        if (ftype == ::apache::thrift::protocol::T_DOUBLE) {
+          xfer += iprot->readDouble(this->memory_usage);
+          this->__isset.memory_usage = true;
         } else {
           xfer += iprot->skip(ftype);
         }
@@ -89,12 +89,12 @@ uint32_t ExecutorStat::write(::apache::thrift::protocol::TProtocol* oprot) const
   xfer += oprot->writeI64(this->task_id);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("used_vcpu", ::apache::thrift::protocol::T_DOUBLE, 3);
-  xfer += oprot->writeDouble(this->used_vcpu);
+  xfer += oprot->writeFieldBegin("cpu_usage", ::apache::thrift::protocol::T_DOUBLE, 3);
+  xfer += oprot->writeDouble(this->cpu_usage);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("used_memory", ::apache::thrift::protocol::T_I32, 4);
-  xfer += oprot->writeI32(this->used_memory);
+  xfer += oprot->writeFieldBegin("memory_usage", ::apache::thrift::protocol::T_DOUBLE, 4);
+  xfer += oprot->writeDouble(this->memory_usage);
   xfer += oprot->writeFieldEnd();
 
   xfer += oprot->writeFieldStop();
@@ -106,13 +106,13 @@ void swap(ExecutorStat &a, ExecutorStat &b) {
   using ::std::swap;
   swap(a.vc_name, b.vc_name);
   swap(a.task_id, b.task_id);
-  swap(a.used_vcpu, b.used_vcpu);
-  swap(a.used_memory, b.used_memory);
+  swap(a.cpu_usage, b.cpu_usage);
+  swap(a.memory_usage, b.memory_usage);
   swap(a.__isset, b.__isset);
 }
 
-const char* MachineInfo::ascii_fingerprint = "2E26812E0ED4F46F8A3A9E75FA0B9AA9";
-const uint8_t MachineInfo::binary_fingerprint[16] = {0x2E,0x26,0x81,0x2E,0x0E,0xD4,0xF4,0x6F,0x8A,0x3A,0x9E,0x75,0xFA,0x0B,0x9A,0xA9};
+const char* MachineInfo::ascii_fingerprint = "EE689CEA7F4C7CF9B6BEF45B296FAA8C";
+const uint8_t MachineInfo::binary_fingerprint[16] = {0xEE,0x68,0x9C,0xEA,0x7F,0x4C,0x7C,0xF9,0xB6,0xBE,0xF4,0x5B,0x29,0x6F,0xAA,0x8C};
 
 uint32_t MachineInfo::read(::apache::thrift::protocol::TProtocol* iprot) {
 

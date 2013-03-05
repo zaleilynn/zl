@@ -94,6 +94,7 @@ src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o
  ../src/./include/proxy.h
  ../src/./include/rapidxml.hpp
  ../src/./include/rapidxml_utils.hpp
+ ../src/./include/rwlock.h
  ../src/./include/singleton.h
  ../src/./include/system.h
  ../src/./proxy/master/gen-cpp/Master.h
@@ -102,6 +103,8 @@ src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o
  ../src/./proxy/worker/gen-cpp/worker_types.h
  ../src/./worker/config.h
  ../src/./worker/resource_manager.h
+ ../src/./worker/vm.h
+ ../src/./worker/vm_pool.h
  /home/zaleilynn/workspace/lynn/src/worker/resource_manager.cpp
 src/worker/CMakeFiles/worker.dir/service.cpp.o
  ../src/./include/mutex.h
@@ -132,6 +135,7 @@ src/worker/CMakeFiles/worker.dir/vm.cpp.o
  ../src/./worker/event.h
  ../src/./worker/resource_manager.h
  ../src/./worker/vm.h
+ ../src/./worker/vm_pool.h
  /home/zaleilynn/workspace/lynn/src/worker/vm.cpp
 src/worker/CMakeFiles/worker.dir/vm_pool.cpp.o
  ../src/./include/mutex.h
@@ -167,6 +171,7 @@ src/worker/CMakeFiles/worker.dir/work_thread.cpp.o
  ../src/./worker/executor_pool.h
  ../src/./worker/resource_manager.h
  ../src/./worker/vm.h
+ ../src/./worker/vm_pool.h
  /home/zaleilynn/workspace/lynn/src/worker/work_thread.cpp
  /usr/local/include/thrift/concurrency/PosixThreadFactory.h
  /usr/local/include/thrift/concurrency/Thread.h
@@ -193,6 +198,7 @@ src/worker/CMakeFiles/worker.dir/worker.cpp.o
  ../src/./include/rapidxml.hpp
  ../src/./include/rapidxml_utils.hpp
  ../src/./include/rpc.h
+ ../src/./include/rwlock.h
  ../src/./include/singleton.h
  ../src/./proxy/master/gen-cpp/Master.h
  ../src/./proxy/master/gen-cpp/master_types.h
@@ -201,6 +207,8 @@ src/worker/CMakeFiles/worker.dir/worker.cpp.o
  ../src/./worker/config.h
  ../src/./worker/resource_manager.h
  ../src/./worker/service.h
+ ../src/./worker/vm.h
+ ../src/./worker/vm_pool.h
  /home/zaleilynn/workspace/lynn/src/worker/worker.cpp
  /usr/local/include/thrift/concurrency/PosixThreadFactory.h
  /usr/local/include/thrift/concurrency/Thread.h

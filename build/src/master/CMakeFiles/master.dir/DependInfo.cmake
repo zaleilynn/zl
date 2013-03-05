@@ -22,6 +22,8 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/zaleilynn/workspace/lynn/src/master/task.cpp" "/home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir/task.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/master/task_pool.cpp" "/home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir/task_pool.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/master/task_queue.cpp" "/home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir/task_queue.cpp.o"
+  "/home/zaleilynn/workspace/lynn/src/master/trigger.cpp" "/home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir/trigger.cpp.o"
+  "/home/zaleilynn/workspace/lynn/src/master/trigger_queue.cpp" "/home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir/trigger_queue.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/master/vc_pool.cpp" "/home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir/vc_pool.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/master/virtual_cluster.cpp" "/home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir/virtual_cluster.cpp.o"
   "/home/zaleilynn/workspace/lynn/src/master/watcher.cpp" "/home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir/watcher.cpp.o"

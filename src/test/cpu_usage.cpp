@@ -65,5 +65,3 @@ int main(int argc, char ** argv) {
     virConnectClose(conn);
     return 0;
 }
-
-

@@ -60,8 +60,14 @@ src/master/CMakeFiles/master.dir/event.cpp.o
  ../src/./proxy/worker/gen-cpp/worker_types.h
  /home/zaleilynn/workspace/lynn/src/master/event.cpp
 src/master/CMakeFiles/master.dir/executor.cpp.o
+ ../src/./include/config.h
+ ../src/./include/mutex.h
  ../src/./include/proxy.h
+ ../src/./include/rapidxml.hpp
+ ../src/./include/rapidxml_utils.hpp
  ../src/./include/rwlock.h
+ ../src/./include/singleton.h
+ ../src/./master/config.h
  ../src/./master/executor.h
  ../src/./proxy/master/gen-cpp/Master.h
  ../src/./proxy/master/gen-cpp/master_types.h
@@ -264,6 +270,33 @@ src/master/CMakeFiles/master.dir/task_queue.cpp.o
  ../src/./proxy/worker/gen-cpp/Worker.h
  ../src/./proxy/worker/gen-cpp/worker_types.h
  /home/zaleilynn/workspace/lynn/src/master/task_queue.cpp
+src/master/CMakeFiles/master.dir/trigger.cpp.o
+ ../src/./include/mutex.h
+ ../src/./include/proxy.h
+ ../src/./include/rwlock.h
+ ../src/./include/singleton.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
+ ../src/./master/machine.h
+ ../src/./master/machine_pool.h
+ ../src/./master/trigger.h
+ ../src/./proxy/master/gen-cpp/Master.h
+ ../src/./proxy/master/gen-cpp/master_types.h
+ ../src/./proxy/worker/gen-cpp/Worker.h
+ ../src/./proxy/worker/gen-cpp/worker_types.h
+ /home/zaleilynn/workspace/lynn/src/master/trigger.cpp
+src/master/CMakeFiles/master.dir/trigger_queue.cpp.o
+ ../src/./include/proxy.h
+ ../src/./include/rwlock.h
+ ../src/./master/executor.h
+ ../src/./master/executor_pool.h
+ ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
+ ../src/./proxy/master/gen-cpp/Master.h
+ ../src/./proxy/master/gen-cpp/master_types.h
+ ../src/./proxy/worker/gen-cpp/Worker.h
+ ../src/./proxy/worker/gen-cpp/worker_types.h
+ /home/zaleilynn/workspace/lynn/src/master/trigger_queue.cpp
 src/master/CMakeFiles/master.dir/vc_pool.cpp.o
  ../src/./include/block_queue.h
  ../src/./include/cond.h
