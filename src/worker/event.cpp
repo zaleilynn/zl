@@ -27,9 +27,33 @@ int32_t StartedEvent::Handle() {
 }
 
 int32_t FinishedEvent::Handle() {
+    string master_endpoint = WorkerConfigI::Instance()->Get("master_endpoint");
+    if(master_endpoint.empty()) {
+        LOG4CPLUS_ERROR(logger, "cannot get master_endpoint");
+        return 1;
+    }
+
+    Proxy<MasterClient> proxy = Rpc<MasterClient, MasterClient>::GetProxy(master_endpoint);
+    try {
+        proxy().TaskFinished(m_task_id);
+    } catch (TException &tx) {
+        LOG4CPLUS_ERROR(logger, "report executor start error: " << tx.what());
+    }
     return 0;
 }
 
 int32_t FailedEvent::Handle() {
+    string master_endpoint = WorkerConfigI::Instance()->Get("master_endpoint");
+    if(master_endpoint.empty()) {
+        LOG4CPLUS_ERROR(logger, "cannot get master_endpoint");
+        return 1;
+    }
+
+    Proxy<MasterClient> proxy = Rpc<MasterClient, MasterClient>::GetProxy(master_endpoint);
+    try {
+        proxy().TaskFailed(m_task_id);
+    } catch (TException &tx) {
+        LOG4CPLUS_ERROR(logger, "report executor start error: " << tx.what());
+    }
     return 0;
 }

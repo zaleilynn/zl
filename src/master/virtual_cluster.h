@@ -29,10 +29,12 @@ public:
     string GetVCName() {
         return m_vc_info.name;
     }
-    TaskInfo GetTaskInfo();
     TaskPtr PopTask(TaskState type);
     void PushTask(const TaskPtr& task);
     void RemoveTask(const TaskPtr& task);
+    void AddTask();
+    void DeleteTask();
+    void KillTask(const TaskPtr& task);
     void AddEvent(const ExecutorStat& vm_stat);
     void Push(const ExecutorStat& stat);
     void Start();

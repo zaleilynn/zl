@@ -16,6 +16,7 @@ bool WorkerService::StartTask(const TaskInfo& info) {
     return true;
 }
 
-bool WorkerService::KillTask(int64_t task_id){ 
+bool WorkerService::KillTask(int64_t task_id){
+    //不弄个缓冲类似的什么东西? 
     return ExecutorPoolI::Instance()->DeleteExecutor(task_id);
 }

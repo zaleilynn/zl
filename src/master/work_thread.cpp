@@ -45,8 +45,8 @@ void* TaskProcessor() {
 
 void* StateEventProcessor() {
     while(true) {
-        StateEventPtr event;
-        StateEventBufferI::Instance()->PopFront(&event);
+        EventPtr event;
+        EventBufferI::Instance()->PopFront(&event);
         if(event->Handle() != 0) {
             LOG4CPLUS_ERROR(logger, "process state error");
         }

@@ -13,15 +13,15 @@ using boost::shared_ptr;
 using std::string;
 using lynn::BlockQueue;
 
-class StartedEvent : public StateEvent {
+class StartedEvent : public Event {
 public:
-    StartedEvent(int64_t task_id) : StateEvent(task_id) {};
+    StartedEvent(int64_t task_id) : Event(task_id) {};
     int32_t Handle();
 };
 
-class FailedEvent : public StateEvent {
+class FailedEvent : public Event {
 public:
-    FailedEvent(int64_t task_id, const string& reason) : StateEvent(task_id) {
+    FailedEvent(int64_t task_id, const string& reason) : Event(task_id) {
         m_reason = reason;
     };
     int32_t Handle();
@@ -29,12 +29,12 @@ private:
     string m_reason;
 };
 
-class FinishedEvent : public StateEvent {
+class FinishedEvent : public Event {
 public:
-    FinishedEvent(int64_t task_id) : StateEvent(task_id) {};
+    FinishedEvent(int64_t task_id) : Event(task_id) {};
     int32_t Handle();
 };
 
-typedef shared_ptr<StateEvent> StateEventPtr;
-typedef Singleton< BlockQueue<StateEventPtr> > StateEventBufferI;
+typedef shared_ptr<Event> EventPtr;
+typedef Singleton< BlockQueue<EventPtr> > EventBufferI;
 #endif

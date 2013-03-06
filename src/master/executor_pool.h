@@ -20,6 +20,9 @@ public:
     void Push(const ExecutorStat& stat);
     bool IsOverLoad(int32_t period, double cpu_usage);
     bool IsIdle(int32_t period, double vaule, int64_t task_id);
+    string GetName() {
+        return m_vc_name;
+    }
 private:
     string m_vc_name;
     RWLock m_lock;

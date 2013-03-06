@@ -271,15 +271,25 @@ src/master/CMakeFiles/master.dir/task_queue.cpp.o
  ../src/./proxy/worker/gen-cpp/worker_types.h
  /home/zaleilynn/workspace/lynn/src/master/task_queue.cpp
 src/master/CMakeFiles/master.dir/trigger.cpp.o
+ ../src/./include/block_queue.h
+ ../src/./include/cond.h
+ ../src/./include/event.h
  ../src/./include/mutex.h
  ../src/./include/proxy.h
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
+ ../src/./include/thread.h
+ ../src/./master/event.h
  ../src/./master/executor.h
  ../src/./master/executor_pool.h
  ../src/./master/machine.h
  ../src/./master/machine_pool.h
+ ../src/./master/task.h
+ ../src/./master/task_queue.h
  ../src/./master/trigger.h
+ ../src/./master/trigger_queue.h
+ ../src/./master/vc_pool.h
+ ../src/./master/virtual_cluster.h
  ../src/./proxy/master/gen-cpp/Master.h
  ../src/./proxy/master/gen-cpp/master_types.h
  ../src/./proxy/worker/gen-cpp/Worker.h
@@ -324,6 +334,7 @@ src/master/CMakeFiles/master.dir/virtual_cluster.cpp.o
  ../src/./include/cond.h
  ../src/./include/mutex.h
  ../src/./include/proxy.h
+ ../src/./include/rpc.h
  ../src/./include/rwlock.h
  ../src/./include/singleton.h
  ../src/./include/thread.h
@@ -342,6 +353,24 @@ src/master/CMakeFiles/master.dir/virtual_cluster.cpp.o
  ../src/./proxy/worker/gen-cpp/Worker.h
  ../src/./proxy/worker/gen-cpp/worker_types.h
  /home/zaleilynn/workspace/lynn/src/master/virtual_cluster.cpp
+ /usr/local/include/thrift/concurrency/PosixThreadFactory.h
+ /usr/local/include/thrift/concurrency/Thread.h
+ /usr/local/include/thrift/concurrency/ThreadManager.h
+ /usr/local/include/thrift/config.h
+ /usr/local/include/thrift/protocol/TBinaryProtocol.h
+ /usr/local/include/thrift/protocol/TBinaryProtocol.tcc
+ /usr/local/include/thrift/protocol/TProtocol.h
+ /usr/local/include/thrift/protocol/TVirtualProtocol.h
+ /usr/local/include/thrift/server/TSimpleServer.h
+ /usr/local/include/thrift/server/TThreadPoolServer.h
+ /usr/local/include/thrift/server/TThreadedServer.h
+ /usr/local/include/thrift/transport/TServerSocket.h
+ /usr/local/include/thrift/transport/TServerTransport.h
+ /usr/local/include/thrift/transport/TSocket.h
+ /usr/local/include/thrift/transport/TTransport.h
+ /usr/local/include/thrift/transport/TTransportException.h
+ /usr/local/include/thrift/transport/TTransportUtils.h
+ /usr/local/include/thrift/transport/TVirtualTransport.h
 src/master/CMakeFiles/master.dir/watcher.cpp.o
  ../src/./include/block_queue.h
  ../src/./include/cond.h

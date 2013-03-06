@@ -30,10 +30,13 @@ virConnectPtr VM::m_conn = NULL;
 VM::VM(const VMInfo& info){
     m_info = info;
     m_state = VM_WAIT;
+    m_ptr = NULL;
 }
 
 VM::~VM() {
-    if(m_ptr == NULL) {
+    //m_ptr的初始化一定要做，要不可能m_ptr里面有值，虽然是一个没有用的值
+    //进去了调用virDomainFree就会造成段错误
+    if(m_ptr) {
         virDomainFree(m_ptr);
     }
 }
@@ -194,22 +197,22 @@ int32_t VM::Execute() {
 }
 
 void VM::VMFailed(){
-    StateEventPtr event(new FailedEvent(m_info.id, ""));
-    StateEventBufferI::Instance()->PushBack(event); 
+    EventPtr event(new FailedEvent(m_info.id, ""));
+    EventBufferI::Instance()->PushBack(event); 
     WriteLocker locker(m_lock);
     m_state = VM_FAIL;
 }
 
 void VM::VMFinished(){
-    StateEventPtr event(new FinishedEvent(m_info.id));
-    StateEventBufferI::Instance()->PushBack(event);
+    EventPtr event(new FinishedEvent(m_info.id));
+    EventBufferI::Instance()->PushBack(event);
     WriteLocker locker(m_lock);
     m_state = VM_FINISH;
 }
 
 void VM::VMStarted(){
-    StateEventPtr event(new StartedEvent(m_info.id));
-    StateEventBufferI::Instance()->PushBack(event);
+    EventPtr event(new StartedEvent(m_info.id));
+    EventBufferI::Instance()->PushBack(event);
     WriteLocker locker(m_lock);
     m_state = VM_RUN;
 }
@@ -263,4 +266,8 @@ double VM::GetMemoryUsage() {
 //TODO
 double VM::GetIOUsage() {
     return 0;
+}
+
+int32_t VM::Recycle() {
+    return virDomainDestroy(m_ptr);
 }

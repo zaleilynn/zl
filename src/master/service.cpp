@@ -25,6 +25,7 @@ void MasterService::Heartbeat(const MachineInfo& info) {
 }
 
 //Add了一个virtual cluster，同时初始化了一个task
+//这里需要不需要弄一个缓冲区?
 int32_t MasterService::AddVC(const VCInfo& vc_info){
     VCPtr ptr(new VC(vc_info));
     ptr->LogInfo(); 
@@ -32,19 +33,19 @@ int32_t MasterService::AddVC(const VCInfo& vc_info){
 }
 
 int32_t MasterService::TaskStarted(int64_t task_id){
-    StateEventPtr event(new StartEvent(task_id));
-    StateEventBufferI::Instance()->PushBack(event);
+    EventPtr event(new StartEvent(task_id));
+    EventBufferI::Instance()->PushBack(event);
     return 0;
 }
 
 int32_t MasterService::TaskFinished(int64_t task_id){
-    StateEventPtr event(new FinishEvent(task_id));
-    StateEventBufferI::Instance()->PushBack(event);
+    EventPtr event(new FinishEvent(task_id));
+    EventBufferI::Instance()->PushBack(event);
     return 0;
 }
 
 int32_t MasterService::TaskFailed(int64_t task_id){
-    StateEventPtr event(new FailEvent(task_id));
-    StateEventBufferI::Instance()->PushBack(event);
+    EventPtr event(new FailEvent(task_id));
+    EventBufferI::Instance()->PushBack(event);
     return 0;
 }

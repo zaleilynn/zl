@@ -10,6 +10,7 @@ void Watcher::Entry() {
     while(true) {
         MachinePtr machine; 
         m_queue.PopFront(&machine);
+        //这样做好不好？
         machine->ForwardEvent(); 
     }
 }

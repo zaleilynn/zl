@@ -16,6 +16,7 @@ class WorkerIf {
  public:
   virtual ~WorkerIf() {}
   virtual bool StartTask(const  ::TaskInfo& info) = 0;
+  virtual bool KillTask(const int64_t task_id) = 0;
 };
 
 class WorkerIfFactory {
@@ -46,6 +47,10 @@ class WorkerNull : virtual public WorkerIf {
  public:
   virtual ~WorkerNull() {}
   bool StartTask(const  ::TaskInfo& /* info */) {
+    bool _return = false;
+    return _return;
+  }
+  bool KillTask(const int64_t /* task_id */) {
     bool _return = false;
     return _return;
   }
@@ -159,6 +164,114 @@ class Worker_StartTask_presult {
 
 };
 
+typedef struct _Worker_KillTask_args__isset {
+  _Worker_KillTask_args__isset() : task_id(false) {}
+  bool task_id;
+} _Worker_KillTask_args__isset;
+
+class Worker_KillTask_args {
+ public:
+
+  Worker_KillTask_args() : task_id(0) {
+  }
+
+  virtual ~Worker_KillTask_args() throw() {}
+
+  int64_t task_id;
+
+  _Worker_KillTask_args__isset __isset;
+
+  void __set_task_id(const int64_t val) {
+    task_id = val;
+  }
+
+  bool operator == (const Worker_KillTask_args & rhs) const
+  {
+    if (!(task_id == rhs.task_id))
+      return false;
+    return true;
+  }
+  bool operator != (const Worker_KillTask_args &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Worker_KillTask_args & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class Worker_KillTask_pargs {
+ public:
+
+
+  virtual ~Worker_KillTask_pargs() throw() {}
+
+  const int64_t* task_id;
+
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Worker_KillTask_result__isset {
+  _Worker_KillTask_result__isset() : success(false) {}
+  bool success;
+} _Worker_KillTask_result__isset;
+
+class Worker_KillTask_result {
+ public:
+
+  Worker_KillTask_result() : success(0) {
+  }
+
+  virtual ~Worker_KillTask_result() throw() {}
+
+  bool success;
+
+  _Worker_KillTask_result__isset __isset;
+
+  void __set_success(const bool val) {
+    success = val;
+  }
+
+  bool operator == (const Worker_KillTask_result & rhs) const
+  {
+    if (!(success == rhs.success))
+      return false;
+    return true;
+  }
+  bool operator != (const Worker_KillTask_result &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Worker_KillTask_result & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Worker_KillTask_presult__isset {
+  _Worker_KillTask_presult__isset() : success(false) {}
+  bool success;
+} _Worker_KillTask_presult__isset;
+
+class Worker_KillTask_presult {
+ public:
+
+
+  virtual ~Worker_KillTask_presult() throw() {}
+
+  bool* success;
+
+  _Worker_KillTask_presult__isset __isset;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+
+};
+
 class WorkerClient : virtual public WorkerIf {
  public:
   WorkerClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> prot) :
@@ -182,6 +295,9 @@ class WorkerClient : virtual public WorkerIf {
   bool StartTask(const  ::TaskInfo& info);
   void send_StartTask(const  ::TaskInfo& info);
   bool recv_StartTask();
+  bool KillTask(const int64_t task_id);
+  void send_KillTask(const int64_t task_id);
+  bool recv_KillTask();
  protected:
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;
@@ -198,10 +314,12 @@ class WorkerProcessor : public ::apache::thrift::TDispatchProcessor {
   typedef std::map<std::string, ProcessFunction> ProcessMap;
   ProcessMap processMap_;
   void process_StartTask(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
+  void process_KillTask(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
  public:
   WorkerProcessor(boost::shared_ptr<WorkerIf> iface) :
     iface_(iface) {
     processMap_["StartTask"] = &WorkerProcessor::process_StartTask;
+    processMap_["KillTask"] = &WorkerProcessor::process_KillTask;
   }
 
   virtual ~WorkerProcessor() {}
@@ -237,6 +355,15 @@ class WorkerMultiface : virtual public WorkerIf {
       ifaces_[i]->StartTask(info);
     }
     return ifaces_[i]->StartTask(info);
+  }
+
+  bool KillTask(const int64_t task_id) {
+    size_t sz = ifaces_.size();
+    size_t i = 0;
+    for (; i < (sz - 1); ++i) {
+      ifaces_[i]->KillTask(task_id);
+    }
+    return ifaces_[i]->KillTask(task_id);
   }
 
 };

@@ -40,11 +40,15 @@ void* SchedulerProcessor(){
 
 void* StateEventProcessor(){
     while(true) {
-        StateEventPtr event;
-        StateEventBufferI::Instance()->PopFront(&event);
+        EventPtr event;
+        EventBufferI::Instance()->PopFront(&event);  
+        //这句话怎么有时候会引起段错误？
+        //非确定性BUG？
+        //LOG4CPLUS_DEBUG(logger, "catch a event");
         if(event->Handle() != 0) {
             LOG4CPLUS_ERROR(logger, "process state error"); 
         }
+        LOG4CPLUS_DEBUG(logger, "after event->Handle");
     }
     return NULL;
 }

@@ -1,8 +1,15 @@
+#include <log4cplus/logger.h>
+#include <log4cplus/loggingmacros.h>
+
 #include "master/executor.h"
 #include "master/config.h"
 
 using lynn::WriteLocker;
 using lynn::ReadLocker;
+
+using log4cplus::Logger;
+
+static Logger logger = Logger::getInstance("master");
 
 void Executor::AddStatInfo(const ExecutorStat& stat){
     WriteLocker locker(m_lock);
@@ -23,6 +30,7 @@ bool Executor::IsOverLoad(int32_t period, double cpu_usage){
         sum += riter->cpu_usage;
     }
     double value = sum / len;
+    LOG4CPLUS_DEBUG(logger, "IsOverLoad,value: " << value);
     return value >= cpu_usage;
 }
 
@@ -39,6 +47,7 @@ bool Executor::IsIdle(int32_t period, double cpu_usage) {
         riter != m_stat_list.rend() && i < len; ++riter, ++i) {
         sum += riter->cpu_usage;
     }
-    double value = sum / len; 
+    double value = sum / len;
+    LOG4CPLUS_DEBUG(logger, "Idle,value: " << value);
     return value <= cpu_usage;
 }

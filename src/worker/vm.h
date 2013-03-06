@@ -53,6 +53,7 @@ public:
     double GetCpuUsage();
     double GetMemoryUsage();
     double GetIOUsage();
+    int32_t Recycle();
 private:
     RWLock m_lock;
     int32_t CopyImage();

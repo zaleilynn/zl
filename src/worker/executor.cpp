@@ -40,6 +40,7 @@ VMInfo Executor::GetVMInfo() {
 
 void Executor::Start() {
     ExecutorStarted();
+    LOG4CPLUS_DEBUG(logger, "in Executor::Start");
     VMPtr ptr(new VM(GetVMInfo()));  
     if(ptr->Init() == 0) {
         LOG4CPLUS_INFO(logger, "vm init succeed");
@@ -59,10 +60,13 @@ void Executor::Start() {
         ExecutorFailed();
         LOG4CPLUS_ERROR(logger, "init vm env failed");
     } 
+    LOG4CPLUS_DEBUG(logger, "return from Executor::Start");
 }
 
 void Executor::Kill() {
-    WriteLocker locker(m_lock); 
+    VMPoolI::Instance()->DeleteByTaskId(m_task_info.id); 
+    WriteLocker locker(m_lock);
+    m_state = EXECUTOR_FINISH; 
 }
 
 void Executor::ExecutorStarted(){

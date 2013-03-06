@@ -19,6 +19,7 @@ public:
     void Insert(const VMPtr& ptr);
     void Delete(const string& vm_id);
     void MapToDo(VMFunc func);
+    bool DeleteByTaskId(int64_t task_id);
 private:
     RWLock m_lock;
     map<string, VMPtr> m_vm_pool;

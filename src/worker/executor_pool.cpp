@@ -1,4 +1,12 @@
+#include <log4cplus/logger.h>
+#include <log4cplus/loggingmacros.h>
+
 #include "worker/executor_pool.h"
+
+using log4cplus::Logger;
+
+static Logger logger = Logger::getInstance("worker");
+
 
 using lynn::WriteLocker;
 using lynn::ReadLocker;
@@ -20,6 +28,7 @@ void ExecutorPool::StartExecutor() {
         it != m_executor_map.end(); ++it) {
         if((it->second)->GetStatus() == EXECUTOR_WAIT) {
             (it->second)->Start();
+            LOG4CPLUS_DEBUG(logger, "return from ExecutorPool::StartExecutor");
             return;
         }
     }

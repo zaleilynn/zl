@@ -27,6 +27,11 @@ class WorkerHandler : virtual public WorkerIf {
     printf("StartTask\n");
   }
 
+  bool KillTask(const int64_t task_id) {
+    // Your implementation goes here
+    printf("KillTask\n");
+  }
+
 };
 
 int main(int argc, char **argv) {

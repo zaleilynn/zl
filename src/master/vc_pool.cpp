@@ -40,10 +40,6 @@ void VCPool::AddTask(const TaskPtr& task){
     FindToDo(task->GetVCName(), func);
 }
 
-void VCPool::RemoveTask(const TaskPtr& task){
-    VCFunc func = bind(&VC::RemoveTask, _1, task);
-    FindToDo(task->GetVCName(), func);
-}
 
 bool VCPool::FindToDo(const string& name, VCFunc func) {
     ReadLocker locker(m_lock);
@@ -53,4 +49,14 @@ bool VCPool::FindToDo(const string& name, VCFunc func) {
         return true;
     }
     return false;
+}
+
+void VCPool::RemoveTask(const TaskPtr& task){
+    VCFunc func = bind(&VC::RemoveTask, _1, task);
+    FindToDo(task->GetVCName(), func);
+}
+
+void VCPool::KillTask(const TaskPtr& task) {
+    VCFunc func = bind(&VC::KillTask, _1, task);
+    FindToDo(task->GetVCName(), func);
 }

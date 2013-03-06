@@ -6,9 +6,9 @@
 
 using std::string;
 
-class StateEvent {
+class Event {
 public:
-    StateEvent(int64_t task_id) {
+    Event(int64_t task_id) {
         m_task_id = task_id;
     }
     virtual int32_t Handle() = 0;
@@ -19,6 +19,4 @@ protected:
     int64_t m_task_id;
 };
 
-class ActionEvent {
-};
 #endif
