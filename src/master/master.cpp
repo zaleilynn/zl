@@ -30,8 +30,8 @@ using boost::thread;
 using std::auto_ptr;
 using std::string;
 
-int32_t main(int argc, char ** argv) {
-    int result;
+int32_t main(int32_t argc, char ** argv) {
+    int32_t result;
     bool debug = false;
     while((result = getopt(argc, argv, "d")) != -1) {
         switch(result) {

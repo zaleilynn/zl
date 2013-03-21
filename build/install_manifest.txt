@@ -1,3 +1,5 @@
 /home/zaleilynn/workspace/lynn/test/test
 /home/zaleilynn/workspace/lynn/bin/master
 /home/zaleilynn/workspace/lynn/bin/worker
+/home/zaleilynn/workspace/lynn/bin/lynn_add
+/home/zaleilynn/workspace/lynn/bin/lynn_submit

@@ -18,7 +18,7 @@ Executor::Executor(const TaskInfo& info){
 void Executor::LogInfo(){
     LOG4CPLUS_INFO(logger, "new task :" << m_task_info.id 
                   << " virtual cluster:" << m_task_info.vc_name 
-                  << " vcpu:" << m_task_info.vcpu
+                  << " vcpu:" << m_task_info.cpu
                   << " memory:" << m_task_info.memory);
 }
 
@@ -32,7 +32,7 @@ VMInfo Executor::GetVMInfo() {
     rtn.id = m_task_info.id; 
     rtn.vc_name = m_task_info.vc_name;
     rtn.os = m_task_info.os;
-    rtn.vcpu = m_task_info.vcpu;
+    rtn.cpu = m_task_info.cpu;
     rtn.memory = m_task_info.memory;
     rtn.ip = m_task_info.ip;
     return rtn;

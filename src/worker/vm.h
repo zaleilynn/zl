@@ -23,7 +23,9 @@ struct VMInfo {
     int64_t id;
     string vc_name;
     string os;
-    int32_t vcpu;
+    //这里的cpu为container的shares值
+    //vcpu的个数统一为1，以后可以修改
+    int32_t cpu;
     int32_t memory;
     string ip;
 };
@@ -42,8 +44,8 @@ public:
     }
 
     VMState GetState();
-    int32_t GetAllocatedVCpu() {
-        return m_info.vcpu;
+    int32_t GetAllocatedCpu() {
+        return m_info.cpu;
     }
     int32_t GetAllocatedMemory() {
         return m_info.memory;

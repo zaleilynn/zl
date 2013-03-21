@@ -8,9 +8,9 @@ struct ExecutorStat {
 struct MachineInfo {
     1: string endpoint,
     2: double cpu_usage, 
-    3: i32 all_vcpu,
+    3: i32 all_cpu,
     4: i32 all_memory,
-    5: i32 avail_vcpu,
+    5: i32 avail_cpu,
     6: i32 avail_memory,
     7: list<ExecutorStat> vm_list,
 }
@@ -19,8 +19,11 @@ struct VCInfo {
     1: string name,
     2: i32 quota,
     3: string os,
-    4: i32 vcpu,
-    5: i32 memory,
+    4: string type,
+    5: i32 cpu,
+    6: i32 memory,
+    7: i32 IO,
+    8: string app,
 }
 
 struct TaskInfo {
@@ -29,9 +32,10 @@ struct TaskInfo {
     //任务id号
     2: i64 id,
     3: string os,
-    4: i32 vcpu,
+    4: i32 cpu,
     5: i32 memory,
-    6: string ip,
+    6: i32 IO,
+    7: string ip,
 }
 
 service Master {

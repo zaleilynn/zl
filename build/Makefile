@@ -175,6 +175,32 @@ worker/fast:
 	$(MAKE) -f src/worker/CMakeFiles/worker.dir/build.make src/worker/CMakeFiles/worker.dir/build
 .PHONY : worker/fast
 
+#=============================================================================
+# Target rules for targets named lynn_add
+
+# Build rule for target.
+lynn_add: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lynn_add
+.PHONY : lynn_add
+
+# fast build rule for target.
+lynn_add/fast:
+	$(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/build
+.PHONY : lynn_add/fast
+
+#=============================================================================
+# Target rules for targets named lynn_submit
+
+# Build rule for target.
+lynn_submit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lynn_submit
+.PHONY : lynn_submit
+
+# fast build rule for target.
+lynn_submit/fast:
+	$(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/build
+.PHONY : lynn_submit/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -190,6 +216,8 @@ help:
 	@echo "... test"
 	@echo "... master"
 	@echo "... worker"
+	@echo "... lynn_add"
+	@echo "... lynn_submit"
 .PHONY : help
 
 

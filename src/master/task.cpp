@@ -21,7 +21,7 @@ Task::Task(const TaskInfo& info): m_task_info(info) {
     m_state = TASK_WAIT;
     m_run_on = "";
     //要不要处理一下错误的情况?
-    m_ad.InsertAttr(ATTR_NEED_VCPU, m_task_info.vcpu);
+    m_ad.InsertAttr(ATTR_NEED_VCPU, m_task_info.cpu);
     m_ad.InsertAttr(ATTR_NEED_MEMORY, m_task_info.memory);
     ClassAdParser parser;
     //rank的算法, 选择比例最大的

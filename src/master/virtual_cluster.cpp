@@ -18,9 +18,8 @@ VC::VC(const VCInfo& info) : m_vc_info(info) {
     //提交任务时，这个id会被赋值
     m_task_info.id = -1;
     m_task_info.os = info.os;
-    m_task_info.vcpu = info.vcpu;
+    m_task_info.cpu = info.cpu;
     m_task_info.memory = info.memory;
-    //有一点走火了
     ExecutorPoolPtr ptr(new ExecutorPool(info.name)); 
     m_executor_pool = ptr;
 }

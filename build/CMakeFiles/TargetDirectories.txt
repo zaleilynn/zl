@@ -1,3 +1,5 @@
+/home/zaleilynn/workspace/lynn/build/src/tools/CMakeFiles/lynn_add.dir
+/home/zaleilynn/workspace/lynn/build/src/tools/CMakeFiles/lynn_submit.dir
 /home/zaleilynn/workspace/lynn/build/src/master/CMakeFiles/master.dir
 /home/zaleilynn/workspace/lynn/build/src/test/CMakeFiles/test.dir
 /home/zaleilynn/workspace/lynn/build/src/worker/CMakeFiles/worker.dir

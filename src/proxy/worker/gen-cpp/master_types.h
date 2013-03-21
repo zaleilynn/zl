@@ -84,12 +84,12 @@ class ExecutorStat {
 void swap(ExecutorStat &a, ExecutorStat &b);
 
 typedef struct _MachineInfo__isset {
-  _MachineInfo__isset() : endpoint(false), cpu_usage(false), all_vcpu(false), all_memory(false), avail_vcpu(false), avail_memory(false), vm_list(false) {}
+  _MachineInfo__isset() : endpoint(false), cpu_usage(false), all_cpu(false), all_memory(false), avail_cpu(false), avail_memory(false), vm_list(false) {}
   bool endpoint;
   bool cpu_usage;
-  bool all_vcpu;
+  bool all_cpu;
   bool all_memory;
-  bool avail_vcpu;
+  bool avail_cpu;
   bool avail_memory;
   bool vm_list;
 } _MachineInfo__isset;
@@ -100,16 +100,16 @@ class MachineInfo {
   static const char* ascii_fingerprint; // = "EE689CEA7F4C7CF9B6BEF45B296FAA8C";
   static const uint8_t binary_fingerprint[16]; // = {0xEE,0x68,0x9C,0xEA,0x7F,0x4C,0x7C,0xF9,0xB6,0xBE,0xF4,0x5B,0x29,0x6F,0xAA,0x8C};
 
-  MachineInfo() : endpoint(), cpu_usage(0), all_vcpu(0), all_memory(0), avail_vcpu(0), avail_memory(0) {
+  MachineInfo() : endpoint(), cpu_usage(0), all_cpu(0), all_memory(0), avail_cpu(0), avail_memory(0) {
   }
 
   virtual ~MachineInfo() throw() {}
 
   std::string endpoint;
   double cpu_usage;
-  int32_t all_vcpu;
+  int32_t all_cpu;
   int32_t all_memory;
-  int32_t avail_vcpu;
+  int32_t avail_cpu;
   int32_t avail_memory;
   std::vector<ExecutorStat>  vm_list;
 
@@ -123,16 +123,16 @@ class MachineInfo {
     cpu_usage = val;
   }
 
-  void __set_all_vcpu(const int32_t val) {
-    all_vcpu = val;
+  void __set_all_cpu(const int32_t val) {
+    all_cpu = val;
   }
 
   void __set_all_memory(const int32_t val) {
     all_memory = val;
   }
 
-  void __set_avail_vcpu(const int32_t val) {
-    avail_vcpu = val;
+  void __set_avail_cpu(const int32_t val) {
+    avail_cpu = val;
   }
 
   void __set_avail_memory(const int32_t val) {
@@ -149,11 +149,11 @@ class MachineInfo {
       return false;
     if (!(cpu_usage == rhs.cpu_usage))
       return false;
-    if (!(all_vcpu == rhs.all_vcpu))
+    if (!(all_cpu == rhs.all_cpu))
       return false;
     if (!(all_memory == rhs.all_memory))
       return false;
-    if (!(avail_vcpu == rhs.avail_vcpu))
+    if (!(avail_cpu == rhs.avail_cpu))
       return false;
     if (!(avail_memory == rhs.avail_memory))
       return false;
@@ -175,21 +175,24 @@ class MachineInfo {
 void swap(MachineInfo &a, MachineInfo &b);
 
 typedef struct _VCInfo__isset {
-  _VCInfo__isset() : name(false), quota(false), os(false), vcpu(false), memory(false) {}
+  _VCInfo__isset() : name(false), quota(false), os(false), type(false), cpu(false), memory(false), IO(false), app(false) {}
   bool name;
   bool quota;
   bool os;
-  bool vcpu;
+  bool type;
+  bool cpu;
   bool memory;
+  bool IO;
+  bool app;
 } _VCInfo__isset;
 
 class VCInfo {
  public:
 
-  static const char* ascii_fingerprint; // = "F30B43547AD0CF89944AC297D104BC06";
-  static const uint8_t binary_fingerprint[16]; // = {0xF3,0x0B,0x43,0x54,0x7A,0xD0,0xCF,0x89,0x94,0x4A,0xC2,0x97,0xD1,0x04,0xBC,0x06};
+  static const char* ascii_fingerprint; // = "24F5E3FA9272C001062C433603F469B3";
+  static const uint8_t binary_fingerprint[16]; // = {0x24,0xF5,0xE3,0xFA,0x92,0x72,0xC0,0x01,0x06,0x2C,0x43,0x36,0x03,0xF4,0x69,0xB3};
 
-  VCInfo() : name(), quota(0), os(), vcpu(0), memory(0) {
+  VCInfo() : name(), quota(0), os(), type(), cpu(0), memory(0), IO(0), app() {
   }
 
   virtual ~VCInfo() throw() {}
@@ -197,8 +200,11 @@ class VCInfo {
   std::string name;
   int32_t quota;
   std::string os;
-  int32_t vcpu;
+  std::string type;
+  int32_t cpu;
   int32_t memory;
+  int32_t IO;
+  std::string app;
 
   _VCInfo__isset __isset;
 
@@ -214,12 +220,24 @@ class VCInfo {
     os = val;
   }
 
-  void __set_vcpu(const int32_t val) {
-    vcpu = val;
+  void __set_type(const std::string& val) {
+    type = val;
+  }
+
+  void __set_cpu(const int32_t val) {
+    cpu = val;
   }
 
   void __set_memory(const int32_t val) {
     memory = val;
+  }
+
+  void __set_IO(const int32_t val) {
+    IO = val;
+  }
+
+  void __set_app(const std::string& val) {
+    app = val;
   }
 
   bool operator == (const VCInfo & rhs) const
@@ -230,9 +248,15 @@ class VCInfo {
       return false;
     if (!(os == rhs.os))
       return false;
-    if (!(vcpu == rhs.vcpu))
+    if (!(type == rhs.type))
+      return false;
+    if (!(cpu == rhs.cpu))
       return false;
     if (!(memory == rhs.memory))
+      return false;
+    if (!(IO == rhs.IO))
+      return false;
+    if (!(app == rhs.app))
       return false;
     return true;
   }
@@ -250,22 +274,23 @@ class VCInfo {
 void swap(VCInfo &a, VCInfo &b);
 
 typedef struct _TaskInfo__isset {
-  _TaskInfo__isset() : vc_name(false), id(false), os(false), vcpu(false), memory(false), ip(false) {}
+  _TaskInfo__isset() : vc_name(false), id(false), os(false), cpu(false), memory(false), IO(false), ip(false) {}
   bool vc_name;
   bool id;
   bool os;
-  bool vcpu;
+  bool cpu;
   bool memory;
+  bool IO;
   bool ip;
 } _TaskInfo__isset;
 
 class TaskInfo {
  public:
 
-  static const char* ascii_fingerprint; // = "F55E6FC6EF25297F4EEFFCA87E2BA82A";
-  static const uint8_t binary_fingerprint[16]; // = {0xF5,0x5E,0x6F,0xC6,0xEF,0x25,0x29,0x7F,0x4E,0xEF,0xFC,0xA8,0x7E,0x2B,0xA8,0x2A};
+  static const char* ascii_fingerprint; // = "8C217E4194BBCC62D4E457735D96A34F";
+  static const uint8_t binary_fingerprint[16]; // = {0x8C,0x21,0x7E,0x41,0x94,0xBB,0xCC,0x62,0xD4,0xE4,0x57,0x73,0x5D,0x96,0xA3,0x4F};
 
-  TaskInfo() : vc_name(), id(0), os(), vcpu(0), memory(0), ip() {
+  TaskInfo() : vc_name(), id(0), os(), cpu(0), memory(0), IO(0), ip() {
   }
 
   virtual ~TaskInfo() throw() {}
@@ -273,8 +298,9 @@ class TaskInfo {
   std::string vc_name;
   int64_t id;
   std::string os;
-  int32_t vcpu;
+  int32_t cpu;
   int32_t memory;
+  int32_t IO;
   std::string ip;
 
   _TaskInfo__isset __isset;
@@ -291,12 +317,16 @@ class TaskInfo {
     os = val;
   }
 
-  void __set_vcpu(const int32_t val) {
-    vcpu = val;
+  void __set_cpu(const int32_t val) {
+    cpu = val;
   }
 
   void __set_memory(const int32_t val) {
     memory = val;
+  }
+
+  void __set_IO(const int32_t val) {
+    IO = val;
   }
 
   void __set_ip(const std::string& val) {
@@ -311,9 +341,11 @@ class TaskInfo {
       return false;
     if (!(os == rhs.os))
       return false;
-    if (!(vcpu == rhs.vcpu))
+    if (!(cpu == rhs.cpu))
       return false;
     if (!(memory == rhs.memory))
+      return false;
+    if (!(IO == rhs.IO))
       return false;
     if (!(ip == rhs.ip))
       return false;

@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wno-deprecated -DHAVE_NETINET_IN_H -g    CMakeFiles/lynn_add.dir/lynn_add.cpp.o CMakeFiles/lynn_add.dir/add_context.cpp.o  -o lynn_add -rdynamic -lthrift 

@@ -15,17 +15,17 @@ static Logger logger = Logger::getInstance("master");
 
 Machine::Machine(const MachineInfo& info): m_machine_info(info) {
     m_ad.InsertAttr(ATTR_CPU_USAGE, info.cpu_usage);
-    m_ad.InsertAttr(ATTR_ALL_VCPU, info.all_vcpu);
+    m_ad.InsertAttr(ATTR_ALL_VCPU, info.all_cpu);
     m_ad.InsertAttr(ATTR_ALL_MEMORY, info.all_memory);
-    m_ad.InsertAttr(ATTR_AVAIL_VCPU, info.avail_vcpu);
+    m_ad.InsertAttr(ATTR_AVAIL_VCPU, info.avail_cpu);
     m_ad.InsertAttr(ATTR_AVAIL_MEMORY, info.avail_memory);
 }
 
 void Machine::LogInfo() const {
      LOG4CPLUS_INFO(logger, "machine regist:"
                     << " endpoint: " << m_machine_info.endpoint
-                    << " vcpu: " << m_machine_info.all_vcpu
-                    << " avail: " << m_machine_info.avail_vcpu
+                    << " cpu: " << m_machine_info.all_cpu
+                    << " avail: " << m_machine_info.avail_cpu
                     << " memory: " << m_machine_info.all_memory
                     << " avail: " << m_machine_info.avail_memory
                     << " cpu usage: " << m_machine_info.cpu_usage

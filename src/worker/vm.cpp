@@ -157,8 +157,21 @@ int32_t VM::Init() {
     }
     buffer.str("");
     buffer.clear();
-    buffer << m_info.vcpu;
+    // vcpu 默认为1
+    // cpu 参数设置的是cpu的share值
+    buffer << 1;
     xml_copy.replace(pos, strlen("T_VCPU"), buffer.str());
+
+    pos = xml_copy.find("T_VCPU");
+    if( pos == string::npos) {
+        LOG4CPLUS_ERROR(logger, "error in finding T_VCPU in vm template");
+        return 1;
+    }
+    buffer.str("");
+    buffer.clear();
+    // cpu 参数设置的是cpu的share值
+    buffer << m_info.cpu;
+    xml_copy.replace(pos, strlen("T_CPU"), buffer.str());  
 
     pos = xml_copy.find("T_IMG_LOCATION");
     if( pos == string::npos) {

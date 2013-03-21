@@ -37,6 +37,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/zaleilynn/workspace/lynn/build/src/test/cmake_install.cmake")
   INCLUDE("/home/zaleilynn/workspace/lynn/build/src/master/cmake_install.cmake")
   INCLUDE("/home/zaleilynn/workspace/lynn/build/src/worker/cmake_install.cmake")
+  INCLUDE("/home/zaleilynn/workspace/lynn/build/src/tools/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

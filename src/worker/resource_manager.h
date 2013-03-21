@@ -19,9 +19,9 @@ public:
    void GetExecutorResourceInfo(const VMPtr& ptr, MachineInfo& info);
 private:
    string m_endpoint;
-   int32_t m_avail_vcpu;
+   int32_t m_avail_cpu;
    int32_t m_avail_memory;
-   int32_t m_all_vcpu;
+   int32_t m_all_cpu;
    int32_t m_all_memory;
    double m_cpu_usage;
 };

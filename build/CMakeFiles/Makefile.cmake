@@ -15,6 +15,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "../src/CMakeLists.txt"
   "../src/master/CMakeLists.txt"
   "../src/test/CMakeLists.txt"
+  "../src/tools/CMakeLists.txt"
   "../src/worker/CMakeLists.txt"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
@@ -44,6 +45,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "src/test/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/master/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/worker/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/tools/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -51,4 +53,6 @@ SET(CMAKE_DEPEND_INFO_FILES
   "src/test/CMakeFiles/test.dir/DependInfo.cmake"
   "src/master/CMakeFiles/master.dir/DependInfo.cmake"
   "src/worker/CMakeFiles/worker.dir/DependInfo.cmake"
+  "src/tools/CMakeFiles/lynn_add.dir/DependInfo.cmake"
+  "src/tools/CMakeFiles/lynn_submit.dir/DependInfo.cmake"
   )
