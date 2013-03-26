@@ -22,6 +22,11 @@ class MasterHandler : virtual public MasterIf {
     // Your initialization goes here
   }
 
+  int64_t SubmitTask(const TaskInfo& info) {
+    // Your implementation goes here
+    printf("SubmitTask\n");
+  }
+
   void Heartbeat(const MachineInfo& info) {
     // Your implementation goes here
     printf("Heartbeat\n");

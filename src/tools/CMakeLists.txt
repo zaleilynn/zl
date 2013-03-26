@@ -29,11 +29,13 @@ ADD_CUSTOM_COMMAND (
 )
 
 SET(LYNN_ADD_SRC  
+    ${MASTER_THRIFT_SOURCE}
     lynn_add.cpp 
     add_context.cpp
     )
 
 SET(LYNN_SUBMIT_SRC
+    ${MASTER_THRIFT_SOURCE}
     lynn_submit.cpp
     submit_context.cpp
    )

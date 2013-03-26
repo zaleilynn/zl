@@ -9,7 +9,8 @@ static Logger logger = Logger::getInstance("worker");
 
 //检查配置是否完整
 int32_t WorkerConfig::CheckCompleteness() {
-    const char* s[] = {"master_endpoint",
+    const char* s[] = {
+                       "master_endpoint",
                        "port",
                        "heartbeat_interval",
                        "interface"

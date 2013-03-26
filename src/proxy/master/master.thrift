@@ -17,7 +17,7 @@ struct MachineInfo {
 
 struct VCInfo {
     1: string name,
-    2: i32 quota,
+    2: double quota,
     3: string os,
     4: string type,
     5: i32 cpu,
@@ -32,13 +32,15 @@ struct TaskInfo {
     //任务id号
     2: i64 id,
     3: string os,
-    4: i32 cpu,
-    5: i32 memory,
-    6: i32 IO,
-    7: string ip,
+    4: string type,
+    5: i32 cpu,
+    6: i32 memory,
+    7: i32 IO,
+    8: string ip,
 }
 
 service Master {
+    i64 SubmitTask(1: TaskInfo info),
     void Heartbeat(1: MachineInfo info),
     i32 AddVC(1: VCInfo vc_info),
     i32 TaskStarted(1: i64 task_id),

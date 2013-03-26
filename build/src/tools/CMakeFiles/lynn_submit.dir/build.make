@@ -46,9 +46,78 @@ include src/tools/CMakeFiles/lynn_submit.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/tools/CMakeFiles/lynn_submit.dir/flags.make
 
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o: src/tools/CMakeFiles/lynn_submit.dir/flags.make
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o: ../src/proxy/master/gen-cpp/master_constants.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o -c /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/master_constants.cpp
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.i"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/master_constants.cpp > CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.i
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.s"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/master_constants.cpp -o CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.s
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o.requires:
+.PHONY : src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o.requires
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o.provides: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o.requires
+	$(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o.provides.build
+.PHONY : src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o.provides
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o.provides.build: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o: src/tools/CMakeFiles/lynn_submit.dir/flags.make
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o: ../src/proxy/master/gen-cpp/Master.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o -c /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/Master.cpp
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.i"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/Master.cpp > CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.i
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.s"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/Master.cpp -o CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.s
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o.requires:
+.PHONY : src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o.requires
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o.provides: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o.requires
+	$(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o.provides.build
+.PHONY : src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o.provides
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o.provides.build: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o: src/tools/CMakeFiles/lynn_submit.dir/flags.make
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o: ../src/proxy/master/gen-cpp/master_types.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o -c /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/master_types.cpp
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.i"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/master_types.cpp > CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.i
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.s"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zaleilynn/workspace/lynn/src/proxy/master/gen-cpp/master_types.cpp -o CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.s
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o.requires:
+.PHONY : src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o.requires
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o.provides: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o.requires
+	$(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o.provides.build
+.PHONY : src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o.provides
+
+src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o.provides.build: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o
+
 src/tools/CMakeFiles/lynn_submit.dir/lynn_submit.cpp.o: src/tools/CMakeFiles/lynn_submit.dir/flags.make
 src/tools/CMakeFiles/lynn_submit.dir/lynn_submit.cpp.o: ../src/tools/lynn_submit.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/tools/CMakeFiles/lynn_submit.dir/lynn_submit.cpp.o"
 	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/lynn_submit.dir/lynn_submit.cpp.o -c /home/zaleilynn/workspace/lynn/src/tools/lynn_submit.cpp
 
@@ -71,7 +140,7 @@ src/tools/CMakeFiles/lynn_submit.dir/lynn_submit.cpp.o.provides.build: src/tools
 
 src/tools/CMakeFiles/lynn_submit.dir/submit_context.cpp.o: src/tools/CMakeFiles/lynn_submit.dir/flags.make
 src/tools/CMakeFiles/lynn_submit.dir/submit_context.cpp.o: ../src/tools/submit_context.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/tools/CMakeFiles/lynn_submit.dir/submit_context.cpp.o"
 	cd /home/zaleilynn/workspace/lynn/build/src/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/lynn_submit.dir/submit_context.cpp.o -c /home/zaleilynn/workspace/lynn/src/tools/submit_context.cpp
 
@@ -92,14 +161,35 @@ src/tools/CMakeFiles/lynn_submit.dir/submit_context.cpp.o.provides: src/tools/CM
 
 src/tools/CMakeFiles/lynn_submit.dir/submit_context.cpp.o.provides.build: src/tools/CMakeFiles/lynn_submit.dir/submit_context.cpp.o
 
+../src/proxy/master/gen-cpp/master_constants.cpp:
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zaleilynn/workspace/lynn/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../../../src/proxy/master/gen-cpp/master_constants.cpp, ../../../src/proxy/master/gen-cpp/Master.h, ../../../src/proxy/master/gen-cpp/master_types.h, ../../../src/proxy/master/gen-cpp/master_constants.h, ../../../src/proxy/master/gen-cpp/Master.cpp, ../../../src/proxy/master/gen-cpp/master_types.cpp"
+	cd /home/zaleilynn/workspace/lynn/build/src/tools && thrift --gen cpp -r -o /home/zaleilynn/workspace/lynn/src/proxy/master /home/zaleilynn/workspace/lynn/src/proxy/master/master.thrift
+
+../src/proxy/master/gen-cpp/Master.h: ../src/proxy/master/gen-cpp/master_constants.cpp
+
+../src/proxy/master/gen-cpp/master_types.h: ../src/proxy/master/gen-cpp/master_constants.cpp
+
+../src/proxy/master/gen-cpp/master_constants.h: ../src/proxy/master/gen-cpp/master_constants.cpp
+
+../src/proxy/master/gen-cpp/Master.cpp: ../src/proxy/master/gen-cpp/master_constants.cpp
+
+../src/proxy/master/gen-cpp/master_types.cpp: ../src/proxy/master/gen-cpp/master_constants.cpp
+
 # Object files for target lynn_submit
 lynn_submit_OBJECTS = \
+"CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o" \
+"CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o" \
+"CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o" \
 "CMakeFiles/lynn_submit.dir/lynn_submit.cpp.o" \
 "CMakeFiles/lynn_submit.dir/submit_context.cpp.o"
 
 # External object files for target lynn_submit
 lynn_submit_EXTERNAL_OBJECTS =
 
+src/tools/lynn_submit: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o
+src/tools/lynn_submit: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o
+src/tools/lynn_submit: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o
 src/tools/lynn_submit: src/tools/CMakeFiles/lynn_submit.dir/lynn_submit.cpp.o
 src/tools/lynn_submit: src/tools/CMakeFiles/lynn_submit.dir/submit_context.cpp.o
 src/tools/lynn_submit: src/tools/CMakeFiles/lynn_submit.dir/build.make
@@ -111,6 +201,9 @@ src/tools/lynn_submit: src/tools/CMakeFiles/lynn_submit.dir/link.txt
 src/tools/CMakeFiles/lynn_submit.dir/build: src/tools/lynn_submit
 .PHONY : src/tools/CMakeFiles/lynn_submit.dir/build
 
+src/tools/CMakeFiles/lynn_submit.dir/requires: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o.requires
+src/tools/CMakeFiles/lynn_submit.dir/requires: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o.requires
+src/tools/CMakeFiles/lynn_submit.dir/requires: src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o.requires
 src/tools/CMakeFiles/lynn_submit.dir/requires: src/tools/CMakeFiles/lynn_submit.dir/lynn_submit.cpp.o.requires
 src/tools/CMakeFiles/lynn_submit.dir/requires: src/tools/CMakeFiles/lynn_submit.dir/submit_context.cpp.o.requires
 .PHONY : src/tools/CMakeFiles/lynn_submit.dir/requires
@@ -119,7 +212,12 @@ src/tools/CMakeFiles/lynn_submit.dir/clean:
 	cd /home/zaleilynn/workspace/lynn/build/src/tools && $(CMAKE_COMMAND) -P CMakeFiles/lynn_submit.dir/cmake_clean.cmake
 .PHONY : src/tools/CMakeFiles/lynn_submit.dir/clean
 
-src/tools/CMakeFiles/lynn_submit.dir/depend:
+src/tools/CMakeFiles/lynn_submit.dir/depend: ../src/proxy/master/gen-cpp/master_constants.cpp
+src/tools/CMakeFiles/lynn_submit.dir/depend: ../src/proxy/master/gen-cpp/Master.h
+src/tools/CMakeFiles/lynn_submit.dir/depend: ../src/proxy/master/gen-cpp/master_types.h
+src/tools/CMakeFiles/lynn_submit.dir/depend: ../src/proxy/master/gen-cpp/master_constants.h
+src/tools/CMakeFiles/lynn_submit.dir/depend: ../src/proxy/master/gen-cpp/Master.cpp
+src/tools/CMakeFiles/lynn_submit.dir/depend: ../src/proxy/master/gen-cpp/master_types.cpp
 	cd /home/zaleilynn/workspace/lynn/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zaleilynn/workspace/lynn /home/zaleilynn/workspace/lynn/src/tools /home/zaleilynn/workspace/lynn/build /home/zaleilynn/workspace/lynn/build/src/tools /home/zaleilynn/workspace/lynn/build/src/tools/CMakeFiles/lynn_submit.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/tools/CMakeFiles/lynn_submit.dir/depend
 

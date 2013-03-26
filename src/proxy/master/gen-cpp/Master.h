@@ -15,6 +15,7 @@
 class MasterIf {
  public:
   virtual ~MasterIf() {}
+  virtual int64_t SubmitTask(const TaskInfo& info) = 0;
   virtual void Heartbeat(const MachineInfo& info) = 0;
   virtual int32_t AddVC(const VCInfo& vc_info) = 0;
   virtual int32_t TaskStarted(const int64_t task_id) = 0;
@@ -49,6 +50,10 @@ class MasterIfSingletonFactory : virtual public MasterIfFactory {
 class MasterNull : virtual public MasterIf {
  public:
   virtual ~MasterNull() {}
+  int64_t SubmitTask(const TaskInfo& /* info */) {
+    int64_t _return = 0;
+    return _return;
+  }
   void Heartbeat(const MachineInfo& /* info */) {
     return;
   }
@@ -68,6 +73,114 @@ class MasterNull : virtual public MasterIf {
     int32_t _return = 0;
     return _return;
   }
+};
+
+typedef struct _Master_SubmitTask_args__isset {
+  _Master_SubmitTask_args__isset() : info(false) {}
+  bool info;
+} _Master_SubmitTask_args__isset;
+
+class Master_SubmitTask_args {
+ public:
+
+  Master_SubmitTask_args() {
+  }
+
+  virtual ~Master_SubmitTask_args() throw() {}
+
+  TaskInfo info;
+
+  _Master_SubmitTask_args__isset __isset;
+
+  void __set_info(const TaskInfo& val) {
+    info = val;
+  }
+
+  bool operator == (const Master_SubmitTask_args & rhs) const
+  {
+    if (!(info == rhs.info))
+      return false;
+    return true;
+  }
+  bool operator != (const Master_SubmitTask_args &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Master_SubmitTask_args & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class Master_SubmitTask_pargs {
+ public:
+
+
+  virtual ~Master_SubmitTask_pargs() throw() {}
+
+  const TaskInfo* info;
+
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Master_SubmitTask_result__isset {
+  _Master_SubmitTask_result__isset() : success(false) {}
+  bool success;
+} _Master_SubmitTask_result__isset;
+
+class Master_SubmitTask_result {
+ public:
+
+  Master_SubmitTask_result() : success(0) {
+  }
+
+  virtual ~Master_SubmitTask_result() throw() {}
+
+  int64_t success;
+
+  _Master_SubmitTask_result__isset __isset;
+
+  void __set_success(const int64_t val) {
+    success = val;
+  }
+
+  bool operator == (const Master_SubmitTask_result & rhs) const
+  {
+    if (!(success == rhs.success))
+      return false;
+    return true;
+  }
+  bool operator != (const Master_SubmitTask_result &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Master_SubmitTask_result & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _Master_SubmitTask_presult__isset {
+  _Master_SubmitTask_presult__isset() : success(false) {}
+  bool success;
+} _Master_SubmitTask_presult__isset;
+
+class Master_SubmitTask_presult {
+ public:
+
+
+  virtual ~Master_SubmitTask_presult() throw() {}
+
+  int64_t* success;
+
+  _Master_SubmitTask_presult__isset __isset;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+
 };
 
 typedef struct _Master_Heartbeat_args__isset {
@@ -610,6 +723,9 @@ class MasterClient : virtual public MasterIf {
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getOutputProtocol() {
     return poprot_;
   }
+  int64_t SubmitTask(const TaskInfo& info);
+  void send_SubmitTask(const TaskInfo& info);
+  int64_t recv_SubmitTask();
   void Heartbeat(const MachineInfo& info);
   void send_Heartbeat(const MachineInfo& info);
   void recv_Heartbeat();
@@ -640,6 +756,7 @@ class MasterProcessor : public ::apache::thrift::TDispatchProcessor {
   typedef  void (MasterProcessor::*ProcessFunction)(int32_t, ::apache::thrift::protocol::TProtocol*, ::apache::thrift::protocol::TProtocol*, void*);
   typedef std::map<std::string, ProcessFunction> ProcessMap;
   ProcessMap processMap_;
+  void process_SubmitTask(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
   void process_Heartbeat(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
   void process_AddVC(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
   void process_TaskStarted(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
@@ -648,6 +765,7 @@ class MasterProcessor : public ::apache::thrift::TDispatchProcessor {
  public:
   MasterProcessor(boost::shared_ptr<MasterIf> iface) :
     iface_(iface) {
+    processMap_["SubmitTask"] = &MasterProcessor::process_SubmitTask;
     processMap_["Heartbeat"] = &MasterProcessor::process_Heartbeat;
     processMap_["AddVC"] = &MasterProcessor::process_AddVC;
     processMap_["TaskStarted"] = &MasterProcessor::process_TaskStarted;
@@ -681,6 +799,15 @@ class MasterMultiface : virtual public MasterIf {
     ifaces_.push_back(iface);
   }
  public:
+  int64_t SubmitTask(const TaskInfo& info) {
+    size_t sz = ifaces_.size();
+    size_t i = 0;
+    for (; i < (sz - 1); ++i) {
+      ifaces_[i]->SubmitTask(info);
+    }
+    return ifaces_[i]->SubmitTask(info);
+  }
+
   void Heartbeat(const MachineInfo& info) {
     size_t sz = ifaces_.size();
     size_t i = 0;

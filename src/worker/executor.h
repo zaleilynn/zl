@@ -13,6 +13,7 @@ using lynn::RWLock;
 
 enum ExecutorState {
     EXECUTOR_WAIT,
+    EXECUTOR_START,
     EXECUTOR_RUN,
     EXECUTOR_FINISH,
     EXECUTOR_FAIL,
@@ -29,6 +30,7 @@ public:
     void Start();
     void Kill();
     void ExecutorStarted();
+    void ExecutorRunned();
     void ExecutorFailed();
     void ExecutorFinished();
     VMInfo GetVMInfo();

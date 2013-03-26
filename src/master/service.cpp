@@ -4,12 +4,24 @@
 #include "master/service.h"
 #include "master/machine_pool.h"
 #include "master/vc_pool.h"
+#include "master/task_pool.h"
 #include "master/event.h"
 #include "master/watcher.h"
 
 using log4cplus::Logger;
 
 static Logger logger = Logger::getInstance("master");
+
+int64_t MasterService::SubmitTask(const TaskInfo& info) {
+    TaskPtr task(new Task(info));
+    if(task != NULL) {   
+        TaskPoolI::Instance()->Insert(task);
+        TaskBufferI::Instance()->PushBack(task);
+        return task->GetId();
+    } else {
+        return -1;
+    }
+}
 
 void MasterService::Heartbeat(const MachineInfo& info) {
     //  物理机器的资源利用情况是一直在变的，实时更新的

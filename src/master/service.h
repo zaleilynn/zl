@@ -8,6 +8,7 @@ using std::string;
 
 class MasterService : public MasterIf {
 public:
+    int64_t SubmitTask(const TaskInfo& task_info);
     void Heartbeat(const MachineInfo& machine_info);
     //返回值暂时没有用
     int32_t AddVC(const VCInfo& vc_info);

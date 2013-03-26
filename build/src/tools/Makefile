@@ -164,6 +164,87 @@ lynn_submit/fast:
 	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/build
 .PHONY : lynn_submit/fast
 
+__/proxy/master/gen-cpp/Master.o: __/proxy/master/gen-cpp/Master.cpp.o
+.PHONY : __/proxy/master/gen-cpp/Master.o
+
+# target to build an object file
+__/proxy/master/gen-cpp/Master.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/Master.cpp.o
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.o
+.PHONY : __/proxy/master/gen-cpp/Master.cpp.o
+
+__/proxy/master/gen-cpp/Master.i: __/proxy/master/gen-cpp/Master.cpp.i
+.PHONY : __/proxy/master/gen-cpp/Master.i
+
+# target to preprocess a source file
+__/proxy/master/gen-cpp/Master.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/Master.cpp.i
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.i
+.PHONY : __/proxy/master/gen-cpp/Master.cpp.i
+
+__/proxy/master/gen-cpp/Master.s: __/proxy/master/gen-cpp/Master.cpp.s
+.PHONY : __/proxy/master/gen-cpp/Master.s
+
+# target to generate assembly for a file
+__/proxy/master/gen-cpp/Master.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/Master.cpp.s
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/Master.cpp.s
+.PHONY : __/proxy/master/gen-cpp/Master.cpp.s
+
+__/proxy/master/gen-cpp/master_constants.o: __/proxy/master/gen-cpp/master_constants.cpp.o
+.PHONY : __/proxy/master/gen-cpp/master_constants.o
+
+# target to build an object file
+__/proxy/master/gen-cpp/master_constants.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/master_constants.cpp.o
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.o
+.PHONY : __/proxy/master/gen-cpp/master_constants.cpp.o
+
+__/proxy/master/gen-cpp/master_constants.i: __/proxy/master/gen-cpp/master_constants.cpp.i
+.PHONY : __/proxy/master/gen-cpp/master_constants.i
+
+# target to preprocess a source file
+__/proxy/master/gen-cpp/master_constants.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/master_constants.cpp.i
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.i
+.PHONY : __/proxy/master/gen-cpp/master_constants.cpp.i
+
+__/proxy/master/gen-cpp/master_constants.s: __/proxy/master/gen-cpp/master_constants.cpp.s
+.PHONY : __/proxy/master/gen-cpp/master_constants.s
+
+# target to generate assembly for a file
+__/proxy/master/gen-cpp/master_constants.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/master_constants.cpp.s
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_constants.cpp.s
+.PHONY : __/proxy/master/gen-cpp/master_constants.cpp.s
+
+__/proxy/master/gen-cpp/master_types.o: __/proxy/master/gen-cpp/master_types.cpp.o
+.PHONY : __/proxy/master/gen-cpp/master_types.o
+
+# target to build an object file
+__/proxy/master/gen-cpp/master_types.cpp.o:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/master_types.cpp.o
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.o
+.PHONY : __/proxy/master/gen-cpp/master_types.cpp.o
+
+__/proxy/master/gen-cpp/master_types.i: __/proxy/master/gen-cpp/master_types.cpp.i
+.PHONY : __/proxy/master/gen-cpp/master_types.i
+
+# target to preprocess a source file
+__/proxy/master/gen-cpp/master_types.cpp.i:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/master_types.cpp.i
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.i
+.PHONY : __/proxy/master/gen-cpp/master_types.cpp.i
+
+__/proxy/master/gen-cpp/master_types.s: __/proxy/master/gen-cpp/master_types.cpp.s
+.PHONY : __/proxy/master/gen-cpp/master_types.s
+
+# target to generate assembly for a file
+__/proxy/master/gen-cpp/master_types.cpp.s:
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_add.dir/build.make src/tools/CMakeFiles/lynn_add.dir/__/proxy/master/gen-cpp/master_types.cpp.s
+	cd /home/zaleilynn/workspace/lynn/build && $(MAKE) -f src/tools/CMakeFiles/lynn_submit.dir/build.make src/tools/CMakeFiles/lynn_submit.dir/__/proxy/master/gen-cpp/master_types.cpp.s
+.PHONY : __/proxy/master/gen-cpp/master_types.cpp.s
+
 add_context.o: add_context.cpp.o
 .PHONY : add_context.o
 
@@ -274,6 +355,15 @@ help:
 	@echo "... lynn_add"
 	@echo "... lynn_submit"
 	@echo "... rebuild_cache"
+	@echo "... __/proxy/master/gen-cpp/Master.o"
+	@echo "... __/proxy/master/gen-cpp/Master.i"
+	@echo "... __/proxy/master/gen-cpp/Master.s"
+	@echo "... __/proxy/master/gen-cpp/master_constants.o"
+	@echo "... __/proxy/master/gen-cpp/master_constants.i"
+	@echo "... __/proxy/master/gen-cpp/master_constants.s"
+	@echo "... __/proxy/master/gen-cpp/master_types.o"
+	@echo "... __/proxy/master/gen-cpp/master_types.i"
+	@echo "... __/proxy/master/gen-cpp/master_types.s"
 	@echo "... add_context.o"
 	@echo "... add_context.i"
 	@echo "... add_context.s"

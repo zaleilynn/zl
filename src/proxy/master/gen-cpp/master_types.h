@@ -189,8 +189,8 @@ typedef struct _VCInfo__isset {
 class VCInfo {
  public:
 
-  static const char* ascii_fingerprint; // = "24F5E3FA9272C001062C433603F469B3";
-  static const uint8_t binary_fingerprint[16]; // = {0x24,0xF5,0xE3,0xFA,0x92,0x72,0xC0,0x01,0x06,0x2C,0x43,0x36,0x03,0xF4,0x69,0xB3};
+  static const char* ascii_fingerprint; // = "740EBE59832D377153B5F814B9A31324";
+  static const uint8_t binary_fingerprint[16]; // = {0x74,0x0E,0xBE,0x59,0x83,0x2D,0x37,0x71,0x53,0xB5,0xF8,0x14,0xB9,0xA3,0x13,0x24};
 
   VCInfo() : name(), quota(0), os(), type(), cpu(0), memory(0), IO(0), app() {
   }
@@ -198,7 +198,7 @@ class VCInfo {
   virtual ~VCInfo() throw() {}
 
   std::string name;
-  int32_t quota;
+  double quota;
   std::string os;
   std::string type;
   int32_t cpu;
@@ -212,7 +212,7 @@ class VCInfo {
     name = val;
   }
 
-  void __set_quota(const int32_t val) {
+  void __set_quota(const double val) {
     quota = val;
   }
 
@@ -274,10 +274,11 @@ class VCInfo {
 void swap(VCInfo &a, VCInfo &b);
 
 typedef struct _TaskInfo__isset {
-  _TaskInfo__isset() : vc_name(false), id(false), os(false), cpu(false), memory(false), IO(false), ip(false) {}
+  _TaskInfo__isset() : vc_name(false), id(false), os(false), type(false), cpu(false), memory(false), IO(false), ip(false) {}
   bool vc_name;
   bool id;
   bool os;
+  bool type;
   bool cpu;
   bool memory;
   bool IO;
@@ -287,10 +288,10 @@ typedef struct _TaskInfo__isset {
 class TaskInfo {
  public:
 
-  static const char* ascii_fingerprint; // = "8C217E4194BBCC62D4E457735D96A34F";
-  static const uint8_t binary_fingerprint[16]; // = {0x8C,0x21,0x7E,0x41,0x94,0xBB,0xCC,0x62,0xD4,0xE4,0x57,0x73,0x5D,0x96,0xA3,0x4F};
+  static const char* ascii_fingerprint; // = "5192E837BB31FBCCCF773ADF6AFB483E";
+  static const uint8_t binary_fingerprint[16]; // = {0x51,0x92,0xE8,0x37,0xBB,0x31,0xFB,0xCC,0xCF,0x77,0x3A,0xDF,0x6A,0xFB,0x48,0x3E};
 
-  TaskInfo() : vc_name(), id(0), os(), cpu(0), memory(0), IO(0), ip() {
+  TaskInfo() : vc_name(), id(0), os(), type(), cpu(0), memory(0), IO(0), ip() {
   }
 
   virtual ~TaskInfo() throw() {}
@@ -298,6 +299,7 @@ class TaskInfo {
   std::string vc_name;
   int64_t id;
   std::string os;
+  std::string type;
   int32_t cpu;
   int32_t memory;
   int32_t IO;
@@ -315,6 +317,10 @@ class TaskInfo {
 
   void __set_os(const std::string& val) {
     os = val;
+  }
+
+  void __set_type(const std::string& val) {
+    type = val;
   }
 
   void __set_cpu(const int32_t val) {
@@ -340,6 +346,8 @@ class TaskInfo {
     if (!(id == rhs.id))
       return false;
     if (!(os == rhs.os))
+      return false;
+    if (!(type == rhs.type))
       return false;
     if (!(cpu == rhs.cpu))
       return false;

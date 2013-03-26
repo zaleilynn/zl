@@ -35,6 +35,7 @@ VMInfo Executor::GetVMInfo() {
     rtn.cpu = m_task_info.cpu;
     rtn.memory = m_task_info.memory;
     rtn.ip = m_task_info.ip;
+    rtn.IO = m_task_info.IO;
     return rtn;
 }
 
@@ -48,7 +49,7 @@ void Executor::Start() {
             //启动成功
             VMPoolI::Instance()->Insert(ptr);
             ptr->VMStarted();
-            ExecutorStarted();
+            ExecutorRunned();
             LOG4CPLUS_INFO(logger, "vm start succeed");
         } else {
             ptr->VMFailed();
@@ -71,7 +72,7 @@ void Executor::Kill() {
 
 void Executor::ExecutorStarted(){
     WriteLocker locker(m_lock);
-    m_state = EXECUTOR_RUN;
+    m_state = EXECUTOR_START;
 }
 
 void Executor::ExecutorFailed(){
@@ -82,4 +83,9 @@ void Executor::ExecutorFailed(){
 void Executor::ExecutorFinished(){
     WriteLocker locker(m_lock);
     m_state = EXECUTOR_FINISH;
+}
+
+void Executor::ExecutorRunned() {
+    WriteLocker locker(m_lock);
+    m_state = EXECUTOR_RUN;
 }

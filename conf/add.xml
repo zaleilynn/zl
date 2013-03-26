@@ -1,0 +1,9 @@
+<master_endpoint>10.128.252.128:8000</master_endpont>
+<name>vc1</name>
+<quota>0.2</quota>
+<type>kvm</type>
+<os>ubuntu11.10</os>
+<cpu>1</cpu>
+<memory>1024</memory>
+<IO>1024</IO>
+<app>/root/app1</app>

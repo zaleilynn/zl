@@ -157,21 +157,42 @@ int32_t VM::Init() {
     }
     buffer.str("");
     buffer.clear();
-    // vcpu 默认为1
-    // cpu 参数设置的是cpu的share值
-    buffer << 1;
+    //vcpu以及cpu_shares目前是有联系的，对于kvm来说，CPU最好是个整数
+    buffer << m_info.cpu;
     xml_copy.replace(pos, strlen("T_VCPU"), buffer.str());
 
-    pos = xml_copy.find("T_VCPU");
+    pos = xml_copy.find("T_CPU_SHARE");
     if( pos == string::npos) {
-        LOG4CPLUS_ERROR(logger, "error in finding T_VCPU in vm template");
+        LOG4CPLUS_ERROR(logger, "error in finding T_CPU_SHARE in vm template");
         return 1;
     }
     buffer.str("");
     buffer.clear();
     // cpu 参数设置的是cpu的share值
-    buffer << m_info.cpu;
-    xml_copy.replace(pos, strlen("T_CPU"), buffer.str());  
+    // 一个cpu对应的归一化参数是1024 
+    buffer << m_info.cpu * 1024;
+    xml_copy.replace(pos, strlen("T_CPU_SHARE"), buffer.str()); 
+
+    pos = xml_copy.find("T_OUT_BOUND");
+    if( pos == string::npos) {
+        LOG4CPLUS_ERROR(logger, "error in finding T_OUT_BOUND in vm template");
+        return 1;
+    }
+    buffer.str("");
+    buffer.clear();
+    //目前In/Out IO都被同样的控制了
+    buffer << m_info.IO;
+    xml_copy.replace(pos, strlen("T_OUT_BOUND"), buffer.str());
+ 
+    pos = xml_copy.find("T_IN_BOUND");
+    if( pos == string::npos) {
+        LOG4CPLUS_ERROR(logger, "error in finding T_IN_BOUND in vm template");
+        return 1;
+    }
+    buffer.str("");
+    buffer.clear();
+    buffer << m_info.IO;
+    xml_copy.replace(pos, strlen("T_IN_BOUND"), buffer.str());
 
     pos = xml_copy.find("T_IMG_LOCATION");
     if( pos == string::npos) {

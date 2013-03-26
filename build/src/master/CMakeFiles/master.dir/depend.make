@@ -192,6 +192,7 @@ src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/machine.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/machine_pool.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/service.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/task.h
+src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/task_pool.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/task_queue.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/trigger.h
 src/master/CMakeFiles/master.dir/service.cpp.o: ../src/./master/trigger_queue.h
