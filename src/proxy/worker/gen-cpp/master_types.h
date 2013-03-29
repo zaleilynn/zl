@@ -17,20 +17,21 @@
 
 
 typedef struct _ExecutorStat__isset {
-  _ExecutorStat__isset() : vc_name(false), task_id(false), cpu_usage(false), memory_usage(false) {}
+  _ExecutorStat__isset() : vc_name(false), task_id(false), cpu_usage(false), memory_usage(false), io_usage(false) {}
   bool vc_name;
   bool task_id;
   bool cpu_usage;
   bool memory_usage;
+  bool io_usage;
 } _ExecutorStat__isset;
 
 class ExecutorStat {
  public:
 
-  static const char* ascii_fingerprint; // = "FB11FF08354CE6EBB7BFE0173A4D13DC";
-  static const uint8_t binary_fingerprint[16]; // = {0xFB,0x11,0xFF,0x08,0x35,0x4C,0xE6,0xEB,0xB7,0xBF,0xE0,0x17,0x3A,0x4D,0x13,0xDC};
+  static const char* ascii_fingerprint; // = "8C1B57512073FCB1A6CCB6AEA8F3A47D";
+  static const uint8_t binary_fingerprint[16]; // = {0x8C,0x1B,0x57,0x51,0x20,0x73,0xFC,0xB1,0xA6,0xCC,0xB6,0xAE,0xA8,0xF3,0xA4,0x7D};
 
-  ExecutorStat() : vc_name(), task_id(0), cpu_usage(0), memory_usage(0) {
+  ExecutorStat() : vc_name(), task_id(0), cpu_usage(0), memory_usage(0), io_usage(0) {
   }
 
   virtual ~ExecutorStat() throw() {}
@@ -39,6 +40,7 @@ class ExecutorStat {
   int64_t task_id;
   double cpu_usage;
   double memory_usage;
+  double io_usage;
 
   _ExecutorStat__isset __isset;
 
@@ -58,6 +60,10 @@ class ExecutorStat {
     memory_usage = val;
   }
 
+  void __set_io_usage(const double val) {
+    io_usage = val;
+  }
+
   bool operator == (const ExecutorStat & rhs) const
   {
     if (!(vc_name == rhs.vc_name))
@@ -67,6 +73,8 @@ class ExecutorStat {
     if (!(cpu_usage == rhs.cpu_usage))
       return false;
     if (!(memory_usage == rhs.memory_usage))
+      return false;
+    if (!(io_usage == rhs.io_usage))
       return false;
     return true;
   }
@@ -84,23 +92,25 @@ class ExecutorStat {
 void swap(ExecutorStat &a, ExecutorStat &b);
 
 typedef struct _MachineInfo__isset {
-  _MachineInfo__isset() : endpoint(false), cpu_usage(false), all_cpu(false), all_memory(false), avail_cpu(false), avail_memory(false), vm_list(false) {}
+  _MachineInfo__isset() : endpoint(false), cpu_usage(false), all_cpu(false), all_memory(false), all_io(false), avail_cpu(false), avail_memory(false), avail_io(false), vm_list(false) {}
   bool endpoint;
   bool cpu_usage;
   bool all_cpu;
   bool all_memory;
+  bool all_io;
   bool avail_cpu;
   bool avail_memory;
+  bool avail_io;
   bool vm_list;
 } _MachineInfo__isset;
 
 class MachineInfo {
  public:
 
-  static const char* ascii_fingerprint; // = "EE689CEA7F4C7CF9B6BEF45B296FAA8C";
-  static const uint8_t binary_fingerprint[16]; // = {0xEE,0x68,0x9C,0xEA,0x7F,0x4C,0x7C,0xF9,0xB6,0xBE,0xF4,0x5B,0x29,0x6F,0xAA,0x8C};
+  static const char* ascii_fingerprint; // = "C9CADA0E4D10F3E4D5F8EAEFBFF60EB4";
+  static const uint8_t binary_fingerprint[16]; // = {0xC9,0xCA,0xDA,0x0E,0x4D,0x10,0xF3,0xE4,0xD5,0xF8,0xEA,0xEF,0xBF,0xF6,0x0E,0xB4};
 
-  MachineInfo() : endpoint(), cpu_usage(0), all_cpu(0), all_memory(0), avail_cpu(0), avail_memory(0) {
+  MachineInfo() : endpoint(), cpu_usage(0), all_cpu(0), all_memory(0), all_io(0), avail_cpu(0), avail_memory(0), avail_io(0) {
   }
 
   virtual ~MachineInfo() throw() {}
@@ -109,8 +119,10 @@ class MachineInfo {
   double cpu_usage;
   int32_t all_cpu;
   int32_t all_memory;
+  int32_t all_io;
   int32_t avail_cpu;
   int32_t avail_memory;
+  int32_t avail_io;
   std::vector<ExecutorStat>  vm_list;
 
   _MachineInfo__isset __isset;
@@ -131,12 +143,20 @@ class MachineInfo {
     all_memory = val;
   }
 
+  void __set_all_io(const int32_t val) {
+    all_io = val;
+  }
+
   void __set_avail_cpu(const int32_t val) {
     avail_cpu = val;
   }
 
   void __set_avail_memory(const int32_t val) {
     avail_memory = val;
+  }
+
+  void __set_avail_io(const int32_t val) {
+    avail_io = val;
   }
 
   void __set_vm_list(const std::vector<ExecutorStat> & val) {
@@ -153,9 +173,13 @@ class MachineInfo {
       return false;
     if (!(all_memory == rhs.all_memory))
       return false;
+    if (!(all_io == rhs.all_io))
+      return false;
     if (!(avail_cpu == rhs.avail_cpu))
       return false;
     if (!(avail_memory == rhs.avail_memory))
+      return false;
+    if (!(avail_io == rhs.avail_io))
       return false;
     if (!(vm_list == rhs.vm_list))
       return false;
@@ -274,7 +298,7 @@ class VCInfo {
 void swap(VCInfo &a, VCInfo &b);
 
 typedef struct _TaskInfo__isset {
-  _TaskInfo__isset() : vc_name(false), id(false), os(false), type(false), cpu(false), memory(false), IO(false), ip(false) {}
+  _TaskInfo__isset() : vc_name(false), id(false), os(false), type(false), cpu(false), memory(false), IO(false), ip(false), app(false) {}
   bool vc_name;
   bool id;
   bool os;
@@ -283,15 +307,16 @@ typedef struct _TaskInfo__isset {
   bool memory;
   bool IO;
   bool ip;
+  bool app;
 } _TaskInfo__isset;
 
 class TaskInfo {
  public:
 
-  static const char* ascii_fingerprint; // = "5192E837BB31FBCCCF773ADF6AFB483E";
-  static const uint8_t binary_fingerprint[16]; // = {0x51,0x92,0xE8,0x37,0xBB,0x31,0xFB,0xCC,0xCF,0x77,0x3A,0xDF,0x6A,0xFB,0x48,0x3E};
+  static const char* ascii_fingerprint; // = "B8898E0E7F8922ADC5322FC2157B886B";
+  static const uint8_t binary_fingerprint[16]; // = {0xB8,0x89,0x8E,0x0E,0x7F,0x89,0x22,0xAD,0xC5,0x32,0x2F,0xC2,0x15,0x7B,0x88,0x6B};
 
-  TaskInfo() : vc_name(), id(0), os(), type(), cpu(0), memory(0), IO(0), ip() {
+  TaskInfo() : vc_name(), id(0), os(), type(), cpu(0), memory(0), IO(0), ip(), app() {
   }
 
   virtual ~TaskInfo() throw() {}
@@ -304,6 +329,7 @@ class TaskInfo {
   int32_t memory;
   int32_t IO;
   std::string ip;
+  std::string app;
 
   _TaskInfo__isset __isset;
 
@@ -339,6 +365,10 @@ class TaskInfo {
     ip = val;
   }
 
+  void __set_app(const std::string& val) {
+    app = val;
+  }
+
   bool operator == (const TaskInfo & rhs) const
   {
     if (!(vc_name == rhs.vc_name))
@@ -356,6 +386,8 @@ class TaskInfo {
     if (!(IO == rhs.IO))
       return false;
     if (!(ip == rhs.ip))
+      return false;
+    if (!(app == rhs.app))
       return false;
     return true;
   }

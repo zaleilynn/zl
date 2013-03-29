@@ -7,8 +7,6 @@
 #include "master/task_pool.h"
 
 using log4cplus::Logger;
-using lynn::ReadLocker;
-using lynn::WriteLocker;
 using std::tr1::bind;
 
 static Logger logger = Logger::getInstance("master");
@@ -20,6 +18,9 @@ VC::VC(const VCInfo& info) : m_vc_info(info) {
     m_task_info.os = info.os;
     m_task_info.cpu = info.cpu;
     m_task_info.memory = info.memory;
+    m_task_info.app = info.app;
+    m_task_info.IO = info.IO;
+    m_task_info.type = info.type;
     ExecutorPoolPtr ptr(new ExecutorPool(info.name)); 
     m_executor_pool = ptr;
 }
@@ -30,8 +31,9 @@ VC::~VC() throw () {
 }
 
 void VC::Start() {
-    TriggerPtr ptr(new OverloadTrigger);
+    TriggerPtr ptr(new OverloadTrigger());
     m_trigger_list.PushBack(ptr);
+    LOG4CPLUS_INFO(logger, "add a overload trigger for " << m_vc_info.name);
     lynn::Thread::ThreadFunc func = bind(&VC::Entry, this);
     m_thread = new lynn::Thread(func);
     m_thread->Start();
@@ -121,7 +123,7 @@ TaskPtr VC::PopTask(TaskState type) {
 }
 
 void VC::AddEvent(const ExecutorStat& stat) {
-    if(m_executor_pool->Find(stat.task_id) == false) { 
+    if(m_executor_pool->Find(stat.task_id) == false) {
         //其实这里有一个race condition，但是发生的概率应该是没有的
         ExecutorPtr executor_ptr(new Executor(stat.task_id));
         m_executor_pool->Insert(executor_ptr);
@@ -129,6 +131,6 @@ void VC::AddEvent(const ExecutorStat& stat) {
         m_trigger_list.PushBack(trigger_ptr);
         LOG4CPLUS_INFO(logger, "add an executor with" 
                                << " Id: " << stat.task_id);
-    }  
+    } 
     m_queue.PushBack(stat);
 }

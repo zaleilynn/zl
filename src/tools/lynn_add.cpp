@@ -33,21 +33,26 @@ int32_t main(int32_t argc, char ** argv) {
            conf_file = argv[2];
         } else {
             ErrorMsg(argv);
-            return -1;
+            return 1;
         }
     } else {
         ErrorMsg(argv);
-        return -1;
+        return 1;
     }
     AddContext context;
     if(context.Init(conf_file) !=0) {
         fprintf(stderr, "cannot parse conf_file\n");
-        return -1;
+        return 1;
     }
     VCInfo vc_info = context.GetVCInfo();
     string master_endpoint = context.Get("master_endpoint");
-    InfoMsg(master_endpoint, vc_info);  
-    Proxy<MasterClient> proxy = Rpc<MasterClient, MasterClient>::GetProxy(master_endpoint);
-    proxy().AddVC(vc_info);
+    InfoMsg(master_endpoint, vc_info); 
+    try { 
+        Proxy<MasterClient> proxy = Rpc<MasterClient, MasterClient>::GetProxy(master_endpoint);
+        proxy().AddVC(vc_info);
+    } catch (TException &tx) {
+        fprintf(stderr, "cannot add vc to master");
+        return 1;
+    }
     return 0;
 }

@@ -1,7 +1,14 @@
+#include <log4cplus/logger.h>
+#include <log4cplus/loggingmacros.h>
+
 #include "master/trigger_queue.h"
 
 using lynn::ReadLocker;
 using lynn::WriteLocker;
+using log4cplus::Logger;
+
+static Logger logger = Logger::getInstance("master");
+
 
 void TriggerQueue::PushBack(const TriggerPtr& trigger) {
     WriteLocker locker(m_lock);
@@ -26,6 +33,7 @@ void TriggerQueue::Flush(const ExecutorPoolPtr& ptr) {
     for(list<TriggerPtr>::iterator it = m_list.begin();
         it != m_list.end();) {
         //去除触发了的Idle触发器
+        //overload触发器没有管它
         if((*it)->IsTriggered() && (*it)->GetName() == "Idle") {
             ptr->Delete((*it)->GetId());
             it = m_list.erase(it);

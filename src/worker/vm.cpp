@@ -104,13 +104,9 @@ int32_t VM::Init() {
     
     //准备配置文件
     ofstream conf_file((m_dir + "/CONF").c_str());
-    conf_file << "[vm_worker]" << endl;
-    conf_file << "os = " << m_info.os << endl;
+    conf_file << "[agent]" << endl;
     conf_file << "ip = " << m_info.ip << endl;
-    conf_file << "port = " << 1000 << endl;
-    conf_file << "vm_id = " << m_id << endl;
-    conf_file << "worker_endpoint = " << ResourceManagerI::Instance()->GetEndpoint() << endl;
-    conf_file << "heartbeat_interval = " << 15 << endl;
+    conf_file << "app = " << m_info.app << endl;
     conf_file.close();
 
     cmd = "mkisofs -o " + m_iso + " " + m_dir + "/CONF > /dev/null 2>&1";
@@ -208,7 +204,6 @@ int32_t VM::Init() {
     }
     xml_copy.replace(pos, strlen("T_ISO_LOCATION"), m_iso);
     m_xml = xml_copy;
-    LOG4CPLUS_DEBUG(logger, xml_copy);
     return 0;
 }
 
@@ -260,19 +255,22 @@ ExecutorStat VM::GetUsedResource() {
     ExecutorStat stat;
     stat.cpu_usage = GetCpuUsage();
     stat.memory_usage = GetMemoryUsage();
+    stat.io_usage = GetIOUsage();
     stat.vc_name = m_info.vc_name;
     stat.task_id = m_info.id;
     return stat;
 }
 
 double VM::GetCpuUsage() {
+/*
+//下面计算的CPU偏小
     static virDomainInfo p_info;
     static timeval p_real_time;
     static bool first = true;
     virDomainInfo info;
     struct timeval real_time;
     if(virDomainGetInfo(m_ptr, &info) != 0) {
-        LOG4CPLUS_ERROR(logger, "can get domain info!");
+        LOG4CPLUS_ERROR(logger, "cannot get domain info!");
         return 0;
     }
     if(gettimeofday(&real_time, NULL) == -1) {
@@ -289,7 +287,42 @@ double VM::GetCpuUsage() {
     int32_t cpu_diff = (info.cpuTime - p_info.cpuTime) / 1000;
     int32_t real_diff = 1000000 * (real_time.tv_sec - p_real_time.tv_sec) +
                         (real_time.tv_usec - p_real_time.tv_usec);
+    LOG4CPLUS_DEBUG(logger, "usage " << cpu_diff / (double) (real_diff));
     return cpu_diff / (double) (real_diff);
+*/
+    virDomainInfo info_s,info_e;
+    struct timeval real_time_s, real_time_e;
+    int cpu_diff, real_diff;
+    float usage;
+
+    if(virDomainGetInfo(m_ptr, &info_s) != 0) {
+        LOG4CPLUS_ERROR(logger, "cannot get domain info!");
+        return 0;
+    }
+    if(gettimeofday(&real_time_s, NULL) == -1) {
+        LOG4CPLUS_ERROR(logger, "can get real time!");
+        return 0;
+    }
+
+    //睡0.5秒，这个很可能出问题...延迟心跳进程的发送,尤其是虚拟机多的时候， TODO
+    usleep(500000);
+
+    if(virDomainGetInfo(m_ptr, &info_e) !=0) {
+        LOG4CPLUS_ERROR(logger, "cannot get domain info!");
+        return 0;
+    }
+
+    if(gettimeofday(&real_time_e, NULL) == -1) {
+        LOG4CPLUS_ERROR(logger, "can get real time!");
+        return 0;
+    }
+    //转换成微秒
+    cpu_diff = (info_e.cpuTime - info_s.cpuTime) / 1000;
+    //转换成微秒
+    real_diff = 1000000 * (real_time_e.tv_sec - real_time_s.tv_sec) +
+                    (real_time_e.tv_usec - real_time_s.tv_usec);
+    usage = cpu_diff / (float) (real_diff);
+    return usage; 
 }
 
 //TODO

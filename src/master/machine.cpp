@@ -42,9 +42,7 @@ bool Machine::IsMatch(ClassAd ad){
     ClassAdXMLUnParser xml_unparser;
     xml_unparser.SetCompactSpacing(false);
     xml_unparser.Unparse(s, &ad);
-    LOG4CPLUS_DEBUG(logger, "task \n" << s);
     xml_unparser.Unparse(s, &m_ad);
-    LOG4CPLUS_DEBUG(logger, "machine \n" << s);
 
     ad.EvaluateAttrBool(ATTR_TASK_REQUIREMENT, is_match);
     if(!is_match) {
@@ -53,7 +51,6 @@ bool Machine::IsMatch(ClassAd ad){
 
     //for debug
     ad.EvaluateAttrNumber(ATTR_TASK_RANK, m_rank_value);
-    LOG4CPLUS_DEBUG(logger, "rank " << m_rank_value);
     return true;
 }
 

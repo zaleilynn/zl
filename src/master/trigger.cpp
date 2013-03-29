@@ -53,7 +53,9 @@ bool OverloadTrigger::Condition(const ExecutorPoolPtr& epp) {
             return false;
         }
     } else {
-        if(time(0) - m_trigger_time > 30 && epp->Size() < MachinePoolI::Instance()->Size()) {
+        //30秒之后才能再触发
+        if(time(0) - m_trigger_time > 30){
+            LOG4CPLUS_DEBUG(logger, "reset trigger state");
             SetTriggerState(false);
         }
         return false; 

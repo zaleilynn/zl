@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='utf-8'?>
 <port>9999</port>
-<net>10.128.252.129-150</net>
+<net>192.168.120.160-180</net>
 <heartbeat_interval>5</heartbeat_interval>

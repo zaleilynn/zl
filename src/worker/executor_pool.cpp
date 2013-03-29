@@ -28,7 +28,6 @@ void ExecutorPool::StartExecutor() {
         it != m_executor_map.end(); ++it) {
         if((it->second)->GetStatus() == EXECUTOR_WAIT) {
             (it->second)->Start();
-            LOG4CPLUS_DEBUG(logger, "return from ExecutorPool::StartExecutor");
             return;
         }
     }

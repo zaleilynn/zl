@@ -1,5 +1,5 @@
-#ifndef _LYNN_MASTER_MACHINE_POOL_H
-#define _LYNN_MASTER_MACHINE_POOL_H
+#ifndef _LYNN_MASTER_MACHINE_POOL_H_
+#define _LYNN_MASTER_MACHINE_POOL_H_
 
 #include <map>
 #include <tr1/functional>

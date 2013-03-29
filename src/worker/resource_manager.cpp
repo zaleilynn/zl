@@ -7,6 +7,9 @@
 #include "worker/config.h"
 
 using log4cplus::Logger;
+using std::tr1::bind;
+using lynn::ReadLocker;
+using lynn::WriteLocker;
 
 static Logger logger = Logger::getInstance("worker");
 
@@ -15,7 +18,6 @@ int32_t ResourceManager::Init(){
                   + ":" + WorkerConfigI::Instance()->Get("port");
     m_all_cpu = System::CpuNum();
     m_all_memory = System::TotalMemory();
-    LOG4CPLUS_DEBUG(logger, "all memory:" << m_all_memory);
     m_avail_cpu = m_all_cpu;
     m_avail_memory = m_all_memory; 
     return 0;
@@ -36,8 +38,8 @@ void ResourceManager::GetMachineInfo(MachineInfo& info) {
     info.avail_cpu = m_avail_cpu;
     info.avail_memory = m_avail_memory;   
 
-    func = bind(&ResourceManager::GetExecutorResourceInfo, this, _1, info);
-    VMPoolI::Instance()->MapToDo(func);
+    func = bind(&ResourceManager::GetExecutorResourceInfo, this, _1, &info);
+    VMPoolI::Instance()->MapToDo(func);    
 }
 
 void ResourceManager::GetAvailableResource(const VMPtr& ptr) {
@@ -47,8 +49,8 @@ void ResourceManager::GetAvailableResource(const VMPtr& ptr) {
     } 
 }
 
-void ResourceManager::GetExecutorResourceInfo(const VMPtr& ptr, MachineInfo& info) {
+void ResourceManager::GetExecutorResourceInfo(const VMPtr& ptr, MachineInfo* info) {
     if(ptr->GetState() == VM_RUN) {
-       info.vm_list.push_back(ptr->GetUsedResource()); 
+       info->vm_list.push_back(ptr->GetUsedResource()); 
     }
 }

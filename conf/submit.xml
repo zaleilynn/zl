@@ -1,2 +1,2 @@
-<master_endpoint> 10.128.252.128:8000 </master_endpont>
+<master_endpoint>192.168.120.152:9999</master_endpont>
 <name>vc1</name>

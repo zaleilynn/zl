@@ -62,8 +62,8 @@ int32_t main(int32_t argc, char ** argv) {
         exit(1);
     }
 
-    string zlynn_home(p);
-    string conf_file = zlynn_home + "/conf/master.xml";
+    string lynn_home(p);
+    string conf_file = lynn_home + "/conf/master.xml";
     if(MasterConfigI::Instance()->Init(conf_file) != 0) {
         LOG4CPLUS_ERROR(logger, "error in reading master config");
         exit(1);

@@ -18,7 +18,6 @@ using std::string;
 using std::map;
 using boost::shared_ptr;
 using lynn::RWLock;
-using lynn::Thread;
 
 class VC {
 public:
@@ -40,7 +39,6 @@ public:
     void Start();
     void Entry();
 private:
-    RWLock m_lock;
     ExecutorPoolPtr m_executor_pool;
     VCInfo m_vc_info;
     TaskInfo m_task_info;

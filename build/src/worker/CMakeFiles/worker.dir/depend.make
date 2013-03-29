@@ -96,6 +96,7 @@ src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./include/rapidx
 src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./include/rwlock.h
 src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./include/singleton.h
 src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./include/system.h
+src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./include/thread.h
 src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
 src/worker/CMakeFiles/worker.dir/resource_manager.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
@@ -127,6 +128,7 @@ src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/mutex.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/proxy.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/rwlock.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/singleton.h
+src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./include/thread.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
 src/worker/CMakeFiles/worker.dir/vm.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
@@ -160,6 +162,7 @@ src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/rapidxml_ut
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/rpc.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/rwlock.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/singleton.h
+src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./include/thread.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
 src/worker/CMakeFiles/worker.dir/work_thread.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h
@@ -199,6 +202,7 @@ src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/./include/rapidxml_utils.h
 src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/./include/rpc.h
 src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/./include/rwlock.h
 src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/./include/singleton.h
+src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/./include/thread.h
 src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/./proxy/master/gen-cpp/Master.h
 src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/./proxy/master/gen-cpp/master_types.h
 src/worker/CMakeFiles/worker.dir/worker.cpp.o: ../src/./proxy/worker/gen-cpp/Worker.h

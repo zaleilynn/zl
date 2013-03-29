@@ -1,7 +1,14 @@
+#include <log4cplus/logger.h>
+#include <log4cplus/loggingmacros.h>
+
 #include "worker/vm_pool.h"
 
 using lynn::ReadLocker;
 using lynn::WriteLocker;
+using log4cplus::Logger;
+
+static Logger logger = Logger::getInstance("worker");
+
 
 void VMPool::Insert(const VMPtr& ptr) {
     WriteLocker locker(m_lock);

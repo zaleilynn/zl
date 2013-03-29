@@ -29,6 +29,7 @@ struct VMInfo {
     int32_t memory;
     string ip;
     int32_t IO;
+    string app;
 };
 
 class VM {

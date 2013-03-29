@@ -30,7 +30,7 @@ bool Executor::IsOverLoad(int32_t period, double cpu_usage){
         sum += riter->cpu_usage;
     }
     double value = sum / len;
-    LOG4CPLUS_DEBUG(logger, "IsOverLoad,value: " << value);
+    LOG4CPLUS_DEBUG(logger, "IsOverLoad,id: " << m_id << " value: " << value << " threshold: " << cpu_usage);
     return value >= cpu_usage;
 }
 
@@ -48,6 +48,6 @@ bool Executor::IsIdle(int32_t period, double cpu_usage) {
         sum += riter->cpu_usage;
     }
     double value = sum / len;
-    LOG4CPLUS_DEBUG(logger, "Idle,value: " << value);
+    LOG4CPLUS_DEBUG(logger, "IsIdle, id: "<<  m_id << " value: " << value << " threshold:" << cpu_usage);
     return value <= cpu_usage;
 }

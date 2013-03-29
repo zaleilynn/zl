@@ -1,3 +1,4 @@
+#include <vector>
 #include <log4cplus/logger.h>
 #include <log4cplus/loggingmacros.h>
 
@@ -8,9 +9,20 @@
 #include "master/event.h"
 #include "master/watcher.h"
 
+using std::vector;
 using log4cplus::Logger;
 
 static Logger logger = Logger::getInstance("master");
+
+//搞一个MachineInfo wrapper是否可以让这些函数都封装进去？:
+void LogHeartbeat(MachineInfo info) {
+     for(vector<ExecutorStat>::iterator it = info.vm_list.begin(); 
+         it != info.vm_list.end(); it++) {
+         LOG4CPLUS_DEBUG(logger, "vm id:" << it->task_id <<
+                                 " cpu usage:" << it->cpu_usage);
+
+     }
+}
 
 int64_t MasterService::SubmitTask(const TaskInfo& info) {
     TaskPtr task(new Task(info));
@@ -24,6 +36,7 @@ int64_t MasterService::SubmitTask(const TaskInfo& info) {
 }
 
 void MasterService::Heartbeat(const MachineInfo& info) {
+//    LogHeartbeat(info);
     //  物理机器的资源利用情况是一直在变的，实时更新的
     //  master也没有维护物理的剩余资源,只是接受物理机器的上报
     //  这里不能做过多的操作，一定要快的返回，否则客户机一多，这里RPC受不了

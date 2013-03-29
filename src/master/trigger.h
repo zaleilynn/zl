@@ -56,7 +56,8 @@ private:
 
 class IdleTrigger : public Trigger {
 public:
-    IdleTrigger(int64_t id, int32_t value = 20, int period = 5): Trigger("Idle", value, period), m_id(id) {};
+    //默认1分钟，小于10
+    IdleTrigger(int64_t id, int32_t value = 10, int period = 1): Trigger("Idle", value, period), m_id(id) {};
     int64_t GetId() {
         return m_id;
     }
@@ -68,6 +69,7 @@ private:
 
 class OverloadTrigger : public Trigger {
 public:
+    //默认1分钟，大于80
     OverloadTrigger(int32_t value = 80, double period = 1) : 
         Trigger("Overload", value, period), m_trigger_time(0){}
     bool Condition(const ExecutorPoolPtr& epp);

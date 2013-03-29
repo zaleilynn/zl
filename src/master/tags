@@ -1,0 +1,236 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Action	trigger.cpp	/^void Trigger::Action(const ExecutorPoolPtr& epp) {$/;"	f	class:Trigger
+AddEvent	virtual_cluster.cpp	/^void VC::AddEvent(const ExecutorStat& stat) {$/;"	f	class:VC
+AddEvent	watcher.cpp	/^void Watcher::AddEvent(const MachinePtr& machine) {$/;"	f	class:Watcher
+AddStatInfo	executor.cpp	/^void Executor::AddStatInfo(const ExecutorStat& stat){$/;"	f	class:Executor
+AddTask	vc_pool.cpp	/^void VCPool::AddTask(const TaskPtr& task){$/;"	f	class:VCPool
+AddTask	virtual_cluster.cpp	/^void VC::AddTask(){$/;"	f	class:VC
+AddVC	service.cpp	/^int32_t MasterService::AddVC(const VCInfo& vc_info){$/;"	f	class:MasterService
+AddVC	vc_pool.cpp	/^int32_t VCPool::AddVC(const VCPtr& vc) {$/;"	f	class:VCPool
+AllocateIp	ip_pool.cpp	/^bool IpPool::AllocateIp(const string& ip){$/;"	f	class:IpPool
+AssignTask	machine_pool.cpp	/^string MachinePool::AssignTask(const ClassAd& ad){$/;"	f	class:MachinePool
+AssignTask	task.cpp	/^bool Task::AssignTask() {$/;"	f	class:Task
+CheckCompleteness	config.cpp	/^int32_t MasterConfig::CheckCompleteness() {$/;"	f	class:MasterConfig
+Clear	trigger_queue.cpp	/^void TriggerQueue::Clear() {$/;"	f	class:TriggerQueue
+Compare	machine_pool.cpp	/^bool MachinePool::Compare(const MachinePtr& left, const MachinePtr& right){$/;"	f	class:MachinePool
+Condition	trigger.cpp	/^bool IdleTrigger::Condition(const ExecutorPoolPtr& epp) {$/;"	f	class:IdleTrigger
+Condition	trigger.cpp	/^bool OverloadTrigger::Condition(const ExecutorPoolPtr& epp) {$/;"	f	class:OverloadTrigger
+Delete	executor_pool.cpp	/^void ExecutorPool::Delete(int64_t id) {$/;"	f	class:ExecutorPool
+Delete	task_pool.cpp	/^void TaskPool::Delete(int64_t task_id) {$/;"	f	class:TaskPool
+Entry	virtual_cluster.cpp	/^void VC::Entry() {$/;"	f	class:VC
+Entry	watcher.cpp	/^void Watcher::Entry() {$/;"	f	class:Watcher
+Erase	task_queue.cpp	/^bool TaskQueue::Erase(int64_t task_id) {$/;"	f	class:TaskQueue
+EventBufferI	event.h	/^typedef Singleton< BlockQueue<EventPtr> > EventBufferI;$/;"	t
+EventPtr	event.h	/^typedef shared_ptr<Event> EventPtr;$/;"	t
+Executor	executor.h	/^    Executor(int64_t id) : m_id(id) {}$/;"	f	class:Executor
+Executor	executor.h	/^class Executor {$/;"	c
+ExecutorPool	executor_pool.h	/^    explicit ExecutorPool(const string& name) : m_vc_name(name) {}$/;"	f	class:ExecutorPool
+ExecutorPool	executor_pool.h	/^class ExecutorPool {$/;"	c
+ExecutorPoolPtr	executor_pool.h	/^typedef shared_ptr<ExecutorPool> ExecutorPoolPtr;$/;"	t
+ExecutorPtr	executor.h	/^typedef shared_ptr<Executor> ExecutorPtr;$/;"	t
+FailEvent	event.h	/^    FailEvent(int64_t id) : Event(id) {}$/;"	f	class:FailEvent
+FailEvent	event.h	/^class FailEvent : public Event {$/;"	c
+Find	executor_pool.cpp	/^bool ExecutorPool::Find(int64_t id){$/;"	f	class:ExecutorPool
+FindToDo	task_pool.cpp	/^int32_t TaskPool::FindToDo(int64_t task_id, TaskFunc func) {$/;"	f	class:TaskPool
+FindToDo	vc_pool.cpp	/^bool VCPool::FindToDo(const string& name, VCFunc func) {$/;"	f	class:VCPool
+FinishEvent	event.h	/^    FinishEvent(int64_t id) : Event(id) {}$/;"	f	class:FinishEvent
+FinishEvent	event.h	/^class FinishEvent : public Event {$/;"	c
+Flush	trigger_queue.cpp	/^void TriggerQueue::Flush(const ExecutorPoolPtr& ptr) {$/;"	f	class:TriggerQueue
+ForwardEvent	machine.cpp	/^void Machine::ForwardEvent() {$/;"	f	class:Machine
+GetEndpoint	machine.h	/^    string GetEndpoint(){$/;"	f	class:Machine
+GetId	executor.h	/^    int64_t GetId(){$/;"	f	class:Executor
+GetId	task.h	/^    int64_t GetId(){$/;"	f	class:Task
+GetId	trigger.h	/^    int64_t GetId() {$/;"	f	class:IdleTrigger
+GetId	trigger.h	/^    virtual int64_t GetId() {$/;"	f	class:Trigger
+GetName	executor_pool.h	/^    string GetName() {$/;"	f	class:ExecutorPool
+GetName	trigger.h	/^    string GetName() const {$/;"	f	class:Trigger
+GetNextIp	ip_pool.cpp	/^string IpPool::GetNextIp() {$/;"	f	class:IpPool
+GetPeriod	trigger.h	/^    double GetPeriod() const {$/;"	f	class:Trigger
+GetRankValue	machine.h	/^    double GetRankValue() const {$/;"	f	class:Machine
+GetRunOn	task.h	/^    string GetRunOn(){$/;"	f	class:Task
+GetTask	vc_pool.cpp	/^TaskPtr VCPool::GetTask() {$/;"	f	class:VCPool
+GetTaskInfo	task.h	/^    TaskInfo GetTaskInfo(){$/;"	f	class:Task
+GetTaskState	task.cpp	/^TaskState Task::GetTaskState() {$/;"	f	class:Task
+GetVCName	task.h	/^    string GetVCName() {$/;"	f	class:Task
+GetVCName	virtual_cluster.h	/^    string GetVCName() {$/;"	f	class:VC
+GetValue	trigger.h	/^    int32_t GetValue() const {$/;"	f	class:Trigger
+Handle	event.cpp	/^int32_t FailEvent::Handle() {$/;"	f	class:FailEvent
+Handle	event.cpp	/^int32_t FinishEvent::Handle() {$/;"	f	class:FinishEvent
+Handle	event.cpp	/^int32_t RemoveEvent::Handle(){$/;"	f	class:RemoveEvent
+Handle	event.cpp	/^int32_t StartEvent::Handle() {$/;"	f	class:StartEvent
+Heartbeat	service.cpp	/^void MasterService::Heartbeat(const MachineInfo& info) {$/;"	f	class:MasterService
+IdleTrigger	trigger.h	/^    IdleTrigger(int64_t id, int32_t value = 10, int period = 1): Trigger("Idle", value, period), m_id(id) {};$/;"	f	class:IdleTrigger
+IdleTrigger	trigger.h	/^class IdleTrigger : public Trigger {$/;"	c
+Init	ip_pool.cpp	/^int32_t IpPool::Init(){$/;"	f	class:IpPool
+Init	virtual_cluster.cpp	/^void VC::Init() {$/;"	f	class:VC
+Insert	executor_pool.cpp	/^void ExecutorPool::Insert(const ExecutorPtr& executor) {$/;"	f	class:ExecutorPool
+Insert	machine_pool.cpp	/^void MachinePool::Insert(const MachinePtr& machine) {$/;"	f	class:MachinePool
+Insert	task_pool.cpp	/^void TaskPool::Insert(const TaskPtr& task){$/;"	f	class:TaskPool
+Insert	vc_pool.cpp	/^void VCPool::Insert(const VCPtr& vc) {$/;"	f	class:VCPool
+IpPool	ip_pool.h	/^class IpPool {$/;"	c
+IpPoolI	ip_pool.h	/^typedef Singleton<IpPool> IpPoolI;$/;"	t
+IsIdle	executor.cpp	/^bool Executor::IsIdle(int32_t period, double cpu_usage) {$/;"	f	class:Executor
+IsIdle	executor_pool.cpp	/^bool ExecutorPool::IsIdle(int32_t period, double value, int64_t task_id) {$/;"	f	class:ExecutorPool
+IsMatch	machine.cpp	/^bool Machine::IsMatch(ClassAd ad){$/;"	f	class:Machine
+IsOverLoad	executor.cpp	/^bool Executor::IsOverLoad(int32_t period, double cpu_usage){$/;"	f	class:Executor
+IsOverLoad	executor_pool.cpp	/^bool ExecutorPool::IsOverLoad(int32_t period, double cpu_usage){  $/;"	f	class:ExecutorPool
+IsTriggered	trigger.h	/^    bool IsTriggered() const {$/;"	f	class:Trigger
+KillTask	vc_pool.cpp	/^void VCPool::KillTask(const TaskPtr& task) {$/;"	f	class:VCPool
+KillTask	virtual_cluster.cpp	/^void VC::KillTask(const TaskPtr& task) {$/;"	f	class:VC
+LogHeartbeat	service.cpp	/^void LogHeartbeat(MachineInfo info) {$/;"	f
+LogInfo	machine.cpp	/^void Machine::LogInfo() const {$/;"	f	class:Machine
+LogInfo	virtual_cluster.cpp	/^void VC::LogInfo() {$/;"	f	class:VC
+Machine	machine.cpp	/^Machine::Machine(const MachineInfo& info): m_machine_info(info) {$/;"	f	class:Machine
+Machine	machine.h	/^class Machine  {$/;"	c
+MachineFunc	machine_pool.h	/^    typedef function<void(const MachinePtr&)> MachineFunc;$/;"	t	class:MachinePool
+MachinePool	machine_pool.h	/^class MachinePool {$/;"	c
+MachinePoolI	machine_pool.h	/^typedef Singleton<MachinePool> MachinePoolI;$/;"	t
+MachinePtr	machine.h	/^typedef shared_ptr<Machine> MachinePtr;$/;"	t
+Map	trigger_queue.cpp	/^void TriggerQueue::Map(const ExecutorPoolPtr& ptr) {$/;"	f	class:TriggerQueue
+MapToDo	machine_pool.cpp	/^void MachinePool::MapToDo(MachineFunc func) {$/;"	f	class:MachinePool
+MasterConfig	config.h	/^class MasterConfig : public Config {$/;"	c
+MasterConfigI	config.h	/^typedef Singleton<MasterConfig> MasterConfigI;$/;"	t
+MasterService	service.h	/^class MasterService : public MasterIf {$/;"	c
+Match	ip_pool.cpp	/^bool IpPool::Match(const string& ip){$/;"	f	class:IpPool
+Operation	trigger.cpp	/^bool IdleTrigger::Operation(const ExecutorPoolPtr& epp) {$/;"	f	class:IdleTrigger
+Operation	trigger.cpp	/^bool OverloadTrigger::Operation(const ExecutorPoolPtr& epp) {$/;"	f	class:OverloadTrigger
+OverloadTrigger	trigger.h	/^    OverloadTrigger(int32_t value = 90, double period = 1) : $/;"	f	class:OverloadTrigger
+OverloadTrigger	trigger.h	/^class OverloadTrigger : public Trigger {$/;"	c
+PopFront	task_queue.cpp	/^TaskPtr TaskQueue::PopFront() {$/;"	f	class:TaskQueue
+PopTask	virtual_cluster.cpp	/^TaskPtr VC::PopTask(TaskState type) {$/;"	f	class:VC
+Push	executor_pool.cpp	/^void ExecutorPool::Push(const ExecutorStat& stat) {$/;"	f	class:ExecutorPool
+PushBack	task_queue.cpp	/^void TaskQueue::PushBack(const TaskPtr& task) {$/;"	f	class:TaskQueue
+PushBack	trigger_queue.cpp	/^void TriggerQueue::PushBack(const TriggerPtr& trigger) {$/;"	f	class:TriggerQueue
+PushTask	virtual_cluster.cpp	/^void VC::PushTask(const TaskPtr& task) {$/;"	f	class:VC
+ReleaseIp	ip_pool.cpp	/^bool IpPool::ReleaseIp(const string& ip){$/;"	f	class:IpPool
+RemoveEvent	event.h	/^    RemoveEvent(int64_t id) : Event(id) {}$/;"	f	class:RemoveEvent
+RemoveEvent	event.h	/^class RemoveEvent: public Event {$/;"	c
+RemoveTask	vc_pool.cpp	/^void VCPool::RemoveTask(const TaskPtr& task){$/;"	f	class:VCPool
+RemoveTask	virtual_cluster.cpp	/^void VC::RemoveTask(const TaskPtr& task) {$/;"	f	class:VC
+SchedulerProcessor	work_thread.cpp	/^void* SchedulerProcessor() {$/;"	f
+SetTaskState	task.cpp	/^void Task::SetTaskState(TaskState ts) {$/;"	f	class:Task
+SetTriggerState	trigger.h	/^    void SetTriggerState(bool status) {$/;"	f	class:Trigger
+Size	executor_pool.cpp	/^int32_t ExecutorPool::Size() {$/;"	f	class:ExecutorPool
+Size	machine_pool.cpp	/^int32_t MachinePool::Size() {$/;"	f	class:MachinePool
+Size	task_queue.cpp	/^int32_t TaskQueue::Size() {$/;"	f	class:TaskQueue
+Start	virtual_cluster.cpp	/^void VC::Start() {$/;"	f	class:VC
+Start	watcher.cpp	/^void Watcher::Start() {$/;"	f	class:Watcher
+StartEvent	event.h	/^    StartEvent(int64_t id) : Event(id) {}$/;"	f	class:StartEvent
+StartEvent	event.h	/^class StartEvent : public Event {$/;"	c
+StateEventProcessor	work_thread.cpp	/^void* StateEventProcessor() {$/;"	f
+SubmitTask	service.cpp	/^int64_t MasterService::SubmitTask(const TaskInfo& info) {$/;"	f	class:MasterService
+TASK_RUN	task.h	/^    TASK_RUN,$/;"	e	enum:TaskState
+TASK_WAIT	task.h	/^    TASK_WAIT,$/;"	e	enum:TaskState
+Task	task.cpp	/^Task::Task(const TaskInfo& info): m_task_info(info) {$/;"	f	class:Task
+Task	task.h	/^class Task {$/;"	c
+TaskBufferI	task.h	/^typedef Singleton< BlockQueue<TaskPtr> > TaskBufferI;$/;"	t
+TaskFailed	service.cpp	/^int32_t MasterService::TaskFailed(int64_t task_id){$/;"	f	class:MasterService
+TaskFinished	service.cpp	/^int32_t MasterService::TaskFinished(int64_t task_id){$/;"	f	class:MasterService
+TaskFunc	task_pool.h	/^    typedef function<void(const TaskPtr&)> TaskFunc;$/;"	t	class:TaskPool
+TaskIdentity	identity.h	/^class TaskIdentity : public Identity {$/;"	c
+TaskIdentityI	identity.h	/^typedef Singleton<TaskIdentity> TaskIdentityI;$/;"	t
+TaskPool	task_pool.h	/^class TaskPool {$/;"	c
+TaskPoolI	task_pool.h	/^typedef Singleton<TaskPool> TaskPoolI;$/;"	t
+TaskProcessor	work_thread.cpp	/^void* TaskProcessor() {$/;"	f
+TaskPtr	task.h	/^typedef shared_ptr<Task> TaskPtr;$/;"	t
+TaskQueue	task_queue.h	/^class TaskQueue {$/;"	c
+TaskStarted	service.cpp	/^int32_t MasterService::TaskStarted(int64_t task_id){$/;"	f	class:MasterService
+TaskState	task.h	/^enum TaskState {$/;"	g
+Trigger	trigger.h	/^    Trigger(const string& name, int32_t value, int period) :$/;"	f	class:Trigger
+Trigger	trigger.h	/^class Trigger {$/;"	c
+TriggerPtr	trigger.h	/^typedef shared_ptr<Trigger> TriggerPtr;$/;"	t
+TriggerQueue	trigger_queue.h	/^class TriggerQueue {$/;"	c
+VC	virtual_cluster.cpp	/^VC::VC(const VCInfo& info) : m_vc_info(info) {$/;"	f	class:VC
+VC	virtual_cluster.h	/^class VC {$/;"	c
+VCFunc	vc_pool.h	/^    typedef function<void(const VCPtr&)> VCFunc; $/;"	t	class:VCPool
+VCPool	vc_pool.h	/^class VCPool {$/;"	c
+VCPoolI	vc_pool.h	/^typedef Singleton<VCPool> VCPoolI;$/;"	t
+VCPtr	virtual_cluster.h	/^typedef shared_ptr<VC> VCPtr;$/;"	t
+Watcher	watcher.h	/^    Watcher() : m_watcher_thread(NULL) {}$/;"	f	class:Watcher
+Watcher	watcher.h	/^class Watcher {$/;"	c
+WatcherI	watcher.h	/^typedef Singleton<Watcher> WatcherI;$/;"	t
+_LYNN_MASTER_CONFIG_H_	config.h	2;"	d
+_LYNN_MASTER_EVENT_H_	event.h	2;"	d
+_LYNN_MASTER_EXECUTOR_H_	executor.h	2;"	d
+_LYNN_MASTER_EXECUTOR_POOL_H_	executor_pool.h	2;"	d
+_LYNN_MASTER_IP_POOL_H_	ip_pool.h	2;"	d
+_LYNN_MASTER_MACHINE_H_	machine.h	2;"	d
+_LYNN_MASTER_MACHINE_POOL_H_	machine_pool.h	2;"	d
+_LYNN_MASTER_MONITOR_H_	watcher.h	2;"	d
+_LYNN_MASTER_POOL_H_	vc_pool.h	2;"	d
+_LYNN_MASTER_TASK_H_	task.h	2;"	d
+_LYNN_MASTER_TASK_POOL_H_	task_pool.h	2;"	d
+_LYNN_MASTER_TASK_QUEUE_H_	task_queue.h	2;"	d
+_LYNN_MASTER_TRIGGER_H_	trigger.h	2;"	d
+_LYNN_MASTER_TRIGGER_QUEUE_H_	trigger_queue.h	2;"	d
+_LYNN_MASTER_VIRTUAL_CLSUTER_H_	virtual_cluster.h	2;"	d
+_LYNN_SRC_MASTER_SERVICE_H_	service.h	2;"	d
+logger	config.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	event.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	executor.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	machine.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	machine_pool.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	service.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	task.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	trigger.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	trigger_queue.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	vc_pool.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	virtual_cluster.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+logger	work_thread.cpp	/^static Logger logger = Logger::getInstance("master");$/;"	v	file:
+m_ad	machine.h	/^    ClassAd m_ad;$/;"	m	class:Machine
+m_ad	task.h	/^    ClassAd m_ad;$/;"	m	class:Task
+m_cur	ip_pool.h	/^    int32_t m_start, m_end, m_cur;$/;"	m	class:IpPool
+m_end	ip_pool.h	/^    int32_t m_start, m_end, m_cur;$/;"	m	class:IpPool
+m_executor_pool	virtual_cluster.h	/^    ExecutorPoolPtr m_executor_pool;$/;"	m	class:VC
+m_id	executor.h	/^    int64_t m_id;$/;"	m	class:Executor
+m_id	trigger.h	/^    int64_t m_id;$/;"	m	class:IdleTrigger
+m_ip_pool	ip_pool.h	/^    set<string> m_ip_pool;$/;"	m	class:IpPool
+m_ip_to_reuse	ip_pool.h	/^    set<string> m_ip_to_reuse;$/;"	m	class:IpPool
+m_is_triggered	trigger.h	/^    bool m_is_triggered;$/;"	m	class:Trigger
+m_list	task_queue.h	/^    list<TaskPtr> m_list;$/;"	m	class:TaskQueue
+m_list	trigger_queue.h	/^    list<TriggerPtr> m_list;$/;"	m	class:TriggerQueue
+m_lock	executor.h	/^    RWLock m_lock;$/;"	m	class:Executor
+m_lock	executor_pool.h	/^    RWLock m_lock;$/;"	m	class:ExecutorPool
+m_lock	ip_pool.h	/^    RWLock m_lock;$/;"	m	class:IpPool
+m_lock	machine_pool.h	/^    RWLock m_lock;$/;"	m	class:MachinePool
+m_lock	task.h	/^    RWLock m_lock;$/;"	m	class:Task
+m_lock	task_pool.h	/^    RWLock m_lock;$/;"	m	class:TaskPool
+m_lock	task_queue.h	/^    RWLock m_lock;$/;"	m	class:TaskQueue
+m_lock	trigger_queue.h	/^    RWLock m_lock; $/;"	m	class:TriggerQueue
+m_lock	vc_pool.h	/^    RWLock m_lock;$/;"	m	class:VCPool
+m_machine_info	machine.h	/^    MachineInfo m_machine_info;$/;"	m	class:Machine
+m_machine_pool	machine_pool.h	/^    map<string, MachinePtr> m_machine_pool;$/;"	m	class:MachinePool
+m_map	executor_pool.h	/^    map<int64_t, ExecutorPtr> m_map;$/;"	m	class:ExecutorPool
+m_name	trigger.h	/^    string m_name;$/;"	m	class:Trigger
+m_period_threshold	trigger.h	/^    double m_period_threshold;$/;"	m	class:Trigger
+m_prefix	ip_pool.h	/^    string m_prefix;$/;"	m	class:IpPool
+m_queue	virtual_cluster.h	/^    BlockQueue<ExecutorStat> m_queue;$/;"	m	class:VC
+m_queue	watcher.h	/^    BlockQueue<MachinePtr> m_queue;$/;"	m	class:Watcher
+m_rank_value	machine.h	/^    double m_rank_value; $/;"	m	class:Machine
+m_run_on	task.h	/^    string m_run_on;$/;"	m	class:Task
+m_run_queue	virtual_cluster.h	/^    TaskQueue m_run_queue;$/;"	m	class:VC
+m_start	ip_pool.h	/^    int32_t m_start, m_end, m_cur;$/;"	m	class:IpPool
+m_start_time	trigger.h	/^    time_t m_start_time;$/;"	m	class:Trigger
+m_stat_list	executor.h	/^    list<ExecutorStat> m_stat_list;$/;"	m	class:Executor
+m_state	task.h	/^    TaskState m_state;$/;"	m	class:Task
+m_task_info	task.h	/^    TaskInfo m_task_info;$/;"	m	class:Task
+m_task_info	virtual_cluster.h	/^    TaskInfo m_task_info;$/;"	m	class:VC
+m_task_pool	task_pool.h	/^    map<int64_t, TaskPtr> m_task_pool;$/;"	m	class:TaskPool
+m_thread	virtual_cluster.h	/^    lynn::Thread* m_thread;$/;"	m	class:VC
+m_trigger_list	virtual_cluster.h	/^    TriggerQueue m_trigger_list;$/;"	m	class:VC
+m_trigger_time	trigger.h	/^    time_t m_trigger_time;$/;"	m	class:OverloadTrigger
+m_value_threshold	trigger.h	/^    int32_t m_value_threshold;$/;"	m	class:Trigger
+m_vc_info	virtual_cluster.h	/^    VCInfo m_vc_info;$/;"	m	class:VC
+m_vc_name	executor_pool.h	/^    string m_vc_name;$/;"	m	class:ExecutorPool
+m_vc_pool	vc_pool.h	/^    map<string,VCPtr> m_vc_pool;$/;"	m	class:VCPool
+m_wait_queue	virtual_cluster.h	/^    TaskQueue m_wait_queue;$/;"	m	class:VC
+m_watcher_thread	watcher.h	/^    lynn::Thread* m_watcher_thread; $/;"	m	class:Watcher
+main	master.cpp	/^int32_t main(int32_t argc, char ** argv) {$/;"	f
+~Machine	machine.h	/^    ~Machine() throw() {};$/;"	f	class:Machine
+~Task	task.h	/^    ~Task() throw() {};$/;"	f	class:Task
+~VC	virtual_cluster.cpp	/^VC::~VC() throw () {$/;"	f	class:VC
